@@ -96,6 +96,10 @@ class SmartPostHolder {
     }
     
     public void addSmartPost(SmartPost sp) {
+        for ( SmartPost sp2 : smartposts ) {
+            if ( sp.getID() == sp2.getID() )
+                return;
+        }
         smartposts.add(sp);
     }
     

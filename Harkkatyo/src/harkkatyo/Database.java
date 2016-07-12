@@ -63,7 +63,7 @@ public class Database {
         try (
             Connection c = getConnection();
             PreparedStatement ps = c.prepareStatement
-                ("UPDATE TABLE package SET sent = 1 WHERE packageid = ?;");
+                ("UPDATE package SET sent = 1 WHERE packageid = ?;");
         )   {
                 ps.setInt(1, p.getPackageID());
                 ps.executeUpdate();
@@ -184,6 +184,42 @@ public class Database {
         }
         return null;
     }
+    
+        //Return PackageID of last inserted package
+    public ArrayList<Log> getLogMessages() {
+        ArrayList<Log> logs = new ArrayList<Log>();
+        try (
+            Connection c = getConnection();
+            Statement stmt = c.createStatement();
+        ) {
+            String sqlQuery = "SELECT logmessageid, sessionid, message, packageid, distance,"
+                    + " logdate FROM logmessage;";
+            try ( ResultSet rs = stmt.executeQuery(sqlQuery) )   {
+                ArrayList<String> resultStrings = this.resultSetToArrayList(rs);
+                for ( String s : resultStrings ) {
+                    String[] columns = s.split(":");
+                    int logMessageID = Integer.parseInt(columns[0]);
+                    int sessionID = Integer.parseInt(columns[1]);
+                    String message = columns[2];
+                    int packageID = Integer.parseInt(columns[3]);
+                    double distance = Double.valueOf(columns[4]);
+                    Long time = Long.parseLong(columns[5]);
+                    Date logdate = new Date(time);
+                    
+                    Log l = new Log(logMessageID, sessionID, message, packageID, distance, logdate);
+                    logs.add(l);
+                }
+            }
+            catch(SQLException innerE) {
+                innerE.printStackTrace();
+            }
+          }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        return logs;
+    }
+    
     
     //Dont use values from user inpuy
     public int getLastID(String idColumnName, String tableName) {
@@ -436,19 +472,20 @@ public class Database {
     }
     
     //return false if fail
-    public boolean addLogEntry(int sessionID, String message, Package p, Date logDate) {
+    public boolean addLogEntry(int sessionID, String message, Package p, double distance, Date logDate) {
         boolean retVal = false;
         try (
             Connection c = getConnection();
             PreparedStatement ps = c.prepareStatement("INSERT INTO logmessage("
-                    + "sessionid, message, packageid, logdate) VALUES "
-                    + "(?, ?, ?, ?);");
+                    + "sessionid, message, packageid, distance, logdate) VALUES "
+                    + "(?, ?, ?, ?, ?);");
         ) {
             try {
                 ps.setInt(1, sessionID);
                 ps.setString(2, message);
                 ps.setInt(3, p.getPackageID());
-                ps.setTimestamp(4, new java.sql.Timestamp(logDate.getTime()));
+                ps.setDouble(4, distance);
+                ps.setTimestamp(5, new java.sql.Timestamp(logDate.getTime()));
             
                 ps.executeUpdate();
                 retVal = true;
@@ -744,7 +781,7 @@ public class Database {
                         ArrayList<Item> items = getPackagedItems(packageid);
                         Item[] itemList = items.toArray(new Item[items.size()]);
 
-                        Package newPackage = pb.createPackage(packageClass, senderid, receiverid, itemList);
+                        Package newPackage = pb.createPackage(packageid, packageClass, senderid, receiverid, itemList);
                         packages.add(newPackage);
                     }
                 }
@@ -847,6 +884,43 @@ public class Database {
             return null;
         }
         return address;
+    }
+    
+    public SmartPost getSmartPost(int smartPostID) {
+        SmartPost retSmartPost = null;
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("SELECT smartpost.smartpostid, address.localaddress, address.city, "
+                        + "address.postalnumber, availability, postoffice, location.latitude, location.longitude "
+                        + "FROM smartpost "
+                        + "JOIN address on smartpost.addressid = address.addressid "
+                        + "JOIN location on smartpost.locationid = location.locationid "
+                        + "WHERE smartpostid = ?;");
+        ) {
+            ps.setInt(1, smartPostID);
+            try (ResultSet rs = ps.executeQuery()) {
+                if ( rs.isBeforeFirst() ) {
+                    int smartpostid = rs.getInt(1);
+                    String localaddress = rs.getString(2);
+                    String cityName = rs.getString(3);
+                    String postalNumber = rs.getString(4);
+                    String availability = rs.getString(5);
+                    String postoffice = rs.getString(6);
+                    String latitude = rs.getString(7);
+                    String longitude = rs.getString(8);
+
+                    retSmartPost = new SmartPost(smartpostid, localaddress, cityName, postalNumber,
+                            availability, postoffice, latitude, longitude);
+                }
+            }
+            catch(SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return retSmartPost;
     }
     
     public ArrayList<SmartPost> getSmartPosts(String city) {
@@ -969,7 +1043,7 @@ public class Database {
         
         try {
             Connection conn = this.getConnection();
-            String sqlQuery = "UPDATE TABLE packageditem SET broken = true WHERE itemid = ?;";
+            String sqlQuery = "UPDATE packageditem SET broken = 1 WHERE itemid = ? AND breakable = 1;";
             PreparedStatement ps = conn.prepareStatement(sqlQuery);
             ps.setInt(1, itemID);
             ps.executeUpdate();

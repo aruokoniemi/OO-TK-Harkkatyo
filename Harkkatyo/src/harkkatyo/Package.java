@@ -17,9 +17,8 @@ abstract public class Package {
     private int maxSize;
     private int maxWeight;
     
-    public Package(int classNr, int senderID, int receiverID, boolean breaksItems, Item... i) {
-        Database db = Database.getInstance();
-        packageID = db.getNewPackageID();
+    public Package(int packageID, int classNr, int senderID, int receiverID, boolean breaksItems, Item... i) {
+        this.packageID = packageID;
         packageClass = classNr;
         this.senderID = senderID;
         this.receiverID = receiverID;
@@ -67,11 +66,11 @@ abstract public class Package {
     }
 
     public int getSenderID() {
-        return packageID;
+        return senderID;
     }
     
     public int getReceiverID() {
-        return packageID;
+        return receiverID;
     }
 }
 
@@ -80,8 +79,8 @@ class PackageClass1 extends Package {
     final static public int maxSize = 10;
     static public int maxWeight = 10;
     
-    public PackageClass1(int SenderID, int ReceiverID, Item... i) {
-        super(1, SenderID, ReceiverID, true, i);
+    public PackageClass1(int packageID, int SenderID, int ReceiverID, Item... i) {
+        super(packageID, 1, SenderID, ReceiverID, true, i);
     }    
 } 
 
@@ -90,8 +89,8 @@ class PackageClass2 extends Package {
     final static public int maxSize = 20;
     final static public int maxWeight = 20;
     
-    public PackageClass2(int SenderID, int ReceiverID, Item... i) {
-        super(2, SenderID, ReceiverID, false, i);
+    public PackageClass2(int packageID, int SenderID, int ReceiverID, Item... i) {
+        super(packageID, 2, SenderID, ReceiverID, false, i);
     }    
 } 
 
@@ -100,25 +99,25 @@ class PackageClass3 extends Package {
     final static public int maxSize = 30;
     final static public int maxWeight = 30;
     
-    public PackageClass3(int SenderID, int ReceiverID, Item... i) {
-        super(3, SenderID, ReceiverID, true, i);
+    public PackageClass3(int packageID, int SenderID, int ReceiverID, Item... i) {
+        super(packageID, 3, SenderID, ReceiverID, true, i);
     }    
 } 
 
 class PackageBuilder {
     public PackageBuilder() {}
     
-    public Package createPackage(int classNr, int SenderID, int ReceiverID, Item... i) {
+    public Package createPackage(int packageID, int classNr, int SenderID, int ReceiverID, Item... i) {
         Package tempPackage = null;
         
         if ( classNr == 1 ) {
-            tempPackage = new PackageClass1(SenderID, ReceiverID, i);
+            tempPackage = new PackageClass1(packageID, SenderID, ReceiverID, i);
         }
         else if ( classNr == 2 ) {
-            tempPackage = new PackageClass2(SenderID, ReceiverID, i);
+            tempPackage = new PackageClass2(packageID, SenderID, ReceiverID, i);
         }
         else if ( classNr == 3) {
-            tempPackage = new PackageClass3(SenderID, ReceiverID, i);
+            tempPackage = new PackageClass3(packageID, SenderID, ReceiverID, i);
         }
         return tempPackage;
     }

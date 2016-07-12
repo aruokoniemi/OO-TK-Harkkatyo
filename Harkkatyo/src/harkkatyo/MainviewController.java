@@ -1,10 +1,8 @@
 package harkkatyo;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -24,7 +22,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.web.WebView;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class MainviewController implements Initializable {
@@ -51,20 +48,21 @@ public class MainviewController implements Initializable {
     @FXML private ListView logListView;
     ArrayList<Log> logs;
     
+    //Holds all storages
     ArrayList<Storage> storages;
+    
+    //Holds smartposts that are visible on map
     SmartPostHolder spHolder = new SmartPostHolder();
-    Database db;
-    int sessionID;
+    //Database instance
+    Database db = Database.getInstance();
+    final LogWriter logWriter = new LogWriter(db.getNewSessionID());
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Get data from database to comboboxes
-        db = Database.getInstance();   
         updateCitiesBox();
         updateStorages();
-        sessionID = db.getNewSessionID();
-        LogWriter logwriter = new LogWriter(sessionID);
-        
+        updateLogs();
         //
         mapView.getEngine().load(getClass().getResource("map.html").toExternalForm());
         
@@ -119,26 +117,41 @@ public class MainviewController implements Initializable {
                 ArrayList<Package> packages = selectedStorage.getPackages();
                 Package selectedPackage = packages.get(selectedPackageIndex);
                 
+                //See if smartposts on map
                 SmartPost sender = spHolder.getSmartPost(selectedPackage.getSenderID());
                 SmartPost receiver = spHolder.getSmartPost(selectedPackage.getReceiverID());
 
                 // Return n display error msg if smartpost not added on map
+                 // Ask if user wants smartposts added on map
                 if ( (sender == null) || (receiver == null) ) {
-                    return;
+                    if ( displaySmartPostsNotDrawn() ) {
+                        sender = db.getSmartPost(selectedPackage.getSenderID());
+                        receiver = db.getSmartPost(selectedPackage.getReceiverID());
+                        if ((sender == null) || (receiver == null)) {
+                            System.out.print("moi");
+                            return;
+                        }
+                        spHolder.addSmartPost(sender);
+                        spHolder.addSmartPost(receiver);
+                    } 
+                    else {
+                        return;
+                    }
                 }
                 
                 //Get locations and combine
                 ArrayList<String> senderLoc = sender.getGeoPoint().getAsArrayList();
                 ArrayList<String> receiverLoc = receiver.getGeoPoint().getAsArrayList();
                 senderLoc.addAll(receiverLoc);
+                System.out.println(senderLoc);
                 
-                int packageClass = selectedPackage.getPackageClass();
-                
-                db.setPackageAsSent(selectedPackage);
-                db.addLogEntry(sessionID, "Paketti lähetetty", selectedPackage, new Date());
                 selectedPackage.breakItems();
+                int packageClass = selectedPackage.getPackageClass();
                 String jsScript = "document.createPath(" + senderLoc + ", 'red', " + packageClass + ")";
-                Double length2 = (Double) mapView.getEngine().executeScript(jsScript);
+                Double distance = (Double) mapView.getEngine().executeScript(jsScript);
+                db.setPackageAsSent(selectedPackage);
+                updatePackages();
+                logWriter.logSentPackage(selectedPackage, distance);
             }
         });
         
@@ -195,7 +208,6 @@ public class MainviewController implements Initializable {
         
         stage.setScene(scene);
         stage.showAndWait();
-        updatePackages();
         
         return controller.packageAdded;
     }
@@ -207,6 +219,24 @@ public class MainviewController implements Initializable {
         stage.setScene(scene);
         stage.showAndWait();
         updateStorages();
+    }
+    
+    public boolean displaySmartPostsNotDrawn() {  
+        boolean retVal = false;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("drawSmartPostsDialog.fxml"));
+            Parent root = (Parent) loader.load();
+            DrawSmartPostsDialogController controller = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.showAndWait();
+            retVal = controller.getSelection();
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+        return retVal;
     }
     
     public void updateCitiesBox() {  
@@ -231,17 +261,27 @@ public class MainviewController implements Initializable {
         if ( selectedIndex == -1 )
             return;
         
-        Storage tempStorage = storages.get(selectedIndex);
-        ArrayList<Package> packages = tempStorage.getPackages();
+        Storage selectedStorage = storages.get(selectedIndex);
+        selectedStorage.updatePackages();
         ArrayList<String> packageDetails = new ArrayList<>();
         
-        for ( Package p : packages ) {
+        for ( Package p : selectedStorage.getPackages() ) {
             String detailString = "ID: " + p.getPackageID();
             packageDetails.add(detailString);
         }
         
         ObservableList<String> packageObservable = FXCollections.observableArrayList(packageDetails);
         packageComboBox.setItems(packageObservable);
+    }
+    
+    public void drawSmartPost(SmartPost sp) {
+        String jScript = "document.goToLocation('%s, %s, %s,', '%s, %s', 'red')";
+
+        spHolder.addSmartPost(sp);
+        String exec = String.format(jScript, sp.getLocalAddress(), String.valueOf(sp.getPostalNumber()),
+                sp.getCity(), sp.getPostOffice(), sp.getAvailability());
+
+        mapView.getEngine().executeScript(exec);
     }
     
     public void drawSmartPosts() {
@@ -261,6 +301,20 @@ public class MainviewController implements Initializable {
     public String getStorageName() {
         String retval = (String) storageComboBox.getSelectionModel().getSelectedItem();
         return retval;
+    }
+    
+    public void updateLogs() {
+        ArrayList<Log> logs = logWriter.getLogs();
+        ArrayList<String> logDetails = new ArrayList<>();
+        for ( Log l : logs ) {
+            String logDetail = l.getSessionID() + " " + l.getLogMessageID() + " " 
+                    + l.getMessage() + " Paketti: " + l.getPackageID() + " Matka:" + l.getDistance()
+                    + " pvm: " + l.getLogDate();
+            logDetails.add(logDetail);
+        }
+        
+        ObservableList logObservable = FXCollections.observableArrayList(logDetails);
+        logListView.setItems(logObservable);
     }
     
 }

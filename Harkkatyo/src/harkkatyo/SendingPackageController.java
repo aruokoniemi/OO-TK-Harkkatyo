@@ -236,7 +236,6 @@ public class SendingPackageController implements Initializable {
         String receiverPostOffice = receiverAutomaticField.getSelectionModel().getSelectedItem().split(":")[0];
         int senderID = db.getSmartPostID(senderPostOffice);
         int receiverID = db.getSmartPostID(receiverPostOffice);
-        System.out.print(senderID + " " + receiverID);
         
         RadioButton selected = (RadioButton) classGroup.getSelectedToggle();
         int selectedClass = Integer.parseInt(selected.getText().substring(0, 1));
@@ -244,7 +243,8 @@ public class SendingPackageController implements Initializable {
         Item[] itemList = items.toArray(new Item[items.size()]);
         
         PackageBuilder pb = new PackageBuilder();
-        Package newPackage = pb.createPackage(selectedClass, senderID, receiverID, itemList);
+        int packageID = db.getNewPackageID();
+        Package newPackage = pb.createPackage(packageID, selectedClass, senderID, receiverID, itemList);
         db.addPackage(newPackage, storageName);
         
         return newPackage;

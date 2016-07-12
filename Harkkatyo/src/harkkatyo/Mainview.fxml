@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="bgPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="863.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.MainviewController">
+  <tabs>
+    <Tab text="TIMO">
+      <content>
+        <AnchorPane maxWidth="1001.0" minHeight="0.0" minWidth="0.0" prefHeight="743.0" prefWidth="1001.0">
+               <children>
+                  <WebView fx:id="mapView" blendMode="SRC_ATOP" layoutX="16.0" layoutY="14.0" prefHeight="505.0" prefWidth="962.0" />
+                  <Button fx:id="editDatabaseButton" layoutX="690.0" layoutY="542.0" mnemonicParsing="false" text="Hallitse varastoja" />
+                  <VBox layoutX="5.0" layoutY="529.0" prefHeight="205.0" prefWidth="249.0" spacing="10.0">
+                     <children>
+                        <ComboBox fx:id="cityComboBox" prefHeight="25.0" prefWidth="217.0" promptText="Valitse kaupunki:">
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label text="Lisää Smartpost automaatit kartalle:" />
+                        <Button fx:id="addSmartPostsButton" mnemonicParsing="false" text="Lisää kartalle" />
+                        <Button fx:id="removePathsButton" mnemonicParsing="false" text="Poistareitit kartalta" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="294.0" layoutY="529.0" prefHeight="205.0" prefWidth="378.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="369.0" spacing="20.0">
+                           <children>
+                              <ComboBox fx:id="storageComboBox" prefWidth="150.0" promptText="Varasto" />
+                              <Label fx:id="selectStorageLabel" text="Valitse varasto!" textFill="#cd0000" visible="false">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label text="Pakettien luonti ja lähetys." />
+                        <Button fx:id="newPackageButton" mnemonicParsing="false" text="Luo paketti" />
+                        <HBox prefHeight="53.0" prefWidth="285.0" spacing="30.0">
+                           <children>
+                              <ComboBox fx:id="packageComboBox" prefWidth="150.0" promptText="Paketti" />
+                              <Button fx:id="sendPackageButton" mnemonicParsing="false" text="Lähetä paketti" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Loki">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="logListView" layoutX="39.0" layoutY="30.0" prefHeight="390.0" prefWidth="774.0" />
+                  <VBox layoutX="123.0" layoutY="454.0" prefHeight="197.0" prefWidth="178.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="showAllLogsButton" mnemonicParsing="false" text="Näytä kaikki lokitiedot" />
+                        <Button mnemonicParsing="false" text="Tyhjennä näkymä" />
+                        <Button mnemonicParsing="false" text="Näytä edellisen kerran lokitiedot" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

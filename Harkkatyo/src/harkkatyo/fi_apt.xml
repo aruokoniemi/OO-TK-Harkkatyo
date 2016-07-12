@@ -1,0 +1,4305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pprv2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pprv2.xsd">
+   <place>
+      <code>44105</code>
+      <city>Äänekoski</city>
+      <address>Matkakatu 2</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Äänekoski</postoffice>
+      <lat>62.6012838</lat>
+      <lng>25.724778</lng>
+   </place>
+   <place>
+      <code>44105</code>
+      <city>ÄÄNEKOSKI</city>
+      <address>Työskintie 3-5</address>
+      <availability>ma-pe 08.00 - 21.00, la 08.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Äänekoski</postoffice>
+      <lat>62.6028679</lat>
+      <lng>25.7248467</lng>
+   </place>
+   <place>
+      <code>63705</code>
+      <city>ÄHTÄRI</city>
+      <address>Alatie 22</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Automaatti, S-market Ähtäri</postoffice>
+      <lat>62.550052</lat>
+      <lng>24.0860117</lng>
+   </place>
+   <place>
+      <code>37915</code>
+      <city>AKAA</city>
+      <address>Yrittäjätie 4</address>
+      <availability>ma-su 8.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Tokmanni Kylmäkoski</postoffice>
+      <lat>61.1607001</lat>
+      <lng>23.692753</lng>
+   </place>
+   <place>
+      <code>37805</code>
+      <city>AKAA</city>
+      <address>Valtatie 1</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Toijala</postoffice>
+      <lat>61.1680173</lat>
+      <lng>23.8671105</lng>
+   </place>
+   <place>
+      <code>37835</code>
+      <city>AKAA</city>
+      <address>Keskuskatu 47</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 21.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Viiala</postoffice>
+      <lat>61.2105919</lat>
+      <lng>23.7678403</lng>
+   </place>
+   <place>
+      <code>37805</code>
+      <city>AKAA</city>
+      <address>Satamatie 43</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Toijala</postoffice>
+      <lat>61.1913218</lat>
+      <lng>23.9060827</lng>
+   </place>
+   <place>
+      <code>63305</code>
+      <city>ALAVUS</city>
+      <address>Piirantie 1</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Alavus</postoffice>
+      <lat>62.5959386</lat>
+      <lng>23.6086052</lng>
+   </place>
+   <place>
+      <code>47205</code>
+      <city>ELIMÄKI</city>
+      <address>Vanhamaantie 16</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Elimäki</postoffice>
+      <lat>60.7217198</lat>
+      <lng>26.447287</lng>
+   </place>
+   <place>
+      <code>02615</code>
+      <city>ESPOO</city>
+      <address>Kilonpuistonkatu 14</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Kilo</postoffice>
+      <lat>60.2169982</lat>
+      <lng>24.781975</lng>
+   </place>
+   <place>
+      <code>02715</code>
+      <city>ESPOO</city>
+      <address>Kuusiniementie 1</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Viherlaakso</postoffice>
+      <lat>60.226364</lat>
+      <lng>24.7403245</lng>
+   </place>
+   <place>
+      <code>02755</code>
+      <city>ESPOO</city>
+      <address>Pitkännotkontie 27</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Tuomarila</postoffice>
+      <lat>60.2013632</lat>
+      <lng>24.6951056</lng>
+   </place>
+   <place>
+      <code>02105</code>
+      <city>ESPOO</city>
+      <address>Länsituulentie 5</address>
+      <availability>ma-pe 9.00 - 20.00, la 9.00 - 19.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Stockmann Tapiola</postoffice>
+      <lat>60.1756281</lat>
+      <lng>24.8040198</lng>
+   </place>
+   <place>
+      <code>02335</code>
+      <city>ESPOO</city>
+      <address>Magneettikatu 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Saunalahti</postoffice>
+      <lat>60.1677503</lat>
+      <lng>24.6189014</lng>
+   </place>
+   <place>
+      <code>02325</code>
+      <city>ESPOO</city>
+      <address>Espoonlahdenkatu 4</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Lippulaiva</postoffice>
+      <lat>60.1485715</lat>
+      <lng>24.6579057</lng>
+   </place>
+   <place>
+      <code>02775</code>
+      <city>ESPOO</city>
+      <address>Kamreerintie 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Espoontori</postoffice>
+      <lat>60.2038381</lat>
+      <lng>24.6550027</lng>
+   </place>
+   <place>
+      <code>02765</code>
+      <city>ESPOO</city>
+      <address>Sunantie 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Espoonkeskus</postoffice>
+      <lat>60.2041561</lat>
+      <lng>24.6607801</lng>
+   </place>
+   <place>
+      <code>02925</code>
+      <city>ESPOO</city>
+      <address>Juvankartanontie 33</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Juvankartano</postoffice>
+      <lat>60.2699187</lat>
+      <lng>24.7572615</lng>
+   </place>
+   <place>
+      <code>02135</code>
+      <city>ESPOO</city>
+      <address>Kalevalantie 3</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, S-market Pohjois-Tapiola</postoffice>
+      <lat>60.1853055</lat>
+      <lng>24.8077325</lng>
+   </place>
+   <place>
+      <code>02235</code>
+      <city>ESPOO</city>
+      <address>Matinkatu 22</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Matinkylä</postoffice>
+      <lat>60.1578737</lat>
+      <lng>24.7398646</lng>
+   </place>
+   <place>
+      <code>02235</code>
+      <city>ESPOO</city>
+      <address>Piispansilta 11</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Iso Omena</postoffice>
+      <lat>60.1624493</lat>
+      <lng>24.7381617</lng>
+   </place>
+   <place>
+      <code>02945</code>
+      <city>ESPOO</city>
+      <address>Kylänportti 16</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Aurora</postoffice>
+      <lat>60.2403901</lat>
+      <lng>24.7007553</lng>
+   </place>
+   <place>
+      <code>02635</code>
+      <city>ESPOO</city>
+      <address>Kutojantie 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-Market Nihtisilta</postoffice>
+      <lat>60.2096243</lat>
+      <lng>24.7528033</lng>
+   </place>
+   <place>
+      <code>02275</code>
+      <city>ESPOO</city>
+      <address>Isonniitynkuja 2</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Merituulen kauppakeskus</postoffice>
+      <lat>60.1626785</lat>
+      <lng>24.7094991</lng>
+   </place>
+   <place>
+      <code>02285</code>
+      <city>ESPOO</city>
+      <address>Malminkorpi 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Malminmäki</postoffice>
+      <lat>60.1813017</lat>
+      <lng>24.6781264</lng>
+   </place>
+   <place>
+      <code>02155</code>
+      <city>ESPOO</city>
+      <address>Sähkömiehentie 3</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, Aalto-Yliopisto Otaniemi</postoffice>
+      <lat>60.1892631</lat>
+      <lng>24.8262549</lng>
+   </place>
+   <place>
+      <code>02775</code>
+      <city>ESPOO</city>
+      <address>Virastopiha 1</address>
+      <availability>ma-pe 7.00 - 22.00, la 9.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Resiina</postoffice>
+      <lat>60.2056987</lat>
+      <lng>24.6551563</lng>
+   </place>
+   <place>
+      <code>02605</code>
+      <city>ESPOO</city>
+      <address>Leppävaarankatu 5</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Sello</postoffice>
+      <lat>60.2174189</lat>
+      <lng>24.8135767</lng>
+   </place>
+   <place>
+      <code>02665</code>
+      <city>ESPOO</city>
+      <address>Linnuntie 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Lintuvaara</postoffice>
+      <lat>60.2344183</lat>
+      <lng>24.8137956</lng>
+   </place>
+   <place>
+      <code>02365</code>
+      <city>ESPOO</city>
+      <address>Soukantie 4</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Soukka</postoffice>
+      <lat>60.1380934</lat>
+      <lng>24.6729856</lng>
+   </place>
+   <place>
+      <code>02635</code>
+      <city>ESPOO</city>
+      <address>Sinikalliontie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 08.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket, Mankkaa</postoffice>
+      <lat>60.2039408</lat>
+      <lng>24.76609</lng>
+   </place>
+   <place>
+      <code>02215</code>
+      <city>ESPOO</city>
+      <address>Komeetankatu 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Olari</postoffice>
+      <lat>60.1669858</lat>
+      <lng>24.7341209</lng>
+   </place>
+   <place>
+      <code>02605</code>
+      <city>ESPOO</city>
+      <address>Leppävaarankatu 3 A</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Sello</postoffice>
+      <lat>60.2171759</lat>
+      <lng>24.8117083</lng>
+   </place>
+   <place>
+      <code>02215</code>
+      <city>ESPOO</city>
+      <address>Kuunkatu 3</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-Market Olari</postoffice>
+      <lat>60.1725343</lat>
+      <lng>24.7264745</lng>
+   </place>
+   <place>
+      <code>02725</code>
+      <city>ESPOO</city>
+      <address>Lähderanta 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lähderanta</postoffice>
+      <lat>60.2410893</lat>
+      <lng>24.7410393</lng>
+   </place>
+   <place>
+      <code>02325</code>
+      <city>ESPOO</city>
+      <address>Merivirta 3</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Kivenlahti</postoffice>
+      <lat>60.154039</lat>
+      <lng>24.637296</lng>
+   </place>
+   <place>
+      <code>02325</code>
+      <city>ESPOO</city>
+      <address>Kivenlahdentie 9</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-Market Kivenlahdentie</postoffice>
+      <lat>60.1526294</lat>
+      <lng>24.6569104</lng>
+   </place>
+   <place>
+      <code>02175</code>
+      <city>ESPOO</city>
+      <address>Ukkohauentie 11-13</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Haukilahti</postoffice>
+      <lat>60.1629703</lat>
+      <lng>24.7761007</lng>
+   </place>
+   <place>
+      <code>27515</code>
+      <city>EURA</city>
+      <address>Satakunnankatu 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 20.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Eura</postoffice>
+      <lat>61.1300346</lat>
+      <lng>22.1265841</lng>
+   </place>
+   <place>
+      <code>30105</code>
+      <city>FORSSA</city>
+      <address>Yhtiönkatu</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Forssa</postoffice>
+      <lat>60.808492</lat>
+      <lng>23.629334</lng>
+   </place>
+   <place>
+      <code>30105</code>
+      <city>FORSSA</city>
+      <address>Nikkilänkatu 4</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Forssa</postoffice>
+      <lat>60.8212683</lat>
+      <lng>23.6294245</lng>
+   </place>
+   <place>
+      <code>30105</code>
+      <city>FORSSA</city>
+      <address>Tapulikuja 6</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Forssa</postoffice>
+      <lat>60.8121926</lat>
+      <lng>23.6370337</lng>
+   </place>
+   <place>
+      <code>24805</code>
+      <city>HALIKKO</city>
+      <address>Prismantie 2</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Halikko</postoffice>
+      <lat>60.3939486</lat>
+      <lng>23.0854861</lng>
+   </place>
+   <place>
+      <code>13135</code>
+      <city>HÄMEENLINNA</city>
+      <address>Katsastusmiehentie 6</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Tiiriö</postoffice>
+      <lat>61.0066493</lat>
+      <lng>24.4192014</lng>
+   </place>
+   <place>
+      <code>13105</code>
+      <city>HÄMEENLINNA</city>
+      <address>Kaivokatu 7</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Goodman</postoffice>
+      <lat>60.9936715</lat>
+      <lng>24.4538881</lng>
+   </place>
+   <place>
+      <code>13215</code>
+      <city>HÄMEENLINNA</city>
+      <address>Laaniitynkatu 2</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Idänpää</postoffice>
+      <lat>61.005942</lat>
+      <lng>24.5063037</lng>
+   </place>
+   <place>
+      <code>13135</code>
+      <city>HÄMEENLINNA</city>
+      <address>Wartiamäentie 2</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Hämeenlinna</postoffice>
+      <lat>61.0110378</lat>
+      <lng>24.4114691</lng>
+   </place>
+   <place>
+      <code>13505</code>
+      <city>HÄMEENLINNA</city>
+      <address>Ahvenistontie 13</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Jukola</postoffice>
+      <lat>60.9855916</lat>
+      <lng>24.4154386</lng>
+   </place>
+   <place>
+      <code>13105</code>
+      <city>HÄMEENLINNA</city>
+      <address>Hämeensaarentie 7</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Hämeensaari</postoffice>
+      <lat>60.9923316</lat>
+      <lng>24.4609105</lng>
+   </place>
+   <place>
+      <code>49405</code>
+      <city>HAMINA</city>
+      <address>Isoympyräkatu 15</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-ostoskeskus Hamina</postoffice>
+      <lat>60.5689436</lat>
+      <lng>27.1941984</lng>
+   </place>
+   <place>
+      <code>49405</code>
+      <city>HAMINA</city>
+      <address>Sibeliuskatu 27</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 21.00, su 11.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Kanuuna</postoffice>
+      <lat>60.5680666</lat>
+      <lng>27.1886794</lng>
+   </place>
+   <place>
+      <code>10905</code>
+      <city>HANKO</city>
+      <address>Revellinkatu 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Hanko</postoffice>
+      <lat>59.8283461</lat>
+      <lng>22.9658562</lng>
+   </place>
+   <place>
+      <code>29205</code>
+      <city>HARJAVALTA</city>
+      <address>Pirkankatu 5</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Harjavalta</postoffice>
+      <lat>61.312383</lat>
+      <lng>22.1346366</lng>
+   </place>
+   <place>
+      <code>90835</code>
+      <city>HAUKIPUDAS</city>
+      <address>Välitie 1</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Haukipudas</postoffice>
+      <lat>65.1756613</lat>
+      <lng>25.3554075</lng>
+   </place>
+   <place>
+      <code>18105</code>
+      <city>HEINOLA</city>
+      <address>Siltakatu 31</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 19.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Heinoska</postoffice>
+      <lat>61.2057811</lat>
+      <lng>26.0392687</lng>
+   </place>
+   <place>
+      <code>18105</code>
+      <city>HEINOLA</city>
+      <address>Hevossaarentie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Heinola</postoffice>
+      <lat>61.1930174</lat>
+      <lng>25.9983758</lng>
+   </place>
+   <place>
+      <code>00605</code>
+      <city>HELSINKI</city>
+      <address>Käpyläntie 8</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Masurkka</postoffice>
+      <lat>60.2162027</lat>
+      <lng>24.9586577</lng>
+   </place>
+   <place>
+      <code>00915</code>
+      <city>HELSINKI</city>
+      <address>Klaavuntie 11</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Puotila</postoffice>
+      <lat>60.212583</lat>
+      <lng>25.0958636</lng>
+   </place>
+   <place>
+      <code>00985</code>
+      <city>HELSINKI</city>
+      <address>Vuotie 45</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Columbus</postoffice>
+      <lat>60.2070945</lat>
+      <lng>25.1462624</lng>
+   </place>
+   <place>
+      <code>00105</code>
+      <city>HELSINKI</city>
+      <address>Elielinaukio 2 G</address>
+      <availability>Talvi 12.8.-26.5. ma-to 8-22 pe 8-20 la-su 12-18 / Kesä 27.5.-11.8. ma-to 9-20 pe 9-18 la-su 12-18</availability>
+      <postoffice>Pakettiautomaatti, Helsingin Pääposti keskusta</postoffice>
+      <lat>60.1713943</lat>
+      <lng>24.9397235</lng>
+   </place>
+   <place>
+      <code>00905</code>
+      <city>HELSINKI</city>
+      <address>Vanhanlinnantie 1</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Itäkeskus</postoffice>
+      <lat>60.2147739</lat>
+      <lng>25.0870806</lng>
+   </place>
+   <place>
+      <code>00705</code>
+      <city>HELSINKI</city>
+      <address>Malminkaari 19</address>
+      <availability>ma-pe 8.00 - 21.00, la 08.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket, Malmi</postoffice>
+      <lat>60.2524458</lat>
+      <lng>25.0140447</lng>
+   </place>
+   <place>
+      <code>00625</code>
+      <city>HELSINKI</city>
+      <address>Mäkitorpantie 1</address>
+      <availability>ma-pe 07.00 - 21.00, la 07.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket, Mustapekka</postoffice>
+      <lat>60.222605</lat>
+      <lng>24.9476603</lng>
+   </place>
+   <place>
+      <code>00105</code>
+      <city>HELSINKI</city>
+      <address>Aleksanterinkatu 52</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 19.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Stockmann Helsinki</postoffice>
+      <lat>60.1684243</lat>
+      <lng>24.9423342</lng>
+   </place>
+   <place>
+      <code>00935</code>
+      <city>HELSINKI</city>
+      <address>Itäkatu 1-7</address>
+      <availability>ma-pe 7.00 - 21.30, la 7.00 - 19.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Itis</postoffice>
+      <lat>60.2126318</lat>
+      <lng>25.0854167</lng>
+   </place>
+   <place>
+      <code>00225</code>
+      <city>HELSINKI</city>
+      <address>Tyynenmerenkatu 11</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, Verkkokauppa.com Jätkäsaari</postoffice>
+      <lat>60.1560519</lat>
+      <lng>24.9210624</lng>
+   </place>
+   <place>
+      <code>00425</code>
+      <city>HELSINKI</city>
+      <address>Vanhaistentie 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Iso-Kappa</postoffice>
+      <lat>60.2427137</lat>
+      <lng>24.8855227</lng>
+   </place>
+   <place>
+      <code>00645</code>
+      <city>HELSINKI</city>
+      <address>Siltavoudintie 19 A</address>
+      <availability>ma-pe 6.30 - 24.00, la 8.00 - 24.00, su 8.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Neste Oil Oulunkylä</postoffice>
+      <lat>60.2345837</lat>
+      <lng>24.9660246</lng>
+   </place>
+   <place>
+      <code>00305</code>
+      <city>HELSINKI</city>
+      <address>Mannerheimintie 170</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Pikku-Huopalahti</postoffice>
+      <lat>60.2032335</lat>
+      <lng>24.8989991</lng>
+   </place>
+   <place>
+      <code>00105</code>
+      <city>HELSINKI</city>
+      <address>Kaisaniemenkatu 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Kaisaniemi</postoffice>
+      <lat>60.1712539</lat>
+      <lng>24.9474013</lng>
+   </place>
+   <place>
+      <code>00425</code>
+      <city>HELSINKI</city>
+      <address>Kantelettarentie 1</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kannelmäki</postoffice>
+      <lat>60.2368501</lat>
+      <lng>24.8911572</lng>
+   </place>
+   <place>
+      <code>00305</code>
+      <city>HELSINKI</city>
+      <address>Mannerheimintie 160</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Fortuna</postoffice>
+      <lat>60.1978356</lat>
+      <lng>24.9010411</lng>
+   </place>
+   <place>
+      <code>00995</code>
+      <city>HELSINKI</city>
+      <address>Leikosaarentie 48</address>
+      <availability>ma-pe 7.00 - 23.00, la 9.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Aurinkolahti</postoffice>
+      <lat>60.2051822</lat>
+      <lng>25.1554552</lng>
+   </place>
+   <place>
+      <code>00945</code>
+      <city>HELSINKI</city>
+      <address>Keinulaudankuja 4</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Kontumarket</postoffice>
+      <lat>60.2359444</lat>
+      <lng>25.0829406</lng>
+   </place>
+   <place>
+      <code>00765</code>
+      <city>HELSINKI</city>
+      <address>Nummitie 2</address>
+      <availability>ma-pe 7.00 - 23.00, la 8.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Siwa Heikinlaakso</postoffice>
+      <lat>60.2694637</lat>
+      <lng>25.0636812</lng>
+   </place>
+   <place>
+      <code>00935</code>
+      <city>HELSINKI</city>
+      <address>Kauppakartanonkatu 3</address>
+      <availability>ma-pe 9.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Itäkeskus</postoffice>
+      <lat>60.2099295</lat>
+      <lng>25.0875109</lng>
+   </place>
+   <place>
+      <code>00185</code>
+      <city>HELSINKI</city>
+      <address>Itämerenkatu 21-23</address>
+      <availability>ma-pe 9.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Ruoholahti</postoffice>
+      <lat>60.1634169</lat>
+      <lng>24.9156248</lng>
+   </place>
+   <place>
+      <code>00215</code>
+      <city>HELSINKI</city>
+      <address>Kiviaidankatu 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Lauttasaari</postoffice>
+      <lat>60.1543274</lat>
+      <lng>24.8843436</lng>
+   </place>
+   <place>
+      <code>00815</code>
+      <city>HELSINKI</city>
+      <address>Hiihtäjäntie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Hertta</postoffice>
+      <lat>60.1945965</lat>
+      <lng>25.0281141</lng>
+   </place>
+   <place>
+      <code>00635</code>
+      <city>HELSINKI</city>
+      <address>Metsäpurontie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Maunula</postoffice>
+      <lat>60.2307116</lat>
+      <lng>24.9337206</lng>
+   </place>
+   <place>
+      <code>00815</code>
+      <city>HELSINKI</city>
+      <address>Hitsaajankatu 16</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hitsaajankatu</postoffice>
+      <lat>60.1930228</lat>
+      <lng>25.0326349</lng>
+   </place>
+   <place>
+      <code>00515</code>
+      <city>HELSINKI</city>
+      <address>Aleksis Kiven katu 11</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Vallila</postoffice>
+      <lat>60.1898602</lat>
+      <lng>24.9520203</lng>
+   </place>
+   <place>
+      <code>00535</code>
+      <city>HELSINKI</city>
+      <address>Siltasaarenkatu 18-20</address>
+      <availability>ma-la 7.00 - 24.00, su 9.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Ympyrätalo</postoffice>
+      <lat>60.1795945</lat>
+      <lng>24.9503903</lng>
+   </place>
+   <place>
+      <code>00185</code>
+      <city>HELSINKI</city>
+      <address>Välimerenkatu 5</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Jätkäsaari</postoffice>
+      <lat>60.1582135</lat>
+      <lng>24.9128122</lng>
+   </place>
+   <place>
+      <code>00945</code>
+      <city>HELSINKI</city>
+      <address>Ostostie 4</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kontula</postoffice>
+      <lat>60.2383331</lat>
+      <lng>25.0836316</lng>
+   </place>
+   <place>
+      <code>00925</code>
+      <city>HELSINKI</city>
+      <address>Kiviparintie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Myllypuro</postoffice>
+      <lat>60.2245519</lat>
+      <lng>25.0745293</lng>
+   </place>
+   <place>
+      <code>00525</code>
+      <city>HELSINKI</city>
+      <address>Ratapihantie 6</address>
+      <availability>ma-pe 04.00 - 02.00, la-su 04.30 - 03.15</availability>
+      <postoffice>Pakettiautomaatti, Pasilan asema</postoffice>
+      <lat>60.1984726</lat>
+      <lng>24.934611</lng>
+   </place>
+   <place>
+      <code>00725</code>
+      <city>HELSINKI</city>
+      <address>Säterintie 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Pukinmäki</postoffice>
+      <lat>60.2433755</lat>
+      <lng>24.9924348</lng>
+   </place>
+   <place>
+      <code>00355</code>
+      <city>HELSINKI</city>
+      <address>Raumantie 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Munkkivuori</postoffice>
+      <lat>60.205698</lat>
+      <lng>24.877714</lng>
+   </place>
+   <place>
+      <code>00385</code>
+      <city>HELSINKI</city>
+      <address>Takomotie 33</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Pitäjänmäki</postoffice>
+      <lat>60.2175149</lat>
+      <lng>24.8697562</lng>
+   </place>
+   <place>
+      <code>00255</code>
+      <city>HELSINKI</city>
+      <address>Mannerheimintie 76</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Kisahalli</postoffice>
+      <lat>60.1852485</lat>
+      <lng>24.9218164</lng>
+   </place>
+   <place>
+      <code>00715</code>
+      <city>HELSINKI</city>
+      <address>Salpausseläntie 11</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Pihlajisto</postoffice>
+      <lat>60.2312086</lat>
+      <lng>25.0003731</lng>
+   </place>
+   <place>
+      <code>00135</code>
+      <city>HELSINKI</city>
+      <address>Kasarmikatu 19</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kasarmitori</postoffice>
+      <lat>60.1651821</lat>
+      <lng>24.9480459</lng>
+   </place>
+   <place>
+      <code>00665</code>
+      <city>HELSINKI</city>
+      <address>Pakilantie 61</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Pakila</postoffice>
+      <lat>60.2392804</lat>
+      <lng>24.9282405</lng>
+   </place>
+   <place>
+      <code>00785</code>
+      <city>HELSINKI</city>
+      <address>Kirkonkyläntie 34</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-Market Malmi</postoffice>
+      <lat>60.2566343</lat>
+      <lng>24.9985731</lng>
+   </place>
+   <place>
+      <code>00535</code>
+      <city>HELSINKI</city>
+      <address>Siltasaarenkatu 6-10</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-Market Hakaniemi (Elanto)</postoffice>
+      <lat>60.1777443</lat>
+      <lng>24.9497745</lng>
+   </place>
+   <place>
+      <code>00675</code>
+      <city>HELSINKI</city>
+      <address>Pakilantie 95</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Paloheinä</postoffice>
+      <lat>60.2476817</lat>
+      <lng>24.92277</lng>
+   </place>
+   <place>
+      <code>00775</code>
+      <city>HELSINKI</city>
+      <address>Huokotie 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Jakomäki</postoffice>
+      <lat>60.2613348</lat>
+      <lng>25.0760254</lng>
+   </place>
+   <place>
+      <code>00555</code>
+      <city>HELSINKI</city>
+      <address>Hämeentie 111</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Arabia</postoffice>
+      <lat>60.2032002</lat>
+      <lng>24.9677509</lng>
+   </place>
+   <place>
+      <code>00405</code>
+      <city>HELSINKI</city>
+      <address>Näyttelijäntie 14</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Pohjois-Haaga</postoffice>
+      <lat>60.2294983</lat>
+      <lng>24.8957391</lng>
+   </place>
+   <place>
+      <code>00215</code>
+      <city>HELSINKI</city>
+      <address>Itälahdenkatu 27</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Itälahdenkatu</postoffice>
+      <lat>60.1537077</lat>
+      <lng>24.8800265</lng>
+   </place>
+   <place>
+      <code>00845</code>
+      <city>HELSINKI</city>
+      <address>Yliskyläntie 3</address>
+      <availability>ma-pe 7.00 - 23.00, la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Laajasalo</postoffice>
+      <lat>60.1808495</lat>
+      <lng>25.0525525</lng>
+   </place>
+   <place>
+      <code>00125</code>
+      <city>HELSINKI</city>
+      <address>Hietalahdenranta 7</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Bulevardi</postoffice>
+      <lat>60.1613086</lat>
+      <lng>24.9299994</lng>
+   </place>
+   <place>
+      <code>00955</code>
+      <city>HELSINKI</city>
+      <address>Vartiokyläntie 3</address>
+      <availability>ma-pe 7.00 - 23.00, la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Vartiokylä</postoffice>
+      <lat>60.2185395</lat>
+      <lng>25.1028568</lng>
+   </place>
+   <place>
+      <code>00825</code>
+      <city>HELSINKI</city>
+      <address>Roihuvuorentie 26</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Roihuvuori</postoffice>
+      <lat>60.2021385</lat>
+      <lng>25.0593469</lng>
+   </place>
+   <place>
+      <code>00245</code>
+      <city>HELSINKI</city>
+      <address>Pasilanraitio 5</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Pasilanraitio</postoffice>
+      <lat>60.1976848</lat>
+      <lng>24.9270159</lng>
+   </place>
+   <place>
+      <code>00965</code>
+      <city>HELSINKI</city>
+      <address>Mustalahdentie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Vuosaari</postoffice>
+      <lat>60.2217082</lat>
+      <lng>25.1402492</lng>
+   </place>
+   <place>
+      <code>00975</code>
+      <city>HELSINKI</city>
+      <address>Korvatunturintie 2</address>
+      <availability>ma-pe 07.00 - 23.00, la 07.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Mellunmäki</postoffice>
+      <lat>60.2377057</lat>
+      <lng>25.1179346</lng>
+   </place>
+   <place>
+      <code>00795</code>
+      <city>HELSINKI</city>
+      <address>Viikintori 3</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Viikki</postoffice>
+      <lat>60.2272852</lat>
+      <lng>25.0081288</lng>
+   </place>
+   <place>
+      <code>00235</code>
+      <city>HELSINKI</city>
+      <address>Postintaival 7 A</address>
+      <availability>ma-pe 8.00 - 16.00 </availability>
+      <postoffice>Automaatti, Postin pääkonttori Ilmala</postoffice>
+      <lat>60.2123669</lat>
+      <lng>24.9161717</lng>
+   </place>
+   <place>
+      <code>00395</code>
+      <city>HELSINKI</city>
+      <address>Ajomiehentie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Ristikko</postoffice>
+      <lat>60.2388521</lat>
+      <lng>24.851291</lng>
+   </place>
+   <place>
+      <code>00395</code>
+      <city>HELSINKI</city>
+      <address>Hankasuontie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Konala</postoffice>
+      <lat>60.245307</lat>
+      <lng>24.8458975</lng>
+   </place>
+   <place>
+      <code>00105</code>
+      <city>HELSINKI</city>
+      <address>Aleksanterinkatu 9</address>
+      <availability>ma-pe 10.00 - 20.00, la 10.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Helsinki, Kluuvi</postoffice>
+      <lat>60.1689538</lat>
+      <lng>24.9475122</lng>
+   </place>
+   <place>
+      <code>00185</code>
+      <city>HELSINKI</city>
+      <address>Itämerentori 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Ruoholahti</postoffice>
+      <lat>60.1637339</lat>
+      <lng>24.9140495</lng>
+   </place>
+   <place>
+      <code>00705</code>
+      <city>HELSINKI</city>
+      <address>Malmin kauppatie 18</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Malmi</postoffice>
+      <lat>60.2519097</lat>
+      <lng>25.010888</lng>
+   </place>
+   <place>
+      <code>00905</code>
+      <city>HELSINKI</city>
+      <address>Korsholmantie 2</address>
+      <availability>ma-pe 7.00 - 23.00, la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Puotinharju</postoffice>
+      <lat>60.2139588</lat>
+      <lng>25.0835415</lng>
+   </place>
+   <place>
+      <code>00985</code>
+      <city>HELSINKI</city>
+      <address>Meri-Rastilan kuja 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Meri-Rastila</postoffice>
+      <lat>60.2041919</lat>
+      <lng>25.1178972</lng>
+   </place>
+   <place>
+      <code>15875</code>
+      <city>HOLLOLA</city>
+      <address>Kansankatu 8</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 19.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hollola</postoffice>
+      <lat>60.9889715</lat>
+      <lng>25.5163473</lng>
+   </place>
+   <place>
+      <code>32705</code>
+      <city>HUITTINEN</city>
+      <address>Risto Rytin katu 37</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Huittinen</postoffice>
+      <lat>61.1769372</lat>
+      <lng>22.701849</lng>
+   </place>
+   <place>
+      <code>60515</code>
+      <city>HYLLYKALLIO</city>
+      <address>Hyllykalliontie 2</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Hyllykallio</postoffice>
+      <lat>62.8068595</lat>
+      <lng>22.8785614</lng>
+   </place>
+   <place>
+      <code>05805</code>
+      <city>HYVINKÄÄ</city>
+      <address>Hämeenkatu 9</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Hyvinkää</postoffice>
+      <lat>60.6364751</lat>
+      <lng>24.867703</lng>
+   </place>
+   <place>
+      <code>05465</code>
+      <city>HYVINKÄÄ</city>
+      <address>Lehmustie 1</address>
+      <availability>ma-pe 6.00 - 22.00, la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Hakalantori</postoffice>
+      <lat>60.6160192</lat>
+      <lng>24.8687404</lng>
+   </place>
+   <place>
+      <code>05805</code>
+      <city>HYVINKÄÄ</city>
+      <address>Uudenmaankatu 3</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hyvinkää</postoffice>
+      <lat>60.6292972</lat>
+      <lng>24.857469</lng>
+   </place>
+   <place>
+      <code>05805</code>
+      <city>HYVINKÄÄ</city>
+      <address>Kauppakuja 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Hyvinkää</postoffice>
+      <lat>60.6301169</lat>
+      <lng>24.866464</lng>
+   </place>
+   <place>
+      <code>74135</code>
+      <city>IISALMI</city>
+      <address>Eteläntie 4</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Iisalmi</postoffice>
+      <lat>63.536761</lat>
+      <lng>27.2288813</lng>
+   </place>
+   <place>
+      <code>74105</code>
+      <city>IISALMI</city>
+      <address>Satamakatu 10</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Torikulma</postoffice>
+      <lat>63.5562532</lat>
+      <lng>27.1896303</lng>
+   </place>
+   <place>
+      <code>74125</code>
+      <city>IISALMI</city>
+      <address>Parkatintie 2</address>
+      <availability>ma-la 8.00 - 23.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Iisalmi</postoffice>
+      <lat>63.5771347</lat>
+      <lng>27.1894589</lng>
+   </place>
+   <place>
+      <code>39505</code>
+      <city>IKAALINEN</city>
+      <address>Teollisuustalontie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Ikaalinen</postoffice>
+      <lat>61.7621158</lat>
+      <lng>23.0715131</lng>
+   </place>
+   <place>
+      <code>55105</code>
+      <city>IMATRA</city>
+      <address>Olavinkatu 8</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Imatrankoski</postoffice>
+      <lat>61.1702437</lat>
+      <lng>28.7657138</lng>
+   </place>
+   <place>
+      <code>55615</code>
+      <city>IMATRA</city>
+      <address>Ensontie 43</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 19.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Rajapatsas</postoffice>
+      <lat>61.1625961</lat>
+      <lng>28.8025118</lng>
+   </place>
+   <place>
+      <code>55125</code>
+      <city>IMATRA</city>
+      <address>Tietäjänkatu 2</address>
+      <availability>ma-la 8.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Imatra</postoffice>
+      <lat>61.1882003</lat>
+      <lng>28.771577</lng>
+   </place>
+   <place>
+      <code>55125</code>
+      <city>IMATRA</city>
+      <address>Karhumäenkatu 1</address>
+      <availability>ma-la 8.00 - 22.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Imatra</postoffice>
+      <lat>61.1882233</lat>
+      <lng>28.7636834</lng>
+   </place>
+   <place>
+      <code>61605</code>
+      <city>JALASJÄRVI</city>
+      <address>Keskustie 27</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Jalasjärvi</postoffice>
+      <lat>62.489328</lat>
+      <lng>22.7617401</lng>
+   </place>
+   <place>
+      <code>42105</code>
+      <city>JÄMSÄ</city>
+      <address>Keskuskatu 23</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Jämsä</postoffice>
+      <lat>61.8665156</lat>
+      <lng>25.2006291</lng>
+   </place>
+   <place>
+      <code>04405</code>
+      <city>JÄRVENPÄÄ</city>
+      <address>Rantakatu 5 </address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Järvenpää</postoffice>
+      <lat>60.4698942</lat>
+      <lng>25.0836987</lng>
+   </place>
+   <place>
+      <code>04415</code>
+      <city>JÄRVENPÄÄ</city>
+      <address>Helsingintie 41</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, CM Järvenpää</postoffice>
+      <lat>60.477354</lat>
+      <lng>25.1025394</lng>
+   </place>
+   <place>
+      <code>04405</code>
+      <city>JÄRVENPÄÄ</city>
+      <address>Pajalantie 19</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Pajala</postoffice>
+      <lat>60.4792391</lat>
+      <lng>25.084631</lng>
+   </place>
+   <place>
+      <code>04435</code>
+      <city>JÄRVENPÄÄ</city>
+      <address>Laurilantie 35</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Pellonkulma</postoffice>
+      <lat>60.4934965</lat>
+      <lng>25.1184283</lng>
+   </place>
+   <place>
+      <code>80225</code>
+      <city>JOENSUU</city>
+      <address>Mintunkatu 2</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Vehkalahti</postoffice>
+      <lat>62.5811131</lat>
+      <lng>29.7701452</lng>
+   </place>
+   <place>
+      <code>80145</code>
+      <city>JOENSUU</city>
+      <address>Linjatie 2</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Pilkko</postoffice>
+      <lat>62.630318</lat>
+      <lng>29.7022886</lng>
+   </place>
+   <place>
+      <code>80105</code>
+      <city>JOENSUU</city>
+      <address>Voimatie 2</address>
+      <availability>ma-la 9.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Joensuu</postoffice>
+      <lat>62.6163723</lat>
+      <lng>29.7782238</lng>
+   </place>
+   <place>
+      <code>80105</code>
+      <city>JOENSUU</city>
+      <address>Kauppakatu 16</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, CM Joensuu keskusta</postoffice>
+      <lat>62.5985987</lat>
+      <lng>29.7591735</lng>
+   </place>
+   <place>
+      <code>80105</code>
+      <city>JOENSUU</city>
+      <address>Rantakatu 19</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Rantakatu</postoffice>
+      <lat>62.6009449</lat>
+      <lng>29.7654123</lng>
+   </place>
+   <place>
+      <code>80165</code>
+      <city>JOENSUU</city>
+      <address>Pataluodonkatu 1</address>
+      <availability>ma-pe 7.00 - 22.00, la 7.00 - 21.00, su 11.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Rantakylä</postoffice>
+      <lat>62.6154816</lat>
+      <lng>29.8199787</lng>
+   </place>
+   <place>
+      <code>80175</code>
+      <city>JOENSUU</city>
+      <address>Lasinpuhaltajantie 1</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Utra</postoffice>
+      <lat>62.6191791</lat>
+      <lng>29.8578311</lng>
+   </place>
+   <place>
+      <code>05405</code>
+      <city>JOKELA</city>
+      <address>Osulankuja 5</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Jokela</postoffice>
+      <lat>60.5535806</lat>
+      <lng>24.9667614</lng>
+   </place>
+   <place>
+      <code>54105</code>
+      <city>JOUTSENO</city>
+      <address>Keskuskatu 3</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Joutseno</postoffice>
+      <lat>61.1189216</lat>
+      <lng>28.5039276</lng>
+   </place>
+   <place>
+      <code>51905</code>
+      <city>JUVA</city>
+      <address>Juvantie 12</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Juva</postoffice>
+      <lat>61.8969415</lat>
+      <lng>27.8586366</lng>
+   </place>
+   <place>
+      <code>40705</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Vehkakatu 5</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Savela</postoffice>
+      <lat>62.2430626</lat>
+      <lng>25.7107585</lng>
+   </place>
+   <place>
+      <code>40705</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Kaivokatu 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Länsiväylä</postoffice>
+      <lat>62.2435203</lat>
+      <lng>25.7137595</lng>
+   </place>
+   <place>
+      <code>40325</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Ahjokatu 7</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Seppälä</postoffice>
+      <lat>62.2578059</lat>
+      <lng>25.7773469</lng>
+   </place>
+   <place>
+      <code>40505</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Kylmälahdentie 6</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Keljo</postoffice>
+      <lat>62.215442</lat>
+      <lng>25.7187597</lng>
+   </place>
+   <place>
+      <code>40345</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Nevakatu 1</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00 </availability>
+      <postoffice>Pakettiautomaatti, Sale Huhtasuo</postoffice>
+      <lat>62.2713521</lat>
+      <lng>25.800148</lng>
+   </place>
+   <place>
+      <code>40505</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Kylmälahdentie 8</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Keljo</postoffice>
+      <lat>62.2176341</lat>
+      <lng>25.7197169</lng>
+   </place>
+   <place>
+      <code>40105</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Lutakonaukio 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Lutakko</postoffice>
+      <lat>62.2384974</lat>
+      <lng>25.7546887</lng>
+   </place>
+   <place>
+      <code>40105</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Asemakatu 7</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Forum</postoffice>
+      <lat>62.2424487</lat>
+      <lng>25.7475243</lng>
+   </place>
+   <place>
+      <code>40325</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Vasarakatu 29</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Seppälä</postoffice>
+      <lat>62.264134</lat>
+      <lng>25.7773206</lng>
+   </place>
+   <place>
+      <code>40105</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Puistokatu 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kolmikulma</postoffice>
+      <lat>62.2444748</lat>
+      <lng>25.7505818</lng>
+   </place>
+   <place>
+      <code>40525</code>
+      <city>JYVÄSKYLÄ</city>
+      <address>Syöttäjänkatu 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kuokkala</postoffice>
+      <lat>62.2276882</lat>
+      <lng>25.7733703</lng>
+   </place>
+   <place>
+      <code>20785</code>
+      <city>KAARINA</city>
+      <address>Oskarinaukio 5</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Kaarina Center</postoffice>
+      <lat>60.4078816</lat>
+      <lng>22.3685542</lng>
+   </place>
+   <place>
+      <code>87105</code>
+      <city>KAJAANI</city>
+      <address>Kasarminkatu 18</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Tokmanni Kajaani</postoffice>
+      <lat>64.2179242</lat>
+      <lng>27.7429656</lng>
+   </place>
+   <place>
+      <code>87105</code>
+      <city>KAJAANI</city>
+      <address>Veturitie 1</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kajaani</postoffice>
+      <lat>64.2213169</lat>
+      <lng>27.7464062</lng>
+   </place>
+   <place>
+      <code>87105</code>
+      <city>KAJAANI</city>
+      <address>Kauppakatu 10</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kajaani</postoffice>
+      <lat>64.2232958</lat>
+      <lng>27.7366102</lng>
+   </place>
+   <place>
+      <code>87705</code>
+      <city>KAJAANI</city>
+      <address>Taikatie 4</address>
+      <availability>ma-su 6.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, ABC Kajaani</postoffice>
+      <lat>64.2188641</lat>
+      <lng>27.6781075</lng>
+   </place>
+   <place>
+      <code>85105</code>
+      <city>KALAJOKI</city>
+      <address>Kalajoentie 38</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kalajoki</postoffice>
+      <lat>64.251973</lat>
+      <lng>23.9556555</lng>
+   </place>
+   <place>
+      <code>85105</code>
+      <city>KALAJOKI</city>
+      <address>Tuomipakkaintie 2</address>
+      <availability>ma-su 6.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, ABC Kalajoki Hiekkasärkät</postoffice>
+      <lat>64.2305064</lat>
+      <lng>23.8095554</lng>
+   </place>
+   <place>
+      <code>36225</code>
+      <city>KANGASALA</city>
+      <address>Mäkirinteentie 10</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kangasala</postoffice>
+      <lat>61.4752263</lat>
+      <lng>23.9805667</lng>
+   </place>
+   <place>
+      <code>36205</code>
+      <city>KANGASALA</city>
+      <address>Puusepäntie 31</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kangasala</postoffice>
+      <lat>61.4687566</lat>
+      <lng>24.0378656</lng>
+   </place>
+   <place>
+      <code>51205</code>
+      <city>KANGASNIEMI</city>
+      <address>Otto Mannisen tie 10</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kangasniemi</postoffice>
+      <lat>61.9881278</lat>
+      <lng>26.642331</lng>
+   </place>
+   <place>
+      <code>38705</code>
+      <city>KANKAANPÄÄ</city>
+      <address>Keskuskatu 39</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kankaanpää</postoffice>
+      <lat>61.8067661</lat>
+      <lng>22.3890723</lng>
+   </place>
+   <place>
+      <code>10305</code>
+      <city>KARJAA</city>
+      <address>Koulukatu 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 20.00, su 12.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Karjaa</postoffice>
+      <lat>60.0711452</lat>
+      <lng>23.6641052</lng>
+   </place>
+   <place>
+      <code>10305</code>
+      <city>KARJAA</city>
+      <address>Ratakatu 59</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Karjaa</postoffice>
+      <lat>60.0706244</lat>
+      <lng>23.6631539</lng>
+   </place>
+   <place>
+      <code>03605</code>
+      <city>KARKKILA</city>
+      <address>Mäntylänkatu 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Karkkila</postoffice>
+      <lat>60.5344335</lat>
+      <lng>24.2315885</lng>
+   </place>
+   <place>
+      <code>61805</code>
+      <city>KAUHAJOKI</city>
+      <address>Puistotie 70</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kauhajoki</postoffice>
+      <lat>62.4277991</lat>
+      <lng>22.1773825</lng>
+   </place>
+   <place>
+      <code>61805</code>
+      <city>KAUHAJOKI</city>
+      <address>Topeeka 65</address>
+      <availability>ma-la 7.00 - 22.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kauhajoki</postoffice>
+      <lat>62.4335716</lat>
+      <lng>22.1832771</lng>
+   </place>
+   <place>
+      <code>62205</code>
+      <city>KAUHAVA</city>
+      <address>Kauppatie 65</address>
+      <availability>ma-la 7.00 - 22.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kauhava</postoffice>
+      <lat>63.0982603</lat>
+      <lng>23.0395904</lng>
+   </place>
+   <place>
+      <code>02705</code>
+      <city>KAUNIAINEN</city>
+      <address>Asematie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Pohjois Kauniainen</postoffice>
+      <lat>60.2126094</lat>
+      <lng>24.7274681</lng>
+   </place>
+   <place>
+      <code>47405</code>
+      <city>KAUSALA</city>
+      <address>Kauppakatu 13</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kausala</postoffice>
+      <lat>60.8886712</lat>
+      <lng>26.3405418</lng>
+   </place>
+   <place>
+      <code>69605</code>
+      <city>KAUSTINEN</city>
+      <address>Kauppatie</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kaustinen</postoffice>
+      <lat>63.5501005</lat>
+      <lng>23.6895153</lng>
+   </place>
+   <place>
+      <code>94605</code>
+      <city>KEMI</city>
+      <address>Karjalahdenkatu</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kemi</postoffice>
+      <lat>65.7385523</lat>
+      <lng>24.5786683</lng>
+   </place>
+   <place>
+      <code>94105</code>
+      <city>KEMI</city>
+      <address>Asemakatu 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kemi</postoffice>
+      <lat>65.7399006</lat>
+      <lng>24.5650688</lng>
+   </place>
+   <place>
+      <code>94455</code>
+      <city>KEMINMAA</city>
+      <address>Jauholantie 1-3</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Keminmaa</postoffice>
+      <lat>65.7955611</lat>
+      <lng>24.5252628</lng>
+   </place>
+   <place>
+      <code>90455</code>
+      <city>KEMPELE</city>
+      <address>Zeppelinintie</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Zeppelin</postoffice>
+      <lat>64.9129283</lat>
+      <lng>25.5034842</lng>
+   </place>
+   <place>
+      <code>04205</code>
+      <city>KERAVA</city>
+      <address>Kauppakaari 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kerava</postoffice>
+      <lat>60.4027378</lat>
+      <lng>25.1046294</lng>
+   </place>
+   <place>
+      <code>04205</code>
+      <city>KERAVA</city>
+      <address>Kauppakaari 17</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kerava</postoffice>
+      <lat>60.4038326</lat>
+      <lng>25.0981459</lng>
+   </place>
+   <place>
+      <code>04205</code>
+      <city>KERAVA</city>
+      <address>Nikonkatu 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kerava</postoffice>
+      <lat>60.3996144</lat>
+      <lng>25.1025222</lng>
+   </place>
+   <place>
+      <code>42705</code>
+      <city>KEURUU</city>
+      <address>Keuruuntie 9</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Keuruu</postoffice>
+      <lat>62.258107</lat>
+      <lng>24.708371</lng>
+   </place>
+   <place>
+      <code>02405</code>
+      <city>KIRKKONUMMI</city>
+      <address>Munkinmäentie 29</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kirkkonummi</postoffice>
+      <lat>60.1189612</lat>
+      <lng>24.4451503</lng>
+   </place>
+   <place>
+      <code>02405</code>
+      <city>KIRKKONUMMI</city>
+      <address>Toritie 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Kirkkonummi</postoffice>
+      <lat>60.125199</lat>
+      <lng>24.4361064</lng>
+   </place>
+   <place>
+      <code>02405</code>
+      <city>KIRKKONUMMI</city>
+      <address>Asemankulma 2</address>
+      <availability>ma-pe 08.00 - 21.00, la 08.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kirkkonummi</postoffice>
+      <lat>60.1193939</lat>
+      <lng>24.4442277</lng>
+   </place>
+   <place>
+      <code>74705</code>
+      <city>KIURUVESI</city>
+      <address>Tulotie 10</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Tokmanni Kiuruvesi</postoffice>
+      <lat>63.643309</lat>
+      <lng>26.6091919</lng>
+   </place>
+   <place>
+      <code>01805</code>
+      <city>KLAUKKALA</city>
+      <address>Lepsämäntie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Klaukkala</postoffice>
+      <lat>60.3813126</lat>
+      <lng>24.7483501</lng>
+   </place>
+   <place>
+      <code>01805</code>
+      <city>KLAUKKALA</city>
+      <address>Viirintie 9</address>
+      <availability>ma-pe 9.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Klaukkala</postoffice>
+      <lat>60.3786015</lat>
+      <lng>24.7583501</lng>
+   </place>
+   <place>
+      <code>32805</code>
+      <city>KOKEMÄKI</city>
+      <address>Haapionkatu 14</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kokemäki</postoffice>
+      <lat>61.2555483</lat>
+      <lng>22.3488446</lng>
+   </place>
+   <place>
+      <code>67605</code>
+      <city>KOKKOLA</city>
+      <address>Heinolankaari 9</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kokkola</postoffice>
+      <lat>63.8303324</lat>
+      <lng>23.1493294</lng>
+   </place>
+   <place>
+      <code>67105</code>
+      <city>KOKKOLA</city>
+      <address>Torikatu 12</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hakatori</postoffice>
+      <lat>63.8388704</lat>
+      <lng>23.1372517</lng>
+   </place>
+   <place>
+      <code>67705</code>
+      <city>KOKKOLA</city>
+      <address>Prismantie 1</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kokkola</postoffice>
+      <lat>63.8311649</lat>
+      <lng>23.1251595</lng>
+   </place>
+   <place>
+      <code>67105</code>
+      <city>KOKKOLA</city>
+      <address>Tehtaankatu 43</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Minimani Kokkola</postoffice>
+      <lat>63.83684</lat>
+      <lng>23.1120271</lng>
+   </place>
+   <place>
+      <code>45615</code>
+      <city>KORIA</city>
+      <address>Suviojantie 19</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Koria</postoffice>
+      <lat>60.8590049</lat>
+      <lng>26.5681644</lng>
+   </place>
+   <place>
+      <code>26845</code>
+      <city>KORTELA</city>
+      <address>Unajantie 2</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Kortela</postoffice>
+      <lat>61.1004442</lat>
+      <lng>21.5050368</lng>
+   </place>
+   <place>
+      <code>48105</code>
+      <city>KOTKA</city>
+      <address>Keskuskatu 8 A</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Pasaati</postoffice>
+      <lat>60.4665498</lat>
+      <lng>26.9455717</lng>
+   </place>
+   <place>
+      <code>48105</code>
+      <city>KOTKA</city>
+      <address>Koulukatu 6</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Pooki</postoffice>
+      <lat>60.4602316</lat>
+      <lng>26.9395743</lng>
+   </place>
+   <place>
+      <code>48605</code>
+      <city>KOTKA</city>
+      <address>Jumalniementie 8</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kotka</postoffice>
+      <lat>60.5056082</lat>
+      <lng>26.9137217</lng>
+   </place>
+   <place>
+      <code>48405</code>
+      <city>KOTKA</city>
+      <address>Hakamäentie 1</address>
+      <availability>ma-la 8.00 - 21.00, su 12.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kotka</postoffice>
+      <lat>60.5009793</lat>
+      <lng>26.8690777</lng>
+   </place>
+   <place>
+      <code>45105</code>
+      <city>KOUVOLA</city>
+      <address>Kouvolankatu 30</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Sipatti</postoffice>
+      <lat>60.868232</lat>
+      <lng>26.7087881</lng>
+   </place>
+   <place>
+      <code>45165</code>
+      <city>KOUVOLA</city>
+      <address>Madekuja 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lehtomäki</postoffice>
+      <lat>60.8877366</lat>
+      <lng>26.7258314</lng>
+   </place>
+   <place>
+      <code>45135</code>
+      <city>KOUVOLA</city>
+      <address>Tommolankatu 9</address>
+      <availability>ma-la 8.00 - 21.00, su 12.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kouvola</postoffice>
+      <lat>60.871441</lat>
+      <lng>26.658883</lng>
+   </place>
+   <place>
+      <code>88905</code>
+      <city>KUHMO</city>
+      <address>Kainuuntie 123</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kuhmo</postoffice>
+      <lat>64.1236412</lat>
+      <lng>29.5110876</lng>
+   </place>
+   <place>
+      <code>70825</code>
+      <city>KUOPIO</city>
+      <address>Jalkasenkatu 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Petonen</postoffice>
+      <lat>62.8394529</lat>
+      <lng>27.6421831</lng>
+   </place>
+   <place>
+      <code>70425</code>
+      <city>KUOPIO</city>
+      <address>Päivärannantie 18</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Päiväranta</postoffice>
+      <lat>62.9335317</lat>
+      <lng>27.6740786</lng>
+   </place>
+   <place>
+      <code>70115</code>
+      <city>KUOPIO</city>
+      <address>Haapaniemenkatu 24</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Sokos Kuopio</postoffice>
+      <lat>62.8926809</lat>
+      <lng>27.6765987</lng>
+   </place>
+   <place>
+      <code>70105</code>
+      <city>KUOPIO</city>
+      <address>Puijonkatu 19 </address>
+      <availability>ma-pe 9.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Liikekeskus Puijonkatu</postoffice>
+      <lat>62.892497</lat>
+      <lng>27.679751</lng>
+   </place>
+   <place>
+      <code>70705</code>
+      <city>KUOPIO</city>
+      <address>Savilahdentie 10</address>
+      <availability>ma-la 8.00 - 23.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kuopio</postoffice>
+      <lat>62.8906027</lat>
+      <lng>27.6348637</lng>
+   </place>
+   <place>
+      <code>70625</code>
+      <city>KUOPIO</city>
+      <address>Tehdaskatu 19</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Ykkösrasti</postoffice>
+      <lat>62.880926</lat>
+      <lng>27.6674505</lng>
+   </place>
+   <place>
+      <code>70785</code>
+      <city>KUOPIO</city>
+      <address>Kolmisopentie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kolmisoppi</postoffice>
+      <lat>62.86254</lat>
+      <lng>27.6145766</lng>
+   </place>
+   <place>
+      <code>70805</code>
+      <city>KUOPIO</city>
+      <address>Vitostie 1771</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Pitkälahti</postoffice>
+      <lat>62.8389168</lat>
+      <lng>27.6110061</lng>
+   </place>
+   <place>
+      <code>61305</code>
+      <city>KURIKKA</city>
+      <address>Asematie 6</address>
+      <availability>ma-la 7.00 - 22.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kurikka</postoffice>
+      <lat>62.6176324</lat>
+      <lng>22.398008</lng>
+   </place>
+   <place>
+      <code>93605</code>
+      <city>KUUSAMO</city>
+      <address>Huoparintie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kuusamo</postoffice>
+      <lat>65.9579245</lat>
+      <lng>29.1607453</lng>
+   </place>
+   <place>
+      <code>93605</code>
+      <city>KUUSAMO</city>
+      <address>Luomantie 1-3</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kuusamo</postoffice>
+      <lat>65.9564045</lat>
+      <lng>29.1625019</lng>
+   </place>
+   <place>
+      <code>93605</code>
+      <city>KUUSAMO</city>
+      <address>Ouluntaival 1</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Kuusamo</postoffice>
+      <lat>65.9640992</lat>
+      <lng>29.1866487</lng>
+   </place>
+   <place>
+      <code>45725</code>
+      <city>KUUSANKOSKI</city>
+      <address>Tervasharjunkatu 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Veturi</postoffice>
+      <lat>60.867886</lat>
+      <lng>26.7041295</lng>
+   </place>
+   <place>
+      <code>45705</code>
+      <city>KUUSANKOSKI</city>
+      <address>Valtakatu 44</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kuusankoski</postoffice>
+      <lat>60.9065769</lat>
+      <lng>26.6208458</lng>
+   </place>
+   <place>
+      <code>15175</code>
+      <city>LAHTI</city>
+      <address>Heinolan Vanhatie 25</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Tonttila</postoffice>
+      <lat>60.983201</lat>
+      <lng>25.706157</lng>
+   </place>
+   <place>
+      <code>15165</code>
+      <city>LAHTI</city>
+      <address>Kauppiaankatu 2</address>
+      <availability>ma-pe 8.00 - 21.00, la 08.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Karisma</postoffice>
+      <lat>60.9828924</lat>
+      <lng>25.736976</lng>
+   </place>
+   <place>
+      <code>15505</code>
+      <city>LAHTI</city>
+      <address>Ajokatu 83</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Laune</postoffice>
+      <lat>60.96122</lat>
+      <lng>25.6582995</lng>
+   </place>
+   <place>
+      <code>15245</code>
+      <city>LAHTI</city>
+      <address>Johanneksenkatu 4</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Holma Lahti</postoffice>
+      <lat>61.0081993</lat>
+      <lng>25.6807906</lng>
+   </place>
+   <place>
+      <code>15705</code>
+      <city>LAHTI</city>
+      <address>Helsingintie 126</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hennala</postoffice>
+      <lat>60.9695464</lat>
+      <lng>25.629198</lng>
+   </place>
+   <place>
+      <code>15685</code>
+      <city>LAHTI</city>
+      <address>Simolanmutka 1</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Renkomäki</postoffice>
+      <lat>60.9355915</lat>
+      <lng>25.6339513</lng>
+   </place>
+   <place>
+      <code>15115</code>
+      <city>LAHTI</city>
+      <address>Aleksanterinkatu 19-21</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Sokos Lahti</postoffice>
+      <lat>60.9827457</lat>
+      <lng>25.6593514</lng>
+   </place>
+   <place>
+      <code>15145</code>
+      <city>LAHTI</city>
+      <address>Kauppakatu 13</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Paavola</postoffice>
+      <lat>60.98637</lat>
+      <lng>25.6663403</lng>
+   </place>
+   <place>
+      <code>15505</code>
+      <city>LAHTI</city>
+      <address>Ajokatu 53</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Laune</postoffice>
+      <lat>60.9643541</lat>
+      <lng>25.6596261</lng>
+   </place>
+   <place>
+      <code>15215</code>
+      <city>LAHTI</city>
+      <address>Lahdenkatu 48</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Valintatalo Kivistönmäki</postoffice>
+      <lat>60.9950121</lat>
+      <lng>25.6645463</lng>
+   </place>
+   <place>
+      <code>15815</code>
+      <city>LAHTI</city>
+      <address>Hennalankatu 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Okeroinen</postoffice>
+      <lat>60.9666074</lat>
+      <lng>25.5814219</lng>
+   </place>
+   <place>
+      <code>15145</code>
+      <city>LAHTI</city>
+      <address>Aleksanterinkatu 18</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Trio</postoffice>
+      <lat>60.9826522</lat>
+      <lng>25.6622219</lng>
+   </place>
+   <place>
+      <code>15835</code>
+      <city>LAHTI</city>
+      <address>Petsamonkatu 9</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Metsäkangas</postoffice>
+      <lat>60.9809366</lat>
+      <lng>25.5930206</lng>
+   </place>
+   <place>
+      <code>66405</code>
+      <city>LAIHIA</city>
+      <address>Kauppatie 6</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Laihia</postoffice>
+      <lat>62.979246</lat>
+      <lng>22.0085909</lng>
+   </place>
+   <place>
+      <code>23805</code>
+      <city>LAITILA</city>
+      <address>Kauppakatu 8</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Laitila</postoffice>
+      <lat>60.8758584</lat>
+      <lng>21.6965265</lng>
+   </place>
+   <place>
+      <code>16905</code>
+      <city>LAMMI</city>
+      <address>Mommilantie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 19.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lammi</postoffice>
+      <lat>61.0796447</lat>
+      <lng>25.0112159</lng>
+   </place>
+   <place>
+      <code>73105</code>
+      <city>LAPINLAHTI</city>
+      <address>Asematie 1</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lapinlahti</postoffice>
+      <lat>63.3663658</lat>
+      <lng>27.3917984</lng>
+   </place>
+   <place>
+      <code>53855</code>
+      <city>LAPPEENRANTA</city>
+      <address>Orioninkatu 2</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Sammonlahti</postoffice>
+      <lat>61.0522258</lat>
+      <lng>28.1054311</lng>
+   </place>
+   <place>
+      <code>53505</code>
+      <city>LAPPEENRANTA</city>
+      <address>Toikansuontie 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Lappeenranta</postoffice>
+      <lat>61.045288</lat>
+      <lng>28.2002369</lng>
+   </place>
+   <place>
+      <code>53305</code>
+      <city>LAPPEENRANTA</city>
+      <address>Itsenäisyydenkatu 19</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lauritsala</postoffice>
+      <lat>61.0697682</lat>
+      <lng>28.2609002</lng>
+   </place>
+   <place>
+      <code>53105</code>
+      <city>LAPPEENRANTA</city>
+      <address>Brahenkatu 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 19.00, su 12.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Iso-Kristiina</postoffice>
+      <lat>61.0568174</lat>
+      <lng>28.1932329</lng>
+   </place>
+   <place>
+      <code>53855</code>
+      <city>LAPPEENRANTA</city>
+      <address>Laserkatu 10</address>
+      <availability>ma-pe 9.00 - 17.00</availability>
+      <postoffice>Pakettiautomaatti, Lappeenrannan teknillinen yliopisto</postoffice>
+      <lat>61.0634306</lat>
+      <lng>28.0964466</lng>
+   </place>
+   <place>
+      <code>53105</code>
+      <city>LAPPEENRANTA</city>
+      <address>Kauppakatu 40</address>
+      <availability>ma-pe 7.30 - 20.00, la 9.00 - 18.00, su 12.00 - 16.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Galleria</postoffice>
+      <lat>61.0553092</lat>
+      <lng>28.1893419</lng>
+   </place>
+   <place>
+      <code>53605</code>
+      <city>LAPPEENRANTA</city>
+      <address>Puhakankatu 9-11</address>
+      <availability>ma-la 8.00 - 22.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Lappeenranta</postoffice>
+      <lat>61.0512379</lat>
+      <lng>28.1782999</lng>
+   </place>
+   <place>
+      <code>62105</code>
+      <city>LAPUA</city>
+      <address>Latojantie 9</address>
+      <availability>ma-la 7.00 - 22.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lapua</postoffice>
+      <lat>62.9737123</lat>
+      <lng>23.0224889</lng>
+   </place>
+   <place>
+      <code>37565</code>
+      <city>LEMPÄÄLÄ</city>
+      <address>Tampereentie 272</address>
+      <availability>ma-su 9.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Kuljun kartano</postoffice>
+      <lat>61.3805519</lat>
+      <lng>23.7795627</lng>
+   </place>
+   <place>
+      <code>37575</code>
+      <city>LEMPÄÄLÄ</city>
+      <address>Ideaparkinkatu 4</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Ideapark</postoffice>
+      <lat>61.3623382</lat>
+      <lng>23.7985403</lng>
+   </place>
+   <place>
+      <code>37505</code>
+      <city>LEMPÄÄLÄ</city>
+      <address>Puistokatu 4</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lempäälä</postoffice>
+      <lat>61.3127204</lat>
+      <lng>23.7530882</lng>
+   </place>
+   <place>
+      <code>81705</code>
+      <city>LIEKSA</city>
+      <address>Pielisentie 34</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Lieksa</postoffice>
+      <lat>63.3191141</lat>
+      <lng>30.0231498</lng>
+   </place>
+   <place>
+      <code>21425</code>
+      <city>LIETO</city>
+      <address>Hanhenkaari 3</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Lieto</postoffice>
+      <lat>60.5043412</lat>
+      <lng>22.4596149</lng>
+   </place>
+   <place>
+      <code>08205</code>
+      <city>LOHJA</city>
+      <address>Ojamonharjuntie 61</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Lohja</postoffice>
+      <lat>60.2283862</lat>
+      <lng>24.0273017</lng>
+   </place>
+   <place>
+      <code>08105</code>
+      <city>LOHJA</city>
+      <address>Laurinkatu 37-41</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Lohja</postoffice>
+      <lat>60.2482985</lat>
+      <lng>24.061866</lng>
+   </place>
+   <place>
+      <code>08105</code>
+      <city>LOHJA</city>
+      <address>Kauppakatu 10</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Anttila Lohja</postoffice>
+      <lat>60.24979</lat>
+      <lng>24.0656269</lng>
+   </place>
+   <place>
+      <code>32205</code>
+      <city>LOIMAA</city>
+      <address>Aleksis Kivenkatu 11</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Loimaa</postoffice>
+      <lat>60.8544689</lat>
+      <lng>23.0442103</lng>
+   </place>
+   <place>
+      <code>32205</code>
+      <city>LOIMAA</city>
+      <address>Aleksis Kiven Katu 7</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Loimaa</postoffice>
+      <lat>60.8556655</lat>
+      <lng>23.0461074</lng>
+   </place>
+   <place>
+      <code>07905</code>
+      <city>LOVIISA</city>
+      <address>Arkkitehdintie 5</address>
+      <availability>ma-pe 7.00 - 22.00, la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Loviisa</postoffice>
+      <lat>60.4528733</lat>
+      <lng>26.2064738</lng>
+   </place>
+   <place>
+      <code>29105</code>
+      <city>LUVIA</city>
+      <address>Lukkarilantie 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Luvia II</postoffice>
+      <lat>61.3602487</lat>
+      <lng>21.6223349</lng>
+   </place>
+   <place>
+      <code>04605</code>
+      <city>MÄNTSÄLÄ</city>
+      <address>Keskuskatu 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Mäntsälä</postoffice>
+      <lat>60.6351535</lat>
+      <lng>25.3171006</lng>
+   </place>
+   <place>
+      <code>04605</code>
+      <city>MÄNTSÄLÄ</city>
+      <address>Sälinkääntie 2</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Mäntsälä</postoffice>
+      <lat>60.6375328</lat>
+      <lng>25.3179457</lng>
+   </place>
+   <place>
+      <code>35805</code>
+      <city>MÄNTTÄ</city>
+      <address>Hallituskatu 25</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Mänttä</postoffice>
+      <lat>62.0293057</lat>
+      <lng>24.6227464</lng>
+   </place>
+   <place>
+      <code>52705</code>
+      <city>MÄNTYHARJU</city>
+      <address>Pentinpolku 2</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Mäntyharju</postoffice>
+      <lat>61.415508</lat>
+      <lng>26.8804582</lng>
+   </place>
+   <place>
+      <code>02435</code>
+      <city>MASALA</city>
+      <address>Tinankuja 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 21.00, su 9.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Masala</postoffice>
+      <lat>60.1580684</lat>
+      <lng>24.5354548</lng>
+   </place>
+   <place>
+      <code>50105</code>
+      <city>MIKKELI</city>
+      <address>Setrikatu 1</address>
+      <availability>ma-pe 9.00 - 20.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Tokmanni Mikkeli</postoffice>
+      <lat>61.6801035</lat>
+      <lng>27.2693585</lng>
+   </place>
+   <place>
+      <code>50105</code>
+      <city>MIKKELI</city>
+      <address>Porrassalmenkatu 67</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Rokkala</postoffice>
+      <lat>61.7008469</lat>
+      <lng>27.282424</lng>
+   </place>
+   <place>
+      <code>50195</code>
+      <city>MIKKELI</city>
+      <address>Graanintie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Graani</postoffice>
+      <lat>61.6866338</lat>
+      <lng>27.2997764</lng>
+   </place>
+   <place>
+      <code>50105</code>
+      <city>MIKKELI</city>
+      <address>Maaherrankatu 13</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Stella</postoffice>
+      <lat>61.6888374</lat>
+      <lng>27.2726329</lng>
+   </place>
+   <place>
+      <code>91505</code>
+      <city>MUHOS</city>
+      <address>Valtatie 13</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Muhos</postoffice>
+      <lat>64.8078903</lat>
+      <lng>25.994144</lng>
+   </place>
+   <place>
+      <code>40955</code>
+      <city>MUURAME</city>
+      <address>Virastotie 5</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Muurame</postoffice>
+      <lat>62.129397</lat>
+      <lng>25.6732776</lng>
+   </place>
+   <place>
+      <code>46805</code>
+      <city>MYLLYKOSKI</city>
+      <address>Karjalantie 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Myllykoski</postoffice>
+      <lat>60.7662134</lat>
+      <lng>26.7865289</lng>
+   </place>
+   <place>
+      <code>21105</code>
+      <city>NAANTALI</city>
+      <address>Venekuja 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Ukko-Pekka</postoffice>
+      <lat>60.4768879</lat>
+      <lng>22.0426551</lng>
+   </place>
+   <place>
+      <code>21105</code>
+      <city>NAANTALI</city>
+      <address>Tuulensuunkatu 12</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Naantali</postoffice>
+      <lat>60.4674307</lat>
+      <lng>22.0298192</lng>
+   </place>
+   <place>
+      <code>15565</code>
+      <city>NASTOLA</city>
+      <address>Kauppakaari 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 19.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Villähde</postoffice>
+      <lat>60.9458186</lat>
+      <lng>25.8958229</lng>
+   </place>
+   <place>
+      <code>15555</code>
+      <city>NASTOLA</city>
+      <address>Rakokiventie 19</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Nastola</postoffice>
+      <lat>60.9356506</lat>
+      <lng>25.9628184</lng>
+   </place>
+   <place>
+      <code>85505</code>
+      <city>NIVALA</city>
+      <address>Kalliontie 19</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Nivala</postoffice>
+      <lat>63.9304165</lat>
+      <lng>24.9597221</lng>
+   </place>
+   <place>
+      <code>37135</code>
+      <city>NOKIA</city>
+      <address>Pinsiöntie 23</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Myllyhaka</postoffice>
+      <lat>61.4880658</lat>
+      <lng>23.4937425</lng>
+   </place>
+   <place>
+      <code>37155</code>
+      <city>NOKIA</city>
+      <address>Rounionkatu 140</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Kolmenkulma</postoffice>
+      <lat>61.501509</lat>
+      <lng>23.5681629</lng>
+   </place>
+   <place>
+      <code>37125</code>
+      <city>NOKIA</city>
+      <address>Nuijamiestentie 5</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Nokia</postoffice>
+      <lat>61.4676302</lat>
+      <lng>23.5088247</lng>
+   </place>
+   <place>
+      <code>37105</code>
+      <city>NOKIA</city>
+      <address>Välikatu 22</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Nokia</postoffice>
+      <lat>61.4785103</lat>
+      <lng>23.512763</lng>
+   </place>
+   <place>
+      <code>03105</code>
+      <city>NUMMELA</city>
+      <address>Tuusankaari 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Nummela</postoffice>
+      <lat>60.3325082</lat>
+      <lng>24.3297117</lng>
+   </place>
+   <place>
+      <code>03105</code>
+      <city>NUMMELA</city>
+      <address>Naaranpajuntie 3</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Nummela</postoffice>
+      <lat>60.3321759</lat>
+      <lng>24.3232763</lng>
+   </place>
+   <place>
+      <code>03105</code>
+      <city>NUMMELA</city>
+      <address>Keskikuja 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Nummela</postoffice>
+      <lat>60.3337946</lat>
+      <lng>24.3190928</lng>
+   </place>
+   <place>
+      <code>75535</code>
+      <city>NURMES</city>
+      <address>Porokylänkatu 21</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 19.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Nurmes</postoffice>
+      <lat>63.5565189</lat>
+      <lng>29.1046369</lng>
+   </place>
+   <place>
+      <code>75505</code>
+      <city>NURMES</city>
+      <address>Kauppatori 6</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kauppatori</postoffice>
+      <lat>63.5420464</lat>
+      <lng>29.1416021</lng>
+   </place>
+   <place>
+      <code>01905</code>
+      <city>NURMIJÄRVI</city>
+      <address>Kauppanummentie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Nurmijärvi</postoffice>
+      <lat>60.4577451</lat>
+      <lng>24.8219564</lng>
+   </place>
+   <place>
+      <code>16305</code>
+      <city>ORIMATTILA</city>
+      <address>Käkeläntie 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 20.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Orimattila</postoffice>
+      <lat>60.8031085</lat>
+      <lng>25.7350965</lng>
+   </place>
+   <place>
+      <code>16305</code>
+      <city>ORIMATTILA</city>
+      <address>Lahdentie 109</address>
+      <availability>ma-pe 9.00 - 20.00, la 9.00 - 17.00, su 12.00 - 16.00</availability>
+      <postoffice>Pakettiautomaatti, Robinhood Orimattila</postoffice>
+      <lat>60.8120829</lat>
+      <lng>25.729709</lng>
+   </place>
+   <place>
+      <code>35305</code>
+      <city>ORIVESI</city>
+      <address>Keskustie 36</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Orivesi</postoffice>
+      <lat>61.6784568</lat>
+      <lng>24.3576405</lng>
+   </place>
+   <place>
+      <code>90545</code>
+      <city>OULU</city>
+      <address>Ritaharjuntie 49</address>
+      <availability>ma-pe 10.00 - 20.00, la 10.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Ideapark Oulu</postoffice>
+      <lat>65.0761721</lat>
+      <lng>25.4473152</lng>
+   </place>
+   <place>
+      <code>90415</code>
+      <city>OULU</city>
+      <address>Kaakkurinkulma 4</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Verkkokauppa.com Oulu</postoffice>
+      <lat>64.9609431</lat>
+      <lng>25.5225326</lng>
+   </place>
+   <place>
+      <code>90135</code>
+      <city>OULU</city>
+      <address>Tehtaankatu 3</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Raksila</postoffice>
+      <lat>65.0099366</lat>
+      <lng>25.489881</lng>
+   </place>
+   <place>
+      <code>90155</code>
+      <city>OULU</city>
+      <address>Paljetie 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Joutsensilta</postoffice>
+      <lat>64.9969786</lat>
+      <lng>25.4818967</lng>
+   </place>
+   <place>
+      <code>90405</code>
+      <city>OULU</city>
+      <address>Nuottasaarentie 1</address>
+      <availability>ma-la 8.00 - 23.00, su 11.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Limingantulli</postoffice>
+      <lat>64.9961547</lat>
+      <lng>25.4619326</lng>
+   </place>
+   <place>
+      <code>90625</code>
+      <city>OULU</city>
+      <address>Laakeritie 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Rusko</postoffice>
+      <lat>65.0389317</lat>
+      <lng>25.5489068</lng>
+   </place>
+   <place>
+      <code>90805</code>
+      <city>OULU</city>
+      <address>Taskisentie 1</address>
+      <availability>ma-pe 7.00 - 22.00, la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Herukka Oulu</postoffice>
+      <lat>65.0969844</lat>
+      <lng>25.4030432</lng>
+   </place>
+   <place>
+      <code>90505</code>
+      <city>OULU</city>
+      <address>Valtatie 61</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Valintatalo Tuira </postoffice>
+      <lat>65.0253738</lat>
+      <lng>25.4829981</lng>
+   </place>
+   <place>
+      <code>90235</code>
+      <city>OULU</city>
+      <address>Aapistie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kastelli</postoffice>
+      <lat>65.0073403</lat>
+      <lng>25.5277757</lng>
+   </place>
+   <place>
+      <code>90575</code>
+      <city>OULU</city>
+      <address>Kalevalantie 3</address>
+      <availability>ma-pe 7.00 - 23.00, la 8.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Kaijonharju</postoffice>
+      <lat>65.0601166</lat>
+      <lng>25.4806523</lng>
+   </place>
+   <place>
+      <code>90425</code>
+      <city>OULU</city>
+      <address>Metsokankaantie 5</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kaakkuri</postoffice>
+      <lat>64.956222</lat>
+      <lng>25.5239417</lng>
+   </place>
+   <place>
+      <code>90105</code>
+      <city>OULU</city>
+      <address>Isokatu 33</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Hovihalli</postoffice>
+      <lat>65.0104373</lat>
+      <lng>25.471285</lng>
+   </place>
+   <place>
+      <code>90105</code>
+      <city>OULU</city>
+      <address>Isokatu 25</address>
+      <availability>ma-la 9.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Sokos Oulu</postoffice>
+      <lat>65.011363</lat>
+      <lng>25.4725091</lng>
+   </place>
+   <place>
+      <code>90555</code>
+      <city>OULU</city>
+      <address>Menninkäisentie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Puolivälinkangas</postoffice>
+      <lat>65.0426864</lat>
+      <lng>25.4794504</lng>
+   </place>
+   <place>
+      <code>90635</code>
+      <city>OULU</city>
+      <address>Tuiskutie 3</address>
+      <availability>ma-pe 7.00 - 23.00, la 8.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Talvikangas</postoffice>
+      <lat>65.0451072</lat>
+      <lng>25.5868417</lng>
+   </place>
+   <place>
+      <code>90575</code>
+      <city>OULU</city>
+      <address>Kauppalinnankuja 1-3</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Linnanmaa</postoffice>
+      <lat>65.0541077</lat>
+      <lng>25.4554986</lng>
+   </place>
+   <place>
+      <code>90245</code>
+      <city>OULU</city>
+      <address>Kangaskontiontie 15</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Ruokavinkki</postoffice>
+      <lat>64.9773745</lat>
+      <lng>25.5880969</lng>
+   </place>
+   <place>
+      <code>90425</code>
+      <city>OULU</city>
+      <address>Palokankaantie 301</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kaakkuri</postoffice>
+      <lat>64.9637045</lat>
+      <lng>25.5434311</lng>
+   </place>
+   <place>
+      <code>90525</code>
+      <city>OULU</city>
+      <address>Paakakatu 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Toppila</postoffice>
+      <lat>65.0455639</lat>
+      <lng>25.4335213</lng>
+   </place>
+   <place>
+      <code>90545</code>
+      <city>OULU</city>
+      <address>Rita-aukiontie 2</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Ritaharju</postoffice>
+      <lat>65.0804472</lat>
+      <lng>25.4526381</lng>
+   </place>
+   <place>
+      <code>90575</code>
+      <city>OULU</city>
+      <address>Erkki Koiso-Kanttilan katu 1</address>
+      <availability>ma-pe 7.00 - 19.00, la 8.00 - 15.00</availability>
+      <postoffice>Pakettiautomaatti, Oulun yliopisto</postoffice>
+      <lat>65.0583568</lat>
+      <lng>25.4712299</lng>
+   </place>
+   <place>
+      <code>83505</code>
+      <city>OUTOKUMPU</city>
+      <address>Kummunkatu 11</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Outokumpu</postoffice>
+      <lat>62.7270493</lat>
+      <lng>29.0129289</lng>
+   </place>
+   <place>
+      <code>21335</code>
+      <city>PAATTINEN</city>
+      <address>Seuravuorenkatu 2</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Paattinen</postoffice>
+      <lat>60.592926</lat>
+      <lng>22.3832904</lng>
+   </place>
+   <place>
+      <code>21535</code>
+      <city>PAIMIO</city>
+      <address>Asematie 1</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Paimio</postoffice>
+      <lat>60.4579403</lat>
+      <lng>22.6888769</lng>
+   </place>
+   <place>
+      <code>40275</code>
+      <city>PALOKKA</city>
+      <address>Saarijärventie 52</address>
+      <availability>ma-pe 09.00 - 21.00, la 09.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Palokka</postoffice>
+      <lat>62.2878431</lat>
+      <lng>25.7150236</lng>
+   </place>
+   <place>
+      <code>21605</code>
+      <city>PARAINEN</city>
+      <address>Vapparintie 3</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Parainen</postoffice>
+      <lat>60.3074667</lat>
+      <lng>22.3022076</lng>
+   </place>
+   <place>
+      <code>39705</code>
+      <city>PARKANO</city>
+      <address>Humalankatu 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Parkano</postoffice>
+      <lat>62.0073088</lat>
+      <lng>23.0102114</lng>
+   </place>
+   <place>
+      <code>13725</code>
+      <city>PAROLA</city>
+      <address>Kinnalantie 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 19.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Parola</postoffice>
+      <lat>61.0541655</lat>
+      <lng>24.3719665</lng>
+   </place>
+   <place>
+      <code>76105</code>
+      <city>PIEKSÄMÄKI</city>
+      <address>Kukkaroniementie 3</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Pieksämäki</postoffice>
+      <lat>62.3030368</lat>
+      <lng>27.1642179</lng>
+   </place>
+   <place>
+      <code>68605</code>
+      <city>PIETARSAARI</city>
+      <address>Autotie 2</address>
+      <availability>ma-su 6.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, ABC Pietarsaari</postoffice>
+      <lat>63.6742439</lat>
+      <lng>22.712569</lng>
+   </place>
+   <place>
+      <code>68605</code>
+      <city>PIETARSAARI</city>
+      <address>Koulukatu 6</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Pietarsaari</postoffice>
+      <lat>63.6777428</lat>
+      <lng>22.7144775</lng>
+   </place>
+   <place>
+      <code>68605</code>
+      <city>PIETARSAARI</city>
+      <address>Koulukatu 4</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Pietarsaari</postoffice>
+      <lat>63.6781794</lat>
+      <lng>22.7167646</lng>
+   </place>
+   <place>
+      <code>20765</code>
+      <city>PIISPANRISTI</city>
+      <address>Kairiskulmantie 3</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Piispanristi Turku</postoffice>
+      <lat>60.4153141</lat>
+      <lng>22.3266782</lng>
+   </place>
+   <place>
+      <code>33965</code>
+      <city>PIRKKALA</city>
+      <address>Keisarinviitta 2</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Pirkkala</postoffice>
+      <lat>61.4529187</lat>
+      <lng>23.6418823</lng>
+   </place>
+   <place>
+      <code>33955</code>
+      <city>PIRKKALA</city>
+      <address>Palmrothintie 2</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Partola</postoffice>
+      <lat>61.4648739</lat>
+      <lng>23.7213674</lng>
+   </place>
+   <place>
+      <code>28135</code>
+      <city>PORI</city>
+      <address>Itäkeskuksenkaari 6</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Mikkola</postoffice>
+      <lat>61.4550824</lat>
+      <lng>21.8388842</lng>
+   </place>
+   <place>
+      <code>28615</code>
+      <city>PORI</city>
+      <address>Eteläväylä 2</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Länsiporin Prisma</postoffice>
+      <lat>61.4787596</lat>
+      <lng>21.75676</lng>
+   </place>
+   <place>
+      <code>28105</code>
+      <city>PORI</city>
+      <address>Vapaudenkatu 1</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Vapaudenkatu</postoffice>
+      <lat>61.4886159</lat>
+      <lng>21.7843232</lng>
+   </place>
+   <place>
+      <code>28615</code>
+      <city>PORI</city>
+      <address>Yrttitie 1</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Paratiisinmäki</postoffice>
+      <lat>61.4778622</lat>
+      <lng>21.7287156</lng>
+   </place>
+   <place>
+      <code>28365</code>
+      <city>PORI</city>
+      <address>Vanhakoivistontie 10</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Ruokapori</postoffice>
+      <lat>61.4750522</lat>
+      <lng>21.8222688</lng>
+   </place>
+   <place>
+      <code>28105</code>
+      <city>PORI</city>
+      <address>Siltapuistokatu 14</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Puuvilla</postoffice>
+      <lat>61.4943238</lat>
+      <lng>21.8013602</lng>
+   </place>
+   <place>
+      <code>28105</code>
+      <city>PORI</city>
+      <address>Liisankatu 2-4</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Sokos Satakunta</postoffice>
+      <lat>61.4838044</lat>
+      <lng>21.7982408</lng>
+   </place>
+   <place>
+      <code>28135</code>
+      <city>PORI</city>
+      <address>Itäkeskuksenkaari 8</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Mikkola</postoffice>
+      <lat>61.4536203</lat>
+      <lng>21.8358675</lng>
+   </place>
+   <place>
+      <code>06105</code>
+      <city>PORVOO</city>
+      <address>Rauhankatu 24</address>
+      <availability>ma-pe 7.00 - 20.00, la 8.00 - 18.00, su 10.00 - 18.00</availability>
+      <postoffice>SmartPOST, S-market Porvoo keskusta</postoffice>
+      <lat>60.3941824</lat>
+      <lng>25.6641142</lng>
+   </place>
+   <place>
+      <code>06105</code>
+      <city>PORVOO</city>
+      <address>Aleksanterinkaari 1</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Näsi</postoffice>
+      <lat>60.3876303</lat>
+      <lng>25.6512344</lng>
+   </place>
+   <place>
+      <code>06105</code>
+      <city>PORVOO</city>
+      <address>Kesätuulentie 2 </address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 12.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Huhtinen</postoffice>
+      <lat>60.4085358</lat>
+      <lng>25.6692899</lng>
+   </place>
+   <place>
+      <code>49275</code>
+      <city>PYHTÄÄ</city>
+      <address>Pyhtääntie 38-40</address>
+      <availability>ma-su 6.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, ABC Majakka Pyhtää</postoffice>
+      <lat>60.4906888</lat>
+      <lng>26.555113</lng>
+   </place>
+   <place>
+      <code>92105</code>
+      <city>RAAHE</city>
+      <address>Ollinkalliontie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Raahe</postoffice>
+      <lat>64.6779918</lat>
+      <lng>24.4846224</lng>
+   </place>
+   <place>
+      <code>92105</code>
+      <city>RAAHE</city>
+      <address>Palokunnankatu 37</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Raahe</postoffice>
+      <lat>64.6872651</lat>
+      <lng>24.4832052</lng>
+   </place>
+   <place>
+      <code>21205</code>
+      <city>RAISIO</city>
+      <address>Piilipuunkatu 2</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Raisio</postoffice>
+      <lat>60.5061109</lat>
+      <lng>22.1605075</lng>
+   </place>
+   <place>
+      <code>21205</code>
+      <city>RAISIO</city>
+      <address>Raisiontori 5</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Raisio</postoffice>
+      <lat>60.4859674</lat>
+      <lng>22.1664727</lng>
+   </place>
+   <place>
+      <code>21285</code>
+      <city>RAISIO</city>
+      <address>Myllynkatu 1</address>
+      <availability>ma-pe 10.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Mylly</postoffice>
+      <lat>60.491816</lat>
+      <lng>22.2051776</lng>
+   </place>
+   <place>
+      <code>05205</code>
+      <city>RAJAMÄKI</city>
+      <address>Kiljavantie 3</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Rajamäki</postoffice>
+      <lat>60.527678</lat>
+      <lng>24.7511972</lng>
+   </place>
+   <place>
+      <code>26105</code>
+      <city>RAUMA</city>
+      <address>Porintie 4</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Rauma</postoffice>
+      <lat>61.1327137</lat>
+      <lng>21.5347493</lng>
+   </place>
+   <place>
+      <code>26105</code>
+      <city>RAUMA</city>
+      <address>Karjalankatu 5</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Rauma</postoffice>
+      <lat>61.1323825</lat>
+      <lng>21.5074397</lng>
+   </place>
+   <place>
+      <code>26105</code>
+      <city>RAUMA</city>
+      <address>Äyhönjärventie 1</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Äyhö</postoffice>
+      <lat>61.1318595</lat>
+      <lng>21.5406976</lng>
+   </place>
+   <place>
+      <code>11105</code>
+      <city>RIIHIMÄKI</city>
+      <address>Lopentie 22-24</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hirsimäki</postoffice>
+      <lat>60.7317106</lat>
+      <lng>24.7633619</lng>
+   </place>
+   <place>
+      <code>11715</code>
+      <city>RIIHIMÄKI</city>
+      <address>Merkoksenkatu 5</address>
+      <availability>ma-pe 9.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Riihimäki</postoffice>
+      <lat>60.7219102</lat>
+      <lng>24.7341096</lng>
+   </place>
+   <place>
+      <code>11105</code>
+      <city>RIIHIMÄKI</city>
+      <address>Keskuskatu 15</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Keskuskatu</postoffice>
+      <lat>60.7391541</lat>
+      <lng>24.7712263</lng>
+   </place>
+   <place>
+      <code>11125</code>
+      <city>RIIHIMÄKI</city>
+      <address>Kinturintie</address>
+      <availability>ma-su 6.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, ABC Riihimäki</postoffice>
+      <lat>60.7524523</lat>
+      <lng>24.7376819</lng>
+   </place>
+   <place>
+      <code>11135</code>
+      <city>RIIHIMÄKI</city>
+      <address>Voimalankatu 2</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Riihimäki</postoffice>
+      <lat>60.7324172</lat>
+      <lng>24.7757688</lng>
+   </place>
+   <place>
+      <code>96325</code>
+      <city>ROVANIEMI</city>
+      <address>Teollisuustie 2</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Rovaniemi</postoffice>
+      <lat>66.491597</lat>
+      <lng>25.6907517</lng>
+   </place>
+   <place>
+      <code>96105</code>
+      <city>ROVANIEMI</city>
+      <address>Lapinkävijäntie 7</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Kauppatori</postoffice>
+      <lat>66.5006777</lat>
+      <lng>25.7160587</lng>
+   </place>
+   <place>
+      <code>96105</code>
+      <city>ROVANIEMI</city>
+      <address>Koskikatu 27</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Revontuli</postoffice>
+      <lat>66.5037339</lat>
+      <lng>25.7240737</lng>
+   </place>
+   <place>
+      <code>96205</code>
+      <city>ROVANIEMI</city>
+      <address>Koskikatu 25</address>
+      <availability>ma-pe 8.00 - 21.00, la 10.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Rinteenkulma</postoffice>
+      <lat>66.5032212</lat>
+      <lng>25.7261369</lng>
+   </place>
+   <place>
+      <code>96905</code>
+      <city>SAARENKYLÄ</city>
+      <address>Pulkamontie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Rovaniemi</postoffice>
+      <lat>66.5177804</lat>
+      <lng>25.7578799</lng>
+   </place>
+   <place>
+      <code>43105</code>
+      <city>SAARIJÄRVI</city>
+      <address>Kauppakatu 2</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Saarijärvi</postoffice>
+      <lat>62.7049494</lat>
+      <lng>25.2604397</lng>
+   </place>
+   <place>
+      <code>98905</code>
+      <city>SALLA</city>
+      <address>Kuusamontie 17</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Erätuli</postoffice>
+      <lat>66.8305546</lat>
+      <lng>28.671163</lng>
+   </place>
+   <place>
+      <code>24105</code>
+      <city>SALO</city>
+      <address>Vilhonkatu 8</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 10.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Plaza</postoffice>
+      <lat>60.3863727</lat>
+      <lng>23.1247412</lng>
+   </place>
+   <place>
+      <code>24245</code>
+      <city>SALO</city>
+      <address>Hämeentie 24-30</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Salo</postoffice>
+      <lat>60.3905795</lat>
+      <lng>23.1275116</lng>
+   </place>
+   <place>
+      <code>24285</code>
+      <city>SALO</city>
+      <address>Kalkkimäenrinne 2</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Tupuri</postoffice>
+      <lat>60.3969199</lat>
+      <lng>23.1773938</lng>
+   </place>
+   <place>
+      <code>38205</code>
+      <city>SASTAMALA</city>
+      <address>Sorvankatu 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Superi</postoffice>
+      <lat>61.323919</lat>
+      <lng>22.9231437</lng>
+   </place>
+   <place>
+      <code>38205</code>
+      <city>SASTAMALA</city>
+      <address>Itsenäisyydentie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Sastamala</postoffice>
+      <lat>61.3368622</lat>
+      <lng>22.9191729</lng>
+   </place>
+   <place>
+      <code>57105</code>
+      <city>SAVONLINNA</city>
+      <address>Tulliportinkatu 10</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Savonlinna</postoffice>
+      <lat>61.8683894</lat>
+      <lng>28.8682688</lng>
+   </place>
+   <place>
+      <code>57215</code>
+      <city>SAVONLINNA</city>
+      <address>Nojanmaantie 15</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Savonlinna</postoffice>
+      <lat>61.8756706</lat>
+      <lng>28.9499316</lng>
+   </place>
+   <place>
+      <code>40905</code>
+      <city>SÄYNÄTSALO</city>
+      <address>Parviaisentie 6</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Säynätsalo</postoffice>
+      <lat>62.1387872</lat>
+      <lng>25.769686</lng>
+   </place>
+   <place>
+      <code>60325</code>
+      <city>SEINÄJOKI</city>
+      <address>Suupohjantie 45</address>
+      <availability>ma - pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Jouppi</postoffice>
+      <lat>62.7926244</lat>
+      <lng>22.8115569</lng>
+   </place>
+   <place>
+      <code>60125</code>
+      <city>SEINÄJOKI</city>
+      <address>Päivölänkatu 40</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Päivölä</postoffice>
+      <lat>62.7928943</lat>
+      <lng>22.8720546</lng>
+   </place>
+   <place>
+      <code>60105</code>
+      <city>SEINÄJOKI</city>
+      <address>Puskantie 13</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Seinäjoki</postoffice>
+      <lat>62.7917496</lat>
+      <lng>22.8345047</lng>
+   </place>
+   <place>
+      <code>71805</code>
+      <city>SIILINJÄRVI</city>
+      <address>Sorakuja 4</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Herkkupata</postoffice>
+      <lat>63.0756152</lat>
+      <lng>27.6612885</lng>
+   </place>
+   <place>
+      <code>01155</code>
+      <city>SÖDERKULLA</city>
+      <address>Amiraalintie 2</address>
+      <availability>ma-pe 7.00 - 22.00, la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Söderkulla</postoffice>
+      <lat>60.297792</lat>
+      <lng>25.3307485</lng>
+   </place>
+   <place>
+      <code>31405</code>
+      <city>SOMERO</city>
+      <address>Turuntie 6</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Somero</postoffice>
+      <lat>60.6337938</lat>
+      <lng>23.5119965</lng>
+   </place>
+   <place>
+      <code>89605</code>
+      <city>SUOMUSSALMI</city>
+      <address>Risteentie 12</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Suomussalmi</postoffice>
+      <lat>64.8864521</lat>
+      <lng>28.9103205</lng>
+   </place>
+   <place>
+      <code>54505</code>
+      <city>TAAVETTI</city>
+      <address>Linnalantie 42</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 20.00, su 10.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Taavetti</postoffice>
+      <lat>60.9222964</lat>
+      <lng>27.5680324</lng>
+   </place>
+   <place>
+      <code>10605</code>
+      <city>TAMMISAARI</city>
+      <address>Rautatienkatu 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 20.00, su 12.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Tammisaari</postoffice>
+      <lat>59.9787617</lat>
+      <lng>23.4417368</lng>
+   </place>
+   <place>
+      <code>10605</code>
+      <city>TAMMISAARI</city>
+      <address>Rautatienkatu 19</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Ekenäs</postoffice>
+      <lat>59.9794761</lat>
+      <lng>23.4495258</lng>
+   </place>
+   <place>
+      <code>33275</code>
+      <city>TAMPERE</city>
+      <address>Pispalan valtatie 91</address>
+      <availability>ma-pe 7.00 - 23.00, la 8.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Siwa Epilä</postoffice>
+      <lat>61.5083801</lat>
+      <lng>23.6868523</lng>
+   </place>
+   <place>
+      <code>33105</code>
+      <city>TAMPERE</city>
+      <address>Kalevantie 4</address>
+      <availability>ma-pe 7.00 - 17.00</availability>
+      <postoffice>Pakettiautomaatti, Tampereen yliopisto</postoffice>
+      <lat>61.4938038</lat>
+      <lng>23.7800531</lng>
+   </place>
+   <place>
+      <code>33585</code>
+      <city>TAMPERE</city>
+      <address>Mäentakusenkatu 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Linnainmaa</postoffice>
+      <lat>61.4964259</lat>
+      <lng>23.8879765</lng>
+   </place>
+   <place>
+      <code>33315</code>
+      <city>TAMPERE</city>
+      <address>Tesomankatu 4</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Länsiportti</postoffice>
+      <lat>61.5047618</lat>
+      <lng>23.629424</lng>
+   </place>
+   <place>
+      <code>33105</code>
+      <city>TAMPERE</city>
+      <address>Hatanpään valtatie 1</address>
+      <availability>ma-pe 7.00-21.00, la 7.00-20.00, su 10.00-19.00</availability>
+      <postoffice>Pakettiautomaatti, Koskikeskus Tampere</postoffice>
+      <lat>61.496601</lat>
+      <lng>23.767257</lng>
+   </place>
+   <place>
+      <code>33725</code>
+      <city>TAMPERE</city>
+      <address>Korkeakoulunkatu 1</address>
+      <availability>ma-pe 7.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Tampereen teknillinen yliopisto</postoffice>
+      <lat>61.4486314</lat>
+      <lng>23.8549184</lng>
+   </place>
+   <place>
+      <code>33715</code>
+      <city>TAMPERE</city>
+      <address>Keskisenkatu 5</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kaukajärvi</postoffice>
+      <lat>61.4738868</lat>
+      <lng>23.8739401</lng>
+   </place>
+   <place>
+      <code>33305</code>
+      <city>TAMPERE</city>
+      <address>Ratakistonkatu 7</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Villilä</postoffice>
+      <lat>61.4955781</lat>
+      <lng>23.6235776</lng>
+   </place>
+   <place>
+      <code>33715</code>
+      <city>TAMPERE</city>
+      <address>Sotilaankatu 11</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Turtola</postoffice>
+      <lat>61.4782104</lat>
+      <lng>23.8414525</lng>
+   </place>
+   <place>
+      <code>33825</code>
+      <city>TAMPERE</city>
+      <address>Lempääläntie 21</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Koivistonkylä</postoffice>
+      <lat>61.4676611</lat>
+      <lng>23.7749514</lng>
+   </place>
+   <place>
+      <code>33725</code>
+      <city>TAMPERE</city>
+      <address>Pietilänkatu 2</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hervanta</postoffice>
+      <lat>61.4507734</lat>
+      <lng>23.8523764</lng>
+   </place>
+   <place>
+      <code>33545</code>
+      <city>TAMPERE</city>
+      <address>Sammonkatu 75</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Kaleva Tampere</postoffice>
+      <lat>61.4902852</lat>
+      <lng>23.8210923</lng>
+   </place>
+   <place>
+      <code>33105</code>
+      <city>TAMPERE</city>
+      <address>Hämeenkatu 4</address>
+      <availability>ma-pe 9.00 - 20.00, la 9.00 - 19.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Stockmann Tampere</postoffice>
+      <lat>61.4985184</lat>
+      <lng>23.7704828</lng>
+   </place>
+   <place>
+      <code>33405</code>
+      <city>TAMPERE</city>
+      <address>Turvesuonkatu 2</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Lielahti</postoffice>
+      <lat>61.5210027</lat>
+      <lng>23.6556151</lng>
+   </place>
+   <place>
+      <code>33105</code>
+      <city>TAMPERE</city>
+      <address>Pakkahuoneenaukio 2</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Pendoliino</postoffice>
+      <lat>61.4980324</lat>
+      <lng>23.7763654</lng>
+   </place>
+   <place>
+      <code>33215</code>
+      <city>TAMPERE</city>
+      <address>Satakunnankatu 36</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Amuri</postoffice>
+      <lat>61.4999856</lat>
+      <lng>23.7480102</lng>
+   </place>
+   <place>
+      <code>33585</code>
+      <city>TAMPERE</city>
+      <address>Orimuskatu 71</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Leinola</postoffice>
+      <lat>61.4955733</lat>
+      <lng>23.9141747</lng>
+   </place>
+   <place>
+      <code>33585</code>
+      <city>TAMPERE</city>
+      <address>Liikekatu 3</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Linnainmaa</postoffice>
+      <lat>61.4951839</lat>
+      <lng>23.8834159</lng>
+   </place>
+   <place>
+      <code>33875</code>
+      <city>TAMPERE</city>
+      <address>Vuoreksen Puistokatu 87</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Vuores</postoffice>
+      <lat>61.4525559</lat>
+      <lng>23.8002477</lng>
+   </place>
+   <place>
+      <code>33805</code>
+      <city>TAMPERE</city>
+      <address>Viinikankatu 40</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Nekala</postoffice>
+      <lat>61.4799158</lat>
+      <lng>23.7825189</lng>
+   </place>
+   <place>
+      <code>33905</code>
+      <city>TAMPERE</city>
+      <address>Hatanpään puistokuja 23</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Hatanpää</postoffice>
+      <lat>61.4836031</lat>
+      <lng>23.7616044</lng>
+   </place>
+   <place>
+      <code>33405</code>
+      <city>TAMPERE</city>
+      <address>Harjuntausta 7</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Lielahti</postoffice>
+      <lat>61.5147013</lat>
+      <lng>23.6693856</lng>
+   </place>
+   <place>
+      <code>33405</code>
+      <city>TAMPERE</city>
+      <address>Hiitintie 1</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Teivo</postoffice>
+      <lat>61.5319749</lat>
+      <lng>23.6338151</lng>
+   </place>
+   <place>
+      <code>64705</code>
+      <city>TEUVA</city>
+      <address>Mikkiläntie 12</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Teuva</postoffice>
+      <lat>62.4872004</lat>
+      <lng>21.739567</lng>
+   </place>
+   <place>
+      <code>95405</code>
+      <city>TORNIO</city>
+      <address>Torikatu 21</address>
+      <availability>ma-la 7.00 - 24.00, su 9.00 - 24.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Tornio</postoffice>
+      <lat>65.8478618</lat>
+      <lng>24.1464948</lng>
+   </place>
+   <place>
+      <code>95405</code>
+      <city>TORNIO</city>
+      <address>Länsiranta 10</address>
+      <availability>ma-pe 10.00 - 20.00, la 10.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Rajalla På Gränsen</postoffice>
+      <lat>65.8440905</lat>
+      <lng>24.142785</lng>
+   </place>
+   <place>
+      <code>95425</code>
+      <city>TORNIO</city>
+      <address>Oikokatu 1</address>
+      <availability>ma-la 8.00 - 21.00, su 11.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Tornio</postoffice>
+      <lat>65.8440433</lat>
+      <lng>24.1956958</lng>
+   </place>
+   <place>
+      <code>91915</code>
+      <city>TUPOS</city>
+      <address>Tuposkorva 1</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Tupos</postoffice>
+      <lat>64.8623379</lat>
+      <lng>25.5243991</lng>
+   </place>
+   <place>
+      <code>14205</code>
+      <city>TURENKI</city>
+      <address>Harvialantie 5</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 19.00, su 11.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Turenki</postoffice>
+      <lat>60.9223293</lat>
+      <lng>24.6498216</lng>
+   </place>
+   <place>
+      <code>20365</code>
+      <city>TURKU</city>
+      <address>Korjasmäenkatu 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Runosmäki</postoffice>
+      <lat>60.4835865</lat>
+      <lng>22.2727073</lng>
+   </place>
+   <place>
+      <code>20815</code>
+      <city>TURKU</city>
+      <address>Kölikatu 2</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Majakkaranta</postoffice>
+      <lat>60.4309148</lat>
+      <lng>22.2400656</lng>
+   </place>
+   <place>
+      <code>20735</code>
+      <city>TURKU</city>
+      <address>Itäkaari 20</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Skanssi</postoffice>
+      <lat>60.4280545</lat>
+      <lng>22.3227706</lng>
+   </place>
+   <place>
+      <code>20615</code>
+      <city>TURKU</city>
+      <address>Annikanpolku 1</address>
+      <availability>ma-pe 7.00-21.00, la 7.00-18.00, su 12.00-18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Annika</postoffice>
+      <lat>60.4433601</lat>
+      <lng>22.3583347</lng>
+   </place>
+   <place>
+      <code>20105</code>
+      <city>TURKU</city>
+      <address>Verkatehtaankatu 4</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00 </availability>
+      <postoffice>Pakettiautomaatti, Siwa Verkahovi</postoffice>
+      <lat>60.4575364</lat>
+      <lng>22.2729664</lng>
+   </place>
+   <place>
+      <code>20905</code>
+      <city>TURKU</city>
+      <address>Vanha Kakskerrantie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Hirvensalo</postoffice>
+      <lat>60.4186782</lat>
+      <lng>22.228656</lng>
+   </place>
+   <place>
+      <code>20545</code>
+      <city>TURKU</city>
+      <address>Kuralankatu 2    </address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Hannunniittu</postoffice>
+      <lat>60.4617668</lat>
+      <lng>22.3310508</lng>
+   </place>
+   <place>
+      <code>20325</code>
+      <city>TURKU</city>
+      <address>Viilarinkatu 3</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Länsikeskus Turku</postoffice>
+      <lat>60.4732401</lat>
+      <lng>22.2256223</lng>
+   </place>
+   <place>
+      <code>20255</code>
+      <city>TURKU</city>
+      <address>Pitkämäenkatu 4</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Manhattan</postoffice>
+      <lat>60.4576422</lat>
+      <lng>22.2363981</lng>
+   </place>
+   <place>
+      <code>20215</code>
+      <city>TURKU</city>
+      <address>Ieskatu 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Härkämäki</postoffice>
+      <lat>60.4622784</lat>
+      <lng>22.1986716</lng>
+   </place>
+   <place>
+      <code>20745</code>
+      <city>TURKU</city>
+      <address>Kataraistentie 7</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Koivula</postoffice>
+      <lat>60.4179594</lat>
+      <lng>22.3017822</lng>
+   </place>
+   <place>
+      <code>20545</code>
+      <city>TURKU</city>
+      <address>Gregorius IX:n tie 8</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 19.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Halinen</postoffice>
+      <lat>60.4693517</lat>
+      <lng>22.3068411</lng>
+   </place>
+   <place>
+      <code>20105</code>
+      <city>TURKU</city>
+      <address>Yliopistonkatu 29 B</address>
+      <availability>ma-pe 8.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Kivikukkaro</postoffice>
+      <lat>60.4505421</lat>
+      <lng>22.2608697</lng>
+   </place>
+   <place>
+      <code>20815</code>
+      <city>TURKU</city>
+      <address>Laivurinkatu 1</address>
+      <availability>ma-pe 7.00 - 23.00, la 8.00 - 23.00, su 12.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Sale Laivurinkatu</postoffice>
+      <lat>60.4383143</lat>
+      <lng>22.2460973</lng>
+   </place>
+   <place>
+      <code>20705</code>
+      <city>TURKU</city>
+      <address>Uudenmaantie 17</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kupittaa</postoffice>
+      <lat>60.4431345</lat>
+      <lng>22.28675</lng>
+   </place>
+   <place>
+      <code>20105</code>
+      <city>TURKU</city>
+      <address>Koulukatu 29</address>
+      <availability>ma-su 24h</availability>
+      <postoffice>Pakettiautomaatti, ABC Koulukatu</postoffice>
+      <lat>60.4534582</lat>
+      <lng>22.2463625</lng>
+   </place>
+   <place>
+      <code>20505</code>
+      <city>TURKU</city>
+      <address>Henrikinkatu 2</address>
+      <availability>ma-to 7.00-18.00, pe 7.00 - 16.15</availability>
+      <postoffice>Pakettiautomaatti, Turun yliopisto</postoffice>
+      <lat>60.4550001</lat>
+      <lng>22.2823721</lng>
+   </place>
+   <place>
+      <code>20325</code>
+      <city>TURKU</city>
+      <address>Markulantie 150</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Länsikeskus</postoffice>
+      <lat>60.4721889</lat>
+      <lng>22.2305957</lng>
+   </place>
+   <place>
+      <code>20545</code>
+      <city>TURKU</city>
+      <address>Reivikatu 5-7</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Ravattula</postoffice>
+      <lat>60.469348</lat>
+      <lng>22.355343</lng>
+   </place>
+   <place>
+      <code>20525</code>
+      <city>TURKU</city>
+      <address>Kalevantie 41</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Itäharju</postoffice>
+      <lat>60.4459955</lat>
+      <lng>22.326668</lng>
+   </place>
+   <place>
+      <code>20305</code>
+      <city>TURKU</city>
+      <address>Vanha Tampereentie 108</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Tampereentie</postoffice>
+      <lat>60.4727068</lat>
+      <lng>22.2868396</lng>
+   </place>
+   <place>
+      <code>20105</code>
+      <city>TURKU</city>
+      <address>Yliopistonkatu 22</address>
+      <availability>ma-pe 9.00 - 20.00, la 9.00 - 19.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Stockmann Turku</postoffice>
+      <lat>60.4509017</lat>
+      <lng>22.2628761</lng>
+   </place>
+   <place>
+      <code>20105</code>
+      <city>TURKU</city>
+      <address>Eerikinkatu 11</address>
+      <availability>ma-pe 7.00 - 22.00, la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Sokos Wiklund</postoffice>
+      <lat>60.451655</lat>
+      <lng>22.269398</lng>
+   </place>
+   <place>
+      <code>04325</code>
+      <city>TUUSULA</city>
+      <address>Haukantie 2</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Riihikallio</postoffice>
+      <lat>60.374648</lat>
+      <lng>25.0180763</lng>
+   </place>
+   <place>
+      <code>04305</code>
+      <city>TUUSULA</city>
+      <address>Hyrylänkatu 6</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Tuusula Hyrylänkatu 6</postoffice>
+      <lat>60.3978146</lat>
+      <lng>25.0198269</lng>
+   </place>
+   <place>
+      <code>28405</code>
+      <city>ULVILA</city>
+      <address>Friitalantie 18</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Hansa </postoffice>
+      <lat>61.4281842</lat>
+      <lng>21.8750531</lng>
+   </place>
+   <place>
+      <code>23505</code>
+      <city>UUSIKAUPUNKI</city>
+      <address>Ketunkalliontie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Itäpoiju</postoffice>
+      <lat>60.804513</lat>
+      <lng>21.4241794</lng>
+   </place>
+   <place>
+      <code>40805</code>
+      <city>VAAJAKOSKI</city>
+      <address>Asematie 1</address>
+      <availability>ma-la 7.00 - 22.00, su 10.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Vaajala</postoffice>
+      <lat>62.2485157</lat>
+      <lng>25.8773198</lng>
+   </place>
+   <place>
+      <code>17205</code>
+      <city>VÄÄKSY</city>
+      <address>Maakaupantie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Vääksy</postoffice>
+      <lat>61.1732407</lat>
+      <lng>25.5456854</lng>
+   </place>
+   <place>
+      <code>65105</code>
+      <city>VAASA</city>
+      <address>Klemetinkatu 17</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Wasa</postoffice>
+      <lat>63.0918019</lat>
+      <lng>21.629295</lng>
+   </place>
+   <place>
+      <code>65285</code>
+      <city>VAASA</city>
+      <address>Västervikintie 2</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Gerby</postoffice>
+      <lat>63.1305484</lat>
+      <lng>21.6023388</lng>
+   </place>
+   <place>
+      <code>65305</code>
+      <city>VAASA</city>
+      <address>Kokkokalliontie 2-6</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Kivihaka</postoffice>
+      <lat>63.1094883</lat>
+      <lng>21.6509893</lng>
+   </place>
+   <place>
+      <code>65305</code>
+      <city>VAASA</city>
+      <address>Jukolantie 1</address>
+      <availability>ma-la 8.00 - 22.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Vaasa</postoffice>
+      <lat>63.102465</lat>
+      <lng>21.647599</lng>
+   </place>
+   <place>
+      <code>65375</code>
+      <city>VAASA</city>
+      <address>Vanhan Vaasan katu 19</address>
+      <availability>ma - pe 7.00 - 21.00, la 7.00 - 21.00, su 12.00 - 18.00</availability>
+      <postoffice>Automaatti, S-market Ristinummi</postoffice>
+      <lat>63.0858876</lat>
+      <lng>21.7263285</lng>
+   </place>
+   <place>
+      <code>65105</code>
+      <city>VAASA</city>
+      <address>Laivakatu 13</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Minimani Vaasa</postoffice>
+      <lat>63.1032186</lat>
+      <lng>21.6241074</lng>
+   </place>
+   <place>
+      <code>37605</code>
+      <city>VALKEAKOSKI</city>
+      <address>Valtakatu 11</address>
+      <availability>ma-pe 8.00 - 22.00, la 8.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Valkeakoski</postoffice>
+      <lat>61.266277</lat>
+      <lng>24.0277359</lng>
+   </place>
+   <place>
+      <code>37605</code>
+      <city>VALKEAKOSKI</city>
+      <address>Apiankatu 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Valintatalo Valkeakoski </postoffice>
+      <lat>61.2639717</lat>
+      <lng>24.0325378</lng>
+   </place>
+   <place>
+      <code>45365</code>
+      <city>VALKEALA</city>
+      <address>Kauniskankaantie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Jokela, Valkeala</postoffice>
+      <lat>60.9121562</lat>
+      <lng>26.7640268</lng>
+   </place>
+   <place>
+      <code>01205</code>
+      <city>VANTAA</city>
+      <address>Nissaksentie 1</address>
+      <availability>ma-pe 7.00 - 23.00, la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Nissas</postoffice>
+      <lat>60.2845796</lat>
+      <lng>25.1222551</lng>
+   </place>
+   <place>
+      <code>01605</code>
+      <city>VANTAA</city>
+      <address>Liesitori 1</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Myyrmäki</postoffice>
+      <lat>60.262846</lat>
+      <lng>24.8532352</lng>
+   </place>
+   <place>
+      <code>01615</code>
+      <city>VANTAA</city>
+      <address>Ukonkivenpolku 11</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Kaivoksela</postoffice>
+      <lat>60.2629958</lat>
+      <lng>24.870051</lng>
+   </place>
+   <place>
+      <code>01365</code>
+      <city>VANTAA</city>
+      <address>Koivukylän puistotie 1</address>
+      <availability>ma-pe 7.00 - 23.00, la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Koivukylän puistotie</postoffice>
+      <lat>60.3230089</lat>
+      <lng>25.0627523</lng>
+   </place>
+   <place>
+      <code>01365</code>
+      <city>VANTAA</city>
+      <address>Niinikuja 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Koivukylä</postoffice>
+      <lat>60.3227726</lat>
+      <lng>25.05549</lng>
+   </place>
+   <place>
+      <code>01205</code>
+      <city>VANTAA</city>
+      <address>Kannuskuja 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Hakunila</postoffice>
+      <lat>60.2798355</lat>
+      <lng>25.1095852</lng>
+   </place>
+   <place>
+      <code>01305</code>
+      <city>VANTAA</city>
+      <address>Kielotie 29</address>
+      <availability>ma-pe 7.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Kielotie</postoffice>
+      <lat>60.3009093</lat>
+      <lng>25.0402314</lng>
+   </place>
+   <place>
+      <code>01665</code>
+      <city>VANTAA</city>
+      <address>Ulkoniitynkuja 4</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Herkkupähkinä</postoffice>
+      <lat>60.2651105</lat>
+      <lng>24.8106803</lng>
+   </place>
+   <place>
+      <code>01305</code>
+      <city>VANTAA</city>
+      <address>Unikkotie 13</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Tikkurila</postoffice>
+      <lat>60.2928662</lat>
+      <lng>25.0342801</lng>
+   </place>
+   <place>
+      <code>01605</code>
+      <city>VANTAA</city>
+      <address>Louhelantie 3</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, K-market Louhela</postoffice>
+      <lat>60.270349</lat>
+      <lng>24.8564364</lng>
+   </place>
+   <place>
+      <code>01525</code>
+      <city>VANTAA</city>
+      <address>Hagelstamintie 32</address>
+      <availability>ma-la 7.00 - 23.00, su 10.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Kartanonkoski</postoffice>
+      <lat>60.2832673</lat>
+      <lng>24.9700745</lng>
+   </place>
+   <place>
+      <code>01305</code>
+      <city>VANTAA</city>
+      <address>Kuriiritie 23</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Koivuhaka</postoffice>
+      <lat>60.289118</lat>
+      <lng>24.9983558</lng>
+   </place>
+   <place>
+      <code>01635</code>
+      <city>VANTAA</city>
+      <address>Ainontie 1</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Hämeenkylä</postoffice>
+      <lat>60.269098</lat>
+      <lng>24.7958254</lng>
+   </place>
+   <place>
+      <code>01515</code>
+      <city>VANTAA</city>
+      <address>Vantaanportinkatu 4</address>
+      <availability>ma-la 9.00 - 21.00, su 11.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Jumbo</postoffice>
+      <lat>60.2918897</lat>
+      <lng>24.9619882</lng>
+   </place>
+   <place>
+      <code>01515</code>
+      <city>VANTAA</city>
+      <address>Valimotie 9</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Tammisto</postoffice>
+      <lat>60.2725546</lat>
+      <lng>24.9700834</lng>
+   </place>
+   <place>
+      <code>01305</code>
+      <city>VANTAA</city>
+      <address>Peltolantie 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Yliveto</postoffice>
+      <lat>60.2937271</lat>
+      <lng>25.0320571</lng>
+   </place>
+   <place>
+      <code>01625</code>
+      <city>VANTAA</city>
+      <address>Kivivuorentie 4</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Martinlaakso</postoffice>
+      <lat>60.2782614</lat>
+      <lng>24.8540654</lng>
+   </place>
+   <place>
+      <code>01455</code>
+      <city>VANTAA</city>
+      <address>Maakotkantie 19</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Korso</postoffice>
+      <lat>60.3484086</lat>
+      <lng>25.0752471</lng>
+   </place>
+   <place>
+      <code>01625</code>
+      <city>VANTAA</city>
+      <address>Laajavuorenkuja 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Martinlaakso</postoffice>
+      <lat>60.2812985</lat>
+      <lng>24.8441775</lng>
+   </place>
+   <place>
+      <code>01455</code>
+      <city>VANTAA</city>
+      <address>Metsolantie 2</address>
+      <availability>ma-la 7.00 - 22.00, su 9.00 - 22.00</availability>
+      <postoffice>Pakettiautomaatti, S-Market Korson asema</postoffice>
+      <lat>60.3510161</lat>
+      <lng>25.0795487</lng>
+   </place>
+   <place>
+      <code>01605</code>
+      <city>VANTAA</city>
+      <address>Iskoskuja 3 A 1</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, Kauppakeskus Myyrmanni</postoffice>
+      <lat>60.2598169</lat>
+      <lng>24.8516915</lng>
+   </place>
+   <place>
+      <code>01405</code>
+      <city>VANTAA</city>
+      <address>Koivukylän puistotie 11</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Koivukylä</postoffice>
+      <lat>60.3239114</lat>
+      <lng>25.0559645</lng>
+   </place>
+   <place>
+      <code>01495</code>
+      <city>VANTAA</city>
+      <address>Paarmatie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-Supermarket Nikinmäki</postoffice>
+      <lat>60.3455536</lat>
+      <lng>25.1333312</lng>
+   </place>
+   <place>
+      <code>01425</code>
+      <city>VANTAA</city>
+      <address>Laurintie 84</address>
+      <availability>ma-la 7.00 - 23.00, su 9.00 - 23.00</availability>
+      <postoffice>Pakettiautomaatti, Alepa Päiväkumpu</postoffice>
+      <lat>60.3274365</lat>
+      <lng>25.0973527</lng>
+   </place>
+   <place>
+      <code>78205</code>
+      <city>VARKAUS</city>
+      <address>Relanderinkatu 30</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Varkaus</postoffice>
+      <lat>62.3146956</lat>
+      <lng>27.8696837</lng>
+   </place>
+   <place>
+      <code>78205</code>
+      <city>VARKAUS</city>
+      <address>Käsityökatu 21-27</address>
+      <availability>ma-la 8.00 - 23.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Varkaus</postoffice>
+      <lat>62.3171823</lat>
+      <lng>27.8553179</lng>
+   </place>
+   <place>
+      <code>02885</code>
+      <city>VEIKKOLA</city>
+      <address>Koskentie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 8.00 - 21.00, su 11.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Veikkola</postoffice>
+      <lat>60.2689063</lat>
+      <lng>24.4442988</lng>
+   </place>
+   <place>
+      <code>03405</code>
+      <city>VIHTI</city>
+      <address>Niuhalanraitti 3</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Vihti</postoffice>
+      <lat>60.416098</lat>
+      <lng>24.3244595</lng>
+   </place>
+   <place>
+      <code>44505</code>
+      <city>VIITASAARI</city>
+      <address>Pappilantie 14</address>
+      <availability>ma-la 7.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Viitasaari</postoffice>
+      <lat>63.0763551</lat>
+      <lng>25.8626503</lng>
+   </place>
+   <place>
+      <code>34805</code>
+      <city>VIRRAT</city>
+      <address>Pääskyntie 13</address>
+      <availability>ma-la 7.00 - 21.00, su 11.00 - 20.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Virrat</postoffice>
+      <lat>62.2405223</lat>
+      <lng>23.7806571</lng>
+   </place>
+   <place>
+      <code>80405</code>
+      <city>YLÄMYLLY</city>
+      <address>Kievarintie 1</address>
+      <availability>ma-la 7.00 - 21.00, su 12.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Ylämylly</postoffice>
+      <lat>62.6129498</lat>
+      <lng>29.548627</lng>
+   </place>
+   <place>
+      <code>84105</code>
+      <city>YLIVIESKA</city>
+      <address>Savarinkatu 9</address>
+      <availability>ma-la 8.00 - 21.00, su 10.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, Prisma Ylivieska</postoffice>
+      <lat>64.0629512</lat>
+      <lng>24.5531764</lng>
+   </place>
+   <place>
+      <code>84105</code>
+      <city>YLIVIESKA</city>
+      <address>Savarinkatu 2</address>
+      <availability>ma-pe 8.00 - 21.00, la 8.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Ylivieska</postoffice>
+      <lat>64.0635835</lat>
+      <lng>24.551532</lng>
+   </place>
+   <place>
+      <code>33485</code>
+      <city>YLÖJÄRVI</city>
+      <address>Lähdevainiontie 1</address>
+      <availability>ma-pe 7.00 - 22.00, la 8.00 - 22.00, su 11.00 - 21.00</availability>
+      <postoffice>Pakettiautomaatti, S-market Ylöjärvi</postoffice>
+      <lat>61.5643499</lat>
+      <lng>23.5946904</lng>
+   </place>
+   <place>
+      <code>33475</code>
+      <city>YLÖJÄRVI</city>
+      <address>Mastontie 2</address>
+      <availability>ma-pe 7.00 - 21.00, la 7.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-supermarket Linkki</postoffice>
+      <lat>61.5487205</lat>
+      <lng>23.5946346</lng>
+   </place>
+   <place>
+      <code>33475</code>
+      <city>YLÖJÄRVI</city>
+      <address>Elotie 1</address>
+      <availability>ma-pe 9.00 - 21.00, la 9.00 - 18.00, su 12.00 - 18.00</availability>
+      <postoffice>Pakettiautomaatti, K-citymarket Ylöjärvi</postoffice>
+      <lat>61.5564203</lat>
+      <lng>23.567136</lng>
+   </place>
+</pprv2>

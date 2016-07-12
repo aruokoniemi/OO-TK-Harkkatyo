@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="253.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.MainMenuController">
+   <children>
+      <Label layoutX="16.0" layoutY="-2.0" prefHeight="52.0" prefWidth="117.0" text="TIMO">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <VBox layoutX="20.0" layoutY="88.0" prefHeight="120.0" prefWidth="455.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="263.0" spacing="10.0">
+               <children>
+                  <Button fx:id="startButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="Aloita käyttö" />
+                  <VBox prefHeight="34.0" prefWidth="266.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="storageSelectBox" mnemonicParsing="false" text="Käytä ladattua varastotilannetta" />
+                        <CheckBox mnemonicParsing="false" text="Lataa SmartPost-tiedot " fx:id="xmlSelectionBox" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="19.0" prefWidth="451.0" spacing="20.0">
+               <children>
+                  <Label fx:id="progressBarLabel" text="Ladataan tietoja..." />
+                  <Label fx:id="percentageLabel" />
+               </children>
+            </HBox>
+            <ProgressBar fx:id="pb" prefHeight="25.0" prefWidth="230.0" progress="0.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

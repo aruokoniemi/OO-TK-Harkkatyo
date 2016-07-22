@@ -1,1 +1,0 @@
-DB_LOCATION:/net/homes/u006/m8518/Harkkatyo/dbnew

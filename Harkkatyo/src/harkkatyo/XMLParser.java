@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
 
 public class XMLParser {
     final private ProgressBar pb;
-    Database db = Database.getInstance();
+    DatabaseHandler db = DatabaseHandler.getInstance();
     
     public XMLParser() {
         pb = null;
@@ -48,6 +48,10 @@ public class XMLParser {
                 Element root = doc.getDocumentElement();
                 NodeList smartposts = root.getElementsByTagName("place");               
                 
+                if (!pb.isVisible()) {
+                    pb.setVisible(true);
+                }
+                
                 for ( int i = 0; i < smartposts.getLength(); i++ ) {
                     Node smartpost = smartposts.item(i);
                     if ( smartpost.getNodeType() == Node.ELEMENT_NODE ) {
@@ -60,6 +64,7 @@ public class XMLParser {
                         String lat = e.getElementsByTagName("lat").item(0).getTextContent();
                         String lng = e.getElementsByTagName("lng").item(0).getTextContent();
 
+                        
                         while(true) {
                             //Add cities
                             if ( !db.addCity(city) )
@@ -88,16 +93,11 @@ public class XMLParser {
                                 }
                             }
                             System.out.println(city);
-                                    
-                            if ( !pb.isVisible() )
-                                pb.setVisible(true);
-                            this.updateProgress(i, smartposts.getLength());
-                            
-                            
                             break;
                         }
 
                     }
+                    this.updateProgress(i, smartposts.getLength());
                 } 
                 this.updateProgress(1, 1);
                 

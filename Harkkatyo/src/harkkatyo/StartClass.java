@@ -11,20 +11,15 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-public class Mainclass extends Application {
-    public static Stage mainStage;
-    
-    // http://smartpost.ee/fi_apt.xml;
+public class StartClass extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Database db = Database.getInstance();
-        //while( !db.setUpDatabaseLocation()) {}
-        
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("StartMenu.fxml"));
         
         Scene scene = new Scene(root);
-        //scene.getStylesheets().add(getClass().getResource("newCascadeStyleSheet.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("timoStyleSheet.css").toExternalForm());
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
     

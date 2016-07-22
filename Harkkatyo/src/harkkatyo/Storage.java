@@ -4,23 +4,22 @@ import java.util.ArrayList;
 
 public class Storage {
     String name;
-    ArrayList<Package> packages;
     
     public Storage(String name) {
         this.name = name;
-        this.updatePackages();
     }
     
     public String getName() {
         return name;
     }
     
-    public final void updatePackages() {
-        Database db = Database.getInstance();
-        this.packages = db.getPackages(name);
+    public void addPackage(Package p) {
+        DatabaseHandler db = DatabaseHandler.getInstance();
+        db.addPackage(p, this);
     }
     
     public ArrayList<Package> getPackages() {
-        return packages;
+        DatabaseHandler db = DatabaseHandler.getInstance();
+        return db.getPackages(name);
     }
 }

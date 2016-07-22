@@ -15,16 +15,18 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
-public class StorageNameDialogController implements Initializable {
+public class AskStorageNameController implements Initializable {
     @FXML TextField storageNameField;
-    @FXML AnchorPane bgPane;
+    @FXML Pane bgPane;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        storageNameField.setText((""));
+        
         storageNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {

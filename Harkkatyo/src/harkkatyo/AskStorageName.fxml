@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:id="bgPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.AskStorageNameController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="bgPane" prefHeight="84.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="storageNameField" layoutX="44.0" layoutY="37.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

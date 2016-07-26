@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.animation.PauseTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -36,6 +37,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import javafx.util.Duration;
 
 public class PackageCreationController implements Initializable {
     
@@ -56,21 +58,11 @@ public class PackageCreationController implements Initializable {
     
     //Choose item
     @FXML private ComboBox<Item> itemSelectionField;
-    
-    //Create new item
-    @FXML private TextField itemNameField;
-    @FXML private TextField itemSizeField;
-    @FXML private TextField itemWeightField;
-    @FXML private CheckBox itemBreakableSelection;
 
     //All items
     @FXML private ListView itemListView;
     @FXML private Button itemAddButton;
     @FXML private Button itemRemoveButton;
-    
-    //itemTemplate
-    @FXML private Button addItemTemplateButton;
-    
     
     //Exit controls
     @FXML private Button packageReadyButton;
@@ -319,6 +311,19 @@ public class PackageCreationController implements Initializable {
         
         selectedItemsWeightLabel.setText(String.valueOf(newWeight));
         selectedItemsSizeLabel.setText(String.valueOf(newSize));
+    }
+    
+    public void showAndHideLabel(final Label l, String s) {
+        l.setText(s);
+        l.setVisible(true);
+        PauseTransition labelPause = new PauseTransition(Duration.seconds(5));
+        labelPause.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                l.setVisible(false);
+            }
+        });
+        labelPause.play();
     }
 
     //Display package class information popup

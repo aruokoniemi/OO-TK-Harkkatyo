@@ -1,4 +1,7 @@
-
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
+ */
 
 package harkkatyo;
 
@@ -30,18 +33,20 @@ import javafx.stage.Stage;
 
 public class StartMenuController implements Initializable {
 
-    @FXML Button startButton;
-    @FXML CheckBox clearStoragesCheckBox;
-    @FXML ProgressBar pb = new ProgressBar();
-    @FXML AnchorPane bgPane;
-    @FXML Label progressBarLabel;
-    @FXML Label percentageLabel;
-    @FXML CheckBox xmlSelectionBox;
-    @FXML Label mainLabel;
+    //Settings
+    @FXML private CheckBox clearStoragesCBox;
+    @FXML private CheckBox xmlSelectionCBox;
+    @FXML private TextField userNameField;
+    @FXML private TextField dbPathField;
+    @FXML private Button dbLocationButton;
     
-    @FXML TextField dbPathField;
-    @FXML Button dbLocationButton;
-    @FXML TextField userNameField;
+    @FXML private Button startButton;
+    
+    //XML-parsing progressbar elements
+    @FXML private ProgressBar pb = new ProgressBar();
+    @FXML private AnchorPane bgPane;
+    @FXML private Label progressBarLabel;
+    @FXML private Label percentageLabel;
     
     private boolean databaseOk = false;
     
@@ -57,7 +62,7 @@ public class StartMenuController implements Initializable {
         
         DatabaseHandler db = DatabaseHandler.getInstance();
         String path = getDbLocationProperty();
-        db.setUpDatabaseLocation(path);
+        db.setPath(path);
 
         if (db.testConnection()) {
             dbPathField.setText(path);
@@ -66,6 +71,7 @@ public class StartMenuController implements Initializable {
             dbPathField.setText("ERROR: FILE NOT A DB");
         }
         
+        // Don't let user input be over 20 characters
         userNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {
@@ -76,7 +82,7 @@ public class StartMenuController implements Initializable {
             }
         });
         
-        
+        // Get database path from user and test connection
         dbLocationButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -89,7 +95,7 @@ public class StartMenuController implements Initializable {
                 String path = selectedFile.getPath();
                 
                 DatabaseHandler db = DatabaseHandler.getInstance();
-                db.setUpDatabaseLocation(path);
+                db.setPath(path);
                 
                 if ( db.testConnection() ) {
                     dbPathField.setText(path);
@@ -102,16 +108,19 @@ public class StartMenuController implements Initializable {
             }
         });
         
-        xmlSelectionBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+        /* Clear storages if XML-data will be added to database to maintain
+         * database integrity      
+         */
+        xmlSelectionCBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean oldVal, Boolean newVal) {
                 if ( newVal == true ) {
-                    clearStoragesCheckBox.setSelected(true);
-                    clearStoragesCheckBox.setDisable(true);
+                    clearStoragesCBox.setSelected(true);
+                    clearStoragesCBox.setDisable(true);
                 }
                 else {
-                    clearStoragesCheckBox.setSelected(false);
-                    clearStoragesCheckBox.setDisable(false);
+                    clearStoragesCBox.setSelected(false);
+                    clearStoragesCBox.setDisable(false);
                 }
             }
         });
@@ -120,11 +129,12 @@ public class StartMenuController implements Initializable {
         startButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                // Return if database connection not working
                 if ( !databaseOk ) {
                     return;
                 }
                 
-                //Add new session
+                //Add new session to database
                 DatabaseHandler db = DatabaseHandler.getInstance();
                 String userName = userNameField.getText();
                 if ( userName.trim().isEmpty() ) userName = "Guest";
@@ -134,23 +144,21 @@ public class StartMenuController implements Initializable {
                 int sessionID = db.getNewSessionID();
                 db.addSession(userName, sessionID);
                 
-                final XMLParser parser = new XMLParser(pb);
-                //get data from db if selected
-                if ( !db.testConnection() ) {
-                    return;
-                }
-                
-                
-                if ( clearStoragesCheckBox.isSelected() ) {
+                //Clear storages, packages in storages and items in packages
+                if ( clearStoragesCBox.isSelected() ) {
                     ArrayList<Storage> storages = db.getStorages();
                     for ( Storage s : storages ) {
                         db.removeStorage(s);
                     }
                 }
-                if ( xmlSelectionBox.isSelected() ) {
+                //Clear database tables, then parse SmartPost data from XML
+                final XMLParser parser;
+                if ( xmlSelectionCBox.isSelected() ) {
+                    parser = new XMLParser(pb);
                     db.clearDatabaseTables();
                     disableControls();
                     
+                    pb.setProgress(0);
                     progressBarLabel.setVisible(true);
                     percentageLabel.setVisible(true);
                     
@@ -179,6 +187,7 @@ public class StartMenuController implements Initializable {
         });
     }
     
+    //Get database location path from properties
     public String getDbLocationProperty() {
         Properties props = new Properties();
         String retString = null;
@@ -194,10 +203,11 @@ public class StartMenuController implements Initializable {
         return retString;
     }
     
+    //Disable all controls
     public void disableControls() {
-        clearStoragesCheckBox.setDisable(true);
+        clearStoragesCBox.setDisable(true);
         startButton.setDisable(true);
-        xmlSelectionBox.setDisable(true);
+        xmlSelectionCBox.setDisable(true);
         dbLocationButton.setDisable(true);
         userNameField.setDisable(true);
     }

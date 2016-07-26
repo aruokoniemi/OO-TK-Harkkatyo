@@ -42,15 +42,10 @@ public class XMLParser {
 
             try {
                 builder = factory.newDocumentBuilder();
-          //      InputStream is = new URL(xmlURL).openStream();
                 InputStream is = this.getClass().getResourceAsStream("fi_apt.xml");
                 doc = builder.parse(is);
                 Element root = doc.getDocumentElement();
                 NodeList smartposts = root.getElementsByTagName("place");               
-                
-                if (!pb.isVisible()) {
-                    pb.setVisible(true);
-                }
                 
                 for ( int i = 0; i < smartposts.getLength(); i++ ) {
                     Node smartpost = smartposts.item(i);
@@ -92,10 +87,12 @@ public class XMLParser {
                                     db.addSmartPost(sPost, locationID, addressID);
                                 }
                             }
-                            System.out.println(city);
                             break;
                         }
 
+                    }
+                    if (!pb.isVisible()) {
+                        pb.setVisible(true);
                     }
                     this.updateProgress(i, smartposts.getLength());
                 } 

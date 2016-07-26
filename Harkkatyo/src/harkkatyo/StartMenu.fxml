@@ -25,8 +25,8 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <CheckBox fx:id="clearStoragesCheckBox" mnemonicParsing="false" text="Tyhjennä varastot" />
-            <CheckBox mnemonicParsing="false" text="Lataa SmartPost-tiedot tietokantaan" fx:id="xmlSelectionBox" />
+            <CheckBox fx:id="clearStoragesCBox" mnemonicParsing="false" text="Tyhjennä varastot" />
+            <CheckBox mnemonicParsing="false" text="Lataa SmartPost-tiedot tietokantaan" fx:id="xmlSelectionCBox" />
             <TextField fx:id="userNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="222.0" promptText="Anna käyttäjätunnus:" />
             <HBox prefHeight="62.0" prefWidth="476.0" spacing="10.0">
                <children>

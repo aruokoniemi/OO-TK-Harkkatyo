@@ -11,8 +11,11 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -26,38 +29,43 @@ import javafx.util.Callback;
  * @author m8581
  */
 public class PackageInformationDialogController implements Initializable {
-    @FXML ListView<Item> itemListView;
+    @FXML ListView itemListView;
     @FXML Label packageIDLabel;
     @FXML Label packageSizeLabel;
     @FXML Label packageWeightLabel;
     @FXML Label packageClassLabel;
     @FXML Pane bgPane;
+    @FXML Button removeItemButton;
+    
     
     private ObservableList<Item> items;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Callback itemCellFactory = new Callback<ListView<Item>, ListCell<Item>>() {
+        removeItemButton.setVisible(false);
+        removeItemButton.setDisable(true);
+        
+        Callback itemCellFactory = new Callback<ListView<Item>, ItemCell>() {
             @Override
-            public ListCell<Item> call(ListView<Item> itemListView) {
-                return new ListCell<Item>() {
-                    @Override
-                    public void updateItem(Item i, boolean empty) {
-                        if ( empty ) {
-                            setText(null);
-                            setGraphic(null);
-                        }
-                        else {
-                            setText(i.getItemDetails());
-                            setGraphic(null);
-                        }
-                    }
-                };
+            public ItemCell call(ListView<Item> itemListView) {
+                return new ItemCell();
             }
         };
         
         itemListView.setCellFactory(itemCellFactory);
         itemListView.setItems(items);
+        
+        removeItemButton.setOnAction(new EventHandler<ActionEvent>() {
+           @Override
+           public void handle(ActionEvent e) {
+               DatabaseHandler db = DatabaseHandler.getInstance();
+               Item selectedItem = (Item) itemListView.getSelectionModel().getSelectedItem();
+               if ( selectedItem != null ) {
+                   db.removeItem(selectedItem);
+                   items.remove(selectedItem);
+               }
+           }
+        });
     }    
     
     public void updateAll(int packageID) {
@@ -75,4 +83,8 @@ public class PackageInformationDialogController implements Initializable {
         packageClassLabel.setText(String.valueOf(p.getPackageClass()));
     }
     
+    public void enableRemoveItemButton() {
+        removeItemButton.setVisible(true);
+        removeItemButton.setDisable(false);
+    }
 }

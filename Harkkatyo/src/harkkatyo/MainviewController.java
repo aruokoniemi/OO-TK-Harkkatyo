@@ -2,12 +2,10 @@ package harkkatyo;
 
 import java.io.IOException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.animation.PauseTransition;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -21,7 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -30,14 +28,12 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -57,18 +53,17 @@ public class MainviewController implements Initializable {
     // package selection
     @FXML private Button newPackageButton;
     @FXML private ComboBox<Storage> storageComboBox;
-    @FXML private Label selectStorageLabel;
     @FXML private ComboBox<Package> packageComboBox;
     @FXML private Button sendPackageButton;
-    
-    //
-    @FXML private Button editDatabaseButton;
-    
-    //
+    @FXML private Label selectStorageLabel;
+    @FXML private Label packageLabel;
+
+    //SmartPost selection
     @FXML private ComboBox<SmartPost> senderComboBox;
     @FXML private ComboBox<SmartPost> receiverComboBox;
     
-    @FXML private Label packageLabel;
+    //Storage management
+    @FXML private Button manageStoragesButton;
     
     // Log controls
     @FXML private RadioButton thisSessionLogsRadioButton;
@@ -77,16 +72,12 @@ public class MainviewController implements Initializable {
     
     //Log TableView
     @FXML private TableView<Log> logTableView;
-    private ObservableList<Log> logs;
     
     //Holds all storages
     private ArrayList<Storage> storages;
     
     //Holds smartposts that are visible on map
-    private SmartPostHolder spHolder = new SmartPostHolder();
-    
-    //
-    private ObservableList<Package> observablePackages;
+    private final SmartPostHolder spHolder = new SmartPostHolder();
     
     private final DatabaseHandler db = DatabaseHandler.getInstance();
     private final LogWriter logWriter = new LogWriter();
@@ -97,18 +88,17 @@ public class MainviewController implements Initializable {
         // Get data from database to comboboxes
         updateCitiesBox();
         updateStorages();
-        updateLogs();
         updatePackages();
         
         
-        // What logs are shown; defaults to this session logs
+        // wanted logs selection: defaults to logs from this session
         logsToggleGroup = new ToggleGroup();
         thisSessionLogsRadioButton.setToggleGroup(logsToggleGroup);
         thisSessionLogsRadioButton.setSelected(true);
         allLogsRadioButton.setToggleGroup(logsToggleGroup);
         
         
-        //
+        // Update logs when tab changed
         bgPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
             @Override
             public void changed(ObservableValue<? extends Tab> observableValue, Tab oldVal, Tab newVal) {
@@ -118,6 +108,7 @@ public class MainviewController implements Initializable {
             }
         });
         
+        // Update logs when radiobutton changed
         logsToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue ov, Toggle oldValue, Toggle newValue) {
@@ -125,29 +116,29 @@ public class MainviewController implements Initializable {
             }
         });
         
-        //
         mapView.getEngine().load(getClass().getResource("map.html").toExternalForm());
         
         newPackageButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
                 try {
-                    if ( displaySendPackage() ) //update packages if package added to db 
+                    if ( displaySendPackage() ) // update packages if package added to db 
                         updatePackages();   
                 }
-                catch(IOException exception) {
+                catch(IOException ex) {
+                    ex.printStackTrace();
                 }
             }
         });        
         
-        editDatabaseButton.setOnAction(new EventHandler<ActionEvent>() {
+        manageStoragesButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
                try { 
                    displayStorageManagement();
                }
-               catch(IOException e1234r5tr) {
-                   
+               catch(IOException ex) {
+                   ex.printStackTrace();
                }
             }
         });
@@ -155,15 +146,27 @@ public class MainviewController implements Initializable {
         removePathsButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                spHolder.clearSmartPostList();
                 mapView.getEngine().executeScript("document.deletePaths()");
             }
         });
         
+        // Draw SmartPost markers to map and add SmartPost instances to SmartPostHolder
         addSmartPostsButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                drawSmartPosts();
+                String selectedCity = (String) cityComboBox.getSelectionModel().getSelectedItem();
+                ArrayList<SmartPost> smartposts = db.getSmartPosts(selectedCity);
+                String jScript = "document.goToLocation('%s, %s, %s,', '%s, %s', 'red')";
+
+                for (SmartPost sp : smartposts) {
+                    spHolder.addSmartPost(sp);
+                    String exec = String.format(jScript, sp.getLocalAddress(), String.valueOf(sp.getPostalNumber()),
+                            sp.getCity(), sp.getPostOffice(), sp.getAvailability());
+
+                    mapView.getEngine().executeScript(exec);
+                }
+
+                updateSmartPosts();
             }
         });
 
@@ -181,40 +184,41 @@ public class MainviewController implements Initializable {
                     return;
                 }
                 
-                selectedPackage.setSenderAndReceiver(sender.getID(), receiver.getID());
-                
-                //Get locations and combine
+                //Get SmartPost locations and combine them
                 ArrayList<String> senderLoc = sender.getGeoPoint().getAsArrayList();
                 ArrayList<String> receiverLoc = receiver.getGeoPoint().getAsArrayList();
                 senderLoc.addAll(receiverLoc);
                 
-                //Test distance before sending package
+                //Test distance before sending package: show error message if distance too long
                 String jScript = "document.getDistance(" + senderLoc + ")";
                 Double distance = (Double) mapView.getEngine().executeScript(jScript);
                 if ( distance > selectedPackage.getMaxDistance() ) {
-                    String msgString = "Matka on liian pitkä (" + distance + " km). Luokan " +
+                    String msgString = "Matka on liian pitkä (" + distance + " km).\nLuokan " +
                             selectedPackage.getPackageClass() + " paketteja voidaan lähettää korkeintaan "
                             + selectedPackage.getMaxDistance() + " km päähän.";
                     showAndHideLabel(packageLabel, msgString);
                     return;
                 }
                 
-                //Send package and break items
+                //Send package
+                selectedPackage.setSenderAndReceiver(sender.getID(), receiver.getID());
                 selectedPackage.breakItems();
                 db.setPackageAsSent(selectedPackage);
-           
-                
+        
+                //Draw path on map
                 jScript = "document.createPath(" + senderLoc + ", 'red'," +
                         selectedPackage.getPackageClass() + ")";
                 mapView.getEngine().executeScript(jScript);
-                
                 showAndHideLabel(packageLabel, "Paketti lähetetty!");
                 
+                //Log sent package
                 logWriter.logSentPackage(selectedPackage, distance);
+                
                 updatePackages();
             }
         });
         
+        //Zoom with mouse scroll wheel
         mapView.setOnScroll(new EventHandler<ScrollEvent>() {
             @Override
             public void handle(ScrollEvent e) {
@@ -234,13 +238,12 @@ public class MainviewController implements Initializable {
             @Override
             public void changed(ObservableValue observable, Storage oldValue, Storage newValue) {
                 if ( newValue != null ) {
-                    selectStorageLabel.setVisible(false);
                     updatePackages();
                 }
             }
         });
         
-        /** 
+        /** Log TableColumns
          * 
          * 
          */
@@ -257,7 +260,7 @@ public class MainviewController implements Initializable {
                             setText(null);
                             setGraphic(null);
                         } else {
-                            Button contentButton = Package.createInfoButton(pID);
+                            Button contentButton = Package.createInfoButton(pID, false);
                             setText(null);
                             setGraphic(contentButton);
                         }
@@ -348,11 +351,19 @@ public class MainviewController implements Initializable {
             }
         });
         
+        
+        dateColumn.prefWidthProperty().bind(logTableView.widthProperty().multiply(0.2));
+        userColumn.prefWidthProperty().bind(logTableView.widthProperty().multiply(0.1));
+        actionColumn.prefWidthProperty().bind(logTableView.widthProperty().multiply(0.7));
+        distanceColumn.prefWidthProperty().bind(logTableView.widthProperty().multiply(0.1));
+        contentColumn.prefWidthProperty().bind(logTableView.widthProperty().multiply(0.15));
+        
         logTableView.setPlaceholder(new Label("Ei lokitietoja valitulta ajalta"));
         logTableView.getColumns().addAll(dateColumn, userColumn, actionColumn, distanceColumn, contentColumn);        
         logTableView.getSortOrder().addAll(dateColumn);
         
-        //SmartPosts
+        
+        // SmartPost ComboBoxes
         Callback smartPostCellFactory = new Callback<ListView<SmartPost>, ListCell<SmartPost>>() {
             @Override
             public ListCell<SmartPost> call(ListView<SmartPost> p) {
@@ -414,14 +425,7 @@ public class MainviewController implements Initializable {
                             setText("Paketti");
                             setGraphic(null);
                         } else {
-                            HBox hbox = new HBox(50);
-                            String packageDetails = "ID: " + String.valueOf(p.getPackageID());
-                            Label text = new Label(packageDetails);
-                            Button infoButton = Package.createInfoButton(p.getPackageID());
-                            hbox.getChildren().addAll(text, infoButton);
-                            setText(null);
-                            setGraphic(hbox);
-                            
+                            setText("ID: " + p.getPackageID());
                         }
                     }
 
@@ -543,7 +547,9 @@ public class MainviewController implements Initializable {
         ObservableList<Storage> storageObservable = FXCollections.observableArrayList(storages);
         storageComboBox.setItems(storageObservable);
         
-        storageComboBox.getSelectionModel().select(selectedStorage);
+        if ( storageObservable.contains(selectedStorage) ) {
+            storageComboBox.getSelectionModel().select(selectedStorage);
+        }
     }
     
     public void updatePackages() {
@@ -554,12 +560,15 @@ public class MainviewController implements Initializable {
             return;
         
         ArrayList<Package> packages = selectedStorage.getPackages();
-        ObservableList<Package> packageObservable = observablePackages = FXCollections.observableArrayList(packages);
+        ObservableList<Package> packageObservable = FXCollections.observableArrayList(packages);
         packageComboBox.setItems(packageObservable);
+        
+        if (packageObservable.contains(selectedPackage)) {
+            packageComboBox.getSelectionModel().select(selectedPackage);
+        }
     }
     
     public void updateSmartPosts() {
-        //Get currently selected smartposts
         SmartPost selectedReceiver = receiverComboBox.getSelectionModel().getSelectedItem();
         SmartPost selectedSender = senderComboBox.getSelectionModel().getSelectedItem();
 
@@ -571,37 +580,22 @@ public class MainviewController implements Initializable {
         senderComboBox.getSelectionModel().select(selectedSender);
     }
     
-    public void drawSmartPosts() {
-        String selectedCity = (String) cityComboBox.getSelectionModel().getSelectedItem();
-        ArrayList<SmartPost> smartposts = db.getSmartPosts(selectedCity);
-        String jScript = "document.goToLocation('%s, %s, %s,', '%s, %s', 'red')";
-        
-        for ( SmartPost sp : smartposts) {
-            spHolder.addSmartPost(sp);
-            String exec = String.format(jScript, sp.getLocalAddress(), String.valueOf(sp.getPostalNumber()),
-                    sp.getCity(), sp.getPostOffice(), sp.getAvailability());
-            
-            mapView.getEngine().executeScript(exec);
-        }
-        
-        updateSmartPosts();
-    }
-    
     public String getStorageName() {
         Storage selectedStorage = storageComboBox.getSelectionModel().getSelectedItem();
         return selectedStorage.getName();
     }
-   
-    public void updateLogs() {
+    
+    private void updateLogs() {
         ArrayList<Log> logs;
-        if ( thisSessionLogsRadioButton.isSelected() ) {
+        if ( thisSessionLogsRadioButton.isSelected () ) {
             logs = logWriter.getSessionLogs();
         }
         else {
             logs = logWriter.getAllLogs();
         }
-        
+
         ObservableList logObservable = FXCollections.observableArrayList(logs);
-        logTableView.setItems(logObservable);
+
+        logTableView.setItems (logObservable);
     }
 }

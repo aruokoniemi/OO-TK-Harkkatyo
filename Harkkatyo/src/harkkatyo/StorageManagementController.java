@@ -42,14 +42,59 @@ public class StorageManagementController implements Initializable {
         addStorageButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                addStorage();
+                String storageName = displayStorageNameDialog();
+                //Check if name empty
+                if (storageName.trim().equals("")) {
+                    return;
+                }
+
+                //Check if name in use already
+                for (Storage s : storages) {
+                    System.out.println(s.getName());
+                    if (storageName.equals(s.getName())) {
+                        showAndHideLabel(messageLabel, "Varaston nimi on jo käytössä.");
+                        return;
+                    }
+                }
+
+                Storage newStorage = new Storage(storageName);
+                
+                DatabaseHandler db = DatabaseHandler.getInstance();
+                //Add storage to database, update treeview if added successfully
+                if (db.addStorage(newStorage)) {
+                    storages.add(newStorage);
+
+                    TreeItem<String> storageItem = new TreeItem<>();
+                    storageItem.setValue(newStorage.getName());
+                    storageTreeView.getRoot().getChildren().add(storageItem);
+                }
+                else {
+                    showAndHideLabel(messageLabel, "Virhe varaston lisäämisessä tietokantaan.");
+                }
             }
         });
         
         removeStorageButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                removeStorage();
+                TreeItem<String> removedItem = storageTreeView.getSelectionModel().getSelectedItem();
+                String removedStorageName = removedItem.getValue().split(":")[0];
+                
+                
+                int removedIndex = -1;
+                for (Storage s : storages) {
+                    if (s.getName().equals(removedStorageName)) {
+                        removedIndex = storages.indexOf(s);
+                    }
+                }
+
+                if (removedIndex == -1) {
+                    return;
+                }
+
+                storageTreeView.getRoot().getChildren().remove(removedIndex);
+                DatabaseHandler db = DatabaseHandler.getInstance();
+                db.removeStorage(new Storage(removedStorageName));
             }
         });
          
@@ -62,8 +107,6 @@ public class StorageManagementController implements Initializable {
         
     }               
     
-   
-    
     public void updateStorageTreeView() {
         DatabaseHandler db = DatabaseHandler.getInstance();
         this.storages = FXCollections.observableArrayList(db.getStorages());
@@ -74,8 +117,8 @@ public class StorageManagementController implements Initializable {
         root.setGraphic(null);
         root.setExpanded(true);
         
+        //Create storage nodes
         for (Storage s : storages) {
-            //Create storage nodes
             System.out.println(s.getName());
             String packages = " pakettia";
             if ( s.getPackages().size() == 1 )
@@ -90,7 +133,7 @@ public class StorageManagementController implements Initializable {
             for ( Package p : s.getPackages() ) {
                 
                 Label packageLabel = new Label("PackageID: " + p.getPackageID());
-                Button contentsButton = Package.createInfoButton(p.getPackageID());
+                Button contentsButton = Package.createInfoButton(p.getPackageID(), true);
             
                 CustomBox packageBox = new CustomBox(packageLabel, contentsButton);
                 TreeItem<String> packageItem = new TreeItem<>();
@@ -101,34 +144,6 @@ public class StorageManagementController implements Initializable {
             root.getChildren().add(storageItem);
         }
         storageTreeView.setRoot(root);
-    }
-    
-    //return true if no errors
-    public boolean addStorage() {  
-        String storageName = displayStorageNameDialog();
-        if ( !storageName.trim().equals("") ) {
-            return false;
-        }
-
-        //Check if name in use already
-        for ( Storage s : storages ) {
-            if ( storageName.equals(s.getName()) )
-                    return false;
-        }
-        
-        Storage newStorage = new Storage(storageName);
-        DatabaseHandler db = DatabaseHandler.getInstance();
-          if (db.addStorage(newStorage)) {
-                storages.add(newStorage);
-                
-                TreeItem<String> storageItem = new TreeItem<>();
-                storageItem.setValue(newStorage.getName());
-                storageTreeView.getRoot().getChildren().add(storageItem);
-        } else {
-                return false;
-        }
-          
-        return true;
     }
 
     /**
@@ -148,26 +163,7 @@ public class StorageManagementController implements Initializable {
         });
         labelPause.play();
     }
-    
-    
-    public void removeStorage() {
-        TreeItem<String> removedItem = storageTreeView.getSelectionModel().getSelectedItem();
-        String removedStorageName = removedItem.getValue().split(":")[0];
-        
-        int removedIndex = -1;
-        for ( Storage s : storages ) {
-            if ( s.getName().equals(removedStorageName) )
-                removedIndex = storages.indexOf(s);
-        } 
-        
-        if ( removedIndex == -1 ) {
-           return;
-        }
-        
-        storageTreeView.getRoot().getChildren().remove(removedIndex);
-        DatabaseHandler db = DatabaseHandler.getInstance();
-        db.removeStorage(new Storage(removedStorageName));
-    }
+
     
     // Opens a popup, returns given String 
     public String displayStorageNameDialog() {

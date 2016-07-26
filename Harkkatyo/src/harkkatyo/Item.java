@@ -107,57 +107,57 @@ abstract public class Item {
 
 class Cat extends Item {
     public Cat() {
-        super("Kissa", 30, 8, true);
+        super("Kissa", 15000, 8, true);
     }
     
     public Cat(boolean broken) {
-        super("Kissa", 30, 8, broken, true);
+        super("Kissa", 15000, 8, broken, true);
     }
     
     public Cat(int itemID, boolean broken) {
-        super(itemID, "Kissa", 30, 8, broken, true);
+        super(itemID, "Kissa", 15000, 8, broken, true);
     }
 }
 
-class Dog extends Item {
-    public Dog() {
-        super("Koira", 40, 12, true);
+class Stone extends Item {
+    public Stone() {
+        super("Kivi", 1000, 1, true);
     }
     
-    public Dog(boolean broken) {
-        super("Koira", 40, 12, broken,true);
+    public Stone(boolean broken) {
+        super("Kivi", 1000, 1, broken, true);
     }
     
-    public Dog(int itemID, boolean broken) {
-        super(itemID, "Koira", 40, 12, broken, true);
+    public Stone(int itemID, boolean broken) {
+        super(itemID, "Kivi", 1000, 1, broken, true);
     }
 }
 
-class Door extends Item {
-    public Door() {
-        super("Ovi", 120, 10, false);
+class Computer extends Item {
+    public Computer() {
+        super("Tietokone", 15000, 6, true);
     }
     
-    public Door(boolean broken) {
-        super("Ovi", 120, 10, broken, false);
+    public Computer(boolean broken) {
+        super("Tietokone", 15000, 6, broken, true);
     }
     
-    public Door(int itemID, boolean broken) {
-        super(itemID, "Ovi", 120, 10, broken, false);
+    public Computer(int itemID, boolean broken) {
+        super(itemID, "Tietokone", 120, 10, broken, true);
     }
 }
 
-class Gold extends Item {
-    public Gold() {
-        super("Kultaharkko", 20, 50, false);
+class Book extends Item {
+    public Book() {
+        super("Kirja", 1200, 1, false);
     }
     
-    public Gold(boolean broken) {
-        super("Kultaharkko", 20, 50, broken, false);
+    public Book(boolean broken) {
+        super("Kirja", 1200, 1, broken, false);
     }
     
-    public Gold(int itemID, boolean broken) {
-        super(itemID, "Kultaharkko", 20, 50, broken, false);
+    public Book(int itemID, boolean broken) {
+        super(itemID, "Kirja", 1200, 1, broken, false);
     }
 }
 
@@ -171,14 +171,14 @@ class ItemBuilder {
         if (itemName.equals("Kissa")) {
             i = new Cat();
         }
-        if (itemName.equals("Koira")) {
-            i = new Dog();
+        if (itemName.equals("Kivi")) {
+            i = new Stone();
         }
-        if (itemName.equals("Ovi")) {
-            i = new Door();
+        if (itemName.equals("Tietokone")) {
+            i = new Computer();
         }
-        if (itemName.equals("Kultaharkko")) {
-            i = new Gold();
+        if (itemName.equals("Kirja")) {
+            i = new Book();
         }
 
         return i;
@@ -190,14 +190,14 @@ class ItemBuilder {
         if (itemName.equals("Kissa")) {
             i = new Cat(broken);
         }
-        if (itemName.equals("Koira")) {
-            i = new Dog(broken);
+        if (itemName.equals("Kivi")) {
+            i = new Stone(broken);
         }
-        if (itemName.equals("Ovi")) {
-            i = new Door(broken);
+        if (itemName.equals("Tietokone")) {
+            i = new Computer(broken);
         }
-        if (itemName.equals("Kultaharkko")) {
-            i = new Gold(broken);
+        if (itemName.equals("Kirja")) {
+            i = new Book(broken);
         }
 
         return i;
@@ -209,14 +209,14 @@ class ItemBuilder {
         if (itemName.equals("Kissa")) {
             i = new Cat(itemID, broken);
         }
-        if (itemName.equals("Koira")) {
-            i = new Dog(itemID, broken);
+        if (itemName.equals("Kivi")) {
+            i = new Stone(itemID, broken);
         }
-        if (itemName.equals("Ovi")) {
-            i = new Door(itemID, broken);
+        if (itemName.equals("Tietokone")) {
+            i = new Computer(itemID, broken);
         }
-        if (itemName.equals("Kultaharkko")) {
-            i = new Gold(itemID, broken);
+        if (itemName.equals("Kirja")) {
+            i = new Book(itemID, broken);
         }
 
         return i;
@@ -225,9 +225,9 @@ class ItemBuilder {
     public ArrayList<Item> createAllItems() {
         ArrayList<Item> items = new ArrayList<>();
         items.add(new Cat());
-        items.add(new Dog());
-        items.add(new Door());
-        items.add(new Gold());
+        items.add(new Stone());
+        items.add(new Computer());
+        items.add(new Book());
         return items;
     }
 }

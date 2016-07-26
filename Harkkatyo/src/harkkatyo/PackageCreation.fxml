@@ -9,7 +9,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<AnchorPane fx:id="bgPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.PackageCreationController">
+<AnchorPane fx:id="bgPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.PackageCreationController">
    <children>
       <HBox layoutX="16.0" layoutY="73.0" prefHeight="395.0" prefWidth="724.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-29.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -30,11 +30,11 @@
                         <Insets top="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <VBox prefHeight="216.0" prefWidth="201.0" spacing="10.0">
+                  <VBox prefHeight="230.0" prefWidth="409.0" spacing="10.0">
                      <children>
                         <Label text="Esineet" />
                         <ListView fx:id="itemListView" prefHeight="248.0" prefWidth="198.0" />
-                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                        <HBox prefHeight="30.0" prefWidth="409.0" spacing="10.0">
                            <children>
                               <Button fx:id="itemRemoveButton" mnemonicParsing="false" text="Poista esine" />
                            </children>
@@ -49,7 +49,7 @@
                   <Insets bottom="20.0" left="20.0" top="20.0" />
                </HBox.margin>
             </VBox>
-            <VBox prefHeight="207.0" prefWidth="224.0" spacing="10.0">
+            <VBox prefHeight="379.0" prefWidth="247.0" spacing="10.0">
                <children>
                   <HBox prefHeight="0.0" prefWidth="128.0" spacing="20.0">
                      <children>
@@ -81,7 +81,7 @@
                   <RadioButton fx:id="class3Button" mnemonicParsing="false" text="3. luokka" />
                   <HBox prefHeight="180.0" prefWidth="224.0" spacing="5.0">
                      <children>
-                        <VBox prefHeight="35.0" prefWidth="54.0" spacing="5.0">
+                        <VBox prefHeight="160.0" prefWidth="65.0" spacing="5.0">
                            <children>
                               <Label text="Paino:" />
                               <Label text="Koko:" />
@@ -104,13 +104,13 @@
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="35.0" prefWidth="150.0" spacing="10.0">
+                  <HBox prefHeight="25.0" prefWidth="236.0" spacing="10.0">
                      <children>
                         <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" text="Peruuta" />
-                        <Button fx:id="packageReadyButton" mnemonicParsing="false" prefHeight="18.0" prefWidth="62.0" text="Valmis" />
+                        <Button fx:id="packageReadyButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Valmis" />
                      </children>
                      <VBox.margin>
-                        <Insets left="30.0" />
+                        <Insets />
                      </VBox.margin>
                   </HBox>
                </children>

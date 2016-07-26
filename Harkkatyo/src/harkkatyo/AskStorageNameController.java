@@ -27,6 +27,7 @@ public class AskStorageNameController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         storageNameField.setText((""));
         
+        //  Don't let user input be over 20 characters
         storageNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {

@@ -1,14 +1,6 @@
 package harkkatyo;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,8 +9,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 public class DatabaseHandler {
     private static DatabaseHandler dbHandler;
@@ -33,22 +23,24 @@ public class DatabaseHandler {
         return dbHandler;
     }
     
-    
     public String getPath() {
         return path;
     }
     
-    public void setUpDatabaseLocation(String path) {
+    public void setPath(String path) {
         this.path = path;
     }
     
-    
+    /*  Returns true if query to smartpost-table succeeds 
+     *  else returns false
+     */
     public boolean testConnection() {
         boolean retVal = true;
         try ( Connection c = getConnection() ) {
             c.prepareStatement("SELECT * FROM smartpost LIMIT 1");
         } 
         catch(SQLException e) {
+            e.printStackTrace();
             retVal = false;
         }
         return retVal;
@@ -101,7 +93,7 @@ public class DatabaseHandler {
         return null;
     }
     
-        //Return PackageID of last inserted package
+    //Return all logs from database
     public ArrayList<Log> getLogMessages() {
         ArrayList<Log> logs = new ArrayList<Log>();
         try (
@@ -179,8 +171,15 @@ public class DatabaseHandler {
         }
     }
     
-    // remove packages stored in arg Storage that are not sent yet
+    // remove not yet sent packages and items in package from arg Storage
     public void removePackages(Storage s) {
+        //Remove items first
+        for ( Package p : s.getPackages() ) {
+            for ( Item i : p.getItems() ) {
+                removeItem(i);
+            }
+        }
+        
         try (
                 Connection c = getConnection();
                 PreparedStatement ps = c.prepareStatement("DELETE FROM package WHERE storage = ? AND sent = 0;");
@@ -190,6 +189,21 @@ public class DatabaseHandler {
                 ps.executeUpdate();
             }
             catch(SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void removeItem(Item i) {
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM item WHERE itemid = ?;");) {
+            try {
+                ps.setInt(1, i.getItemID());
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
                 innerE.printStackTrace();
             }
         } catch (SQLException e) {
@@ -255,16 +269,16 @@ public class DatabaseHandler {
         }
         //then add items
         for ( Item i : p.getItems() ) {
-            this.addPackagedItem(p, i);
+            this.addItem(p, i);
         }
         
         return true;
     }
     
-    public void addPackagedItem(Package p, Item i) {
+    public void addItem(Package p, Item i) {
         try (
             Connection c = getConnection();
-            PreparedStatement ps = c.prepareStatement("INSERT INTO packageditem("
+            PreparedStatement ps = c.prepareStatement("INSERT INTO item("
                     + "packageid, name, size, weight, broken, breakable) VALUES "
                     + "(?, ?, ?, ?, ?, ?);");
         ) {  
@@ -569,7 +583,7 @@ public class DatabaseHandler {
                 Connection c = getConnection();
                 Statement stmt = c.createStatement();) {
             try (ResultSet rs = stmt.executeQuery("SELECT itemid "
-                    + "FROM packageditem "
+                    + "FROM item "
                     + "ORDER BY itemid DESC LIMIT 1;")) {
                 if (rs.isBeforeFirst()) {
                     itemID = rs.getInt(1) + 1;
@@ -763,7 +777,7 @@ public class DatabaseHandler {
                         int senderid = Integer.parseInt(columns[1]);
                         int receiverid = Integer.parseInt(columns[2]);
                         int packageid = Integer.parseInt(columns[3]);
-                        ArrayList<Item> items = getPackagedItems(packageid);
+                        ArrayList<Item> items = getItems(packageid);
                         Item[] itemList = items.toArray(new Item[items.size()]);
 
                         Package newPackage = pb.createPackage(packageid, packageClass, 
@@ -799,7 +813,7 @@ public class DatabaseHandler {
                 int senderid = rs.getInt("senderid");
                 int receiverid = rs.getInt("receiverid");
                 int packageid = rs.getInt("packageid");
-                ArrayList<Item> items = getPackagedItems(packageid);
+                ArrayList<Item> items = getItems(packageid);
                 Item[] itemList = items.toArray(new Item[items.size()]);
 
                 retPackage = pb.createPackage(packageid, packageClass, senderid, receiverid, itemList);
@@ -814,13 +828,13 @@ public class DatabaseHandler {
         return retPackage;
     }
     
-    public ArrayList<Item> getPackagedItems(int packageID) {
+    public ArrayList<Item> getItems(int packageID) {
         ArrayList<Item> items = new ArrayList<>();
         try (
             Connection c = getConnection();
             PreparedStatement ps = c.prepareStatement("SELECT "
                     + "itemid, name, broken "
-                    + "FROM packageditem WHERE packageID = ?;");
+                    + "FROM item WHERE packageID = ?;");
         ) {
             ps.setInt(1, packageID);
             try ( ResultSet rs = ps.executeQuery(); ) {
@@ -1000,7 +1014,7 @@ public class DatabaseHandler {
         int itemID = i.getItemID();
         try {
             Connection conn = this.getConnection();
-            String sqlQuery = "UPDATE packageditem SET broken = 1 WHERE itemid = ? AND breakable = 1;";
+            String sqlQuery = "UPDATE item SET broken = 1 WHERE itemid = ? AND breakable = 1;";
             PreparedStatement ps = conn.prepareStatement(sqlQuery);
             ps.setInt(1, itemID);
             ps.executeUpdate();

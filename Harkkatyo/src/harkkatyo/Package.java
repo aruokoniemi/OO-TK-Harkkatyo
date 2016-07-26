@@ -118,7 +118,10 @@ abstract public class Package {
         return receiverID;
     }
 
-    public static Button createInfoButton(final int packageID) {
+    /* Creates a button that opens a dialog showing package contents and package information.
+     * itemsRemovable - if true the dialog will have a button that allows the user to remove items from the package.
+     */ 
+    public static Button createInfoButton(final int packageID, final boolean itemsRemovable) {
         Button infoButton = new Button("Katso sisältö");
         infoButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -135,6 +138,9 @@ abstract public class Package {
                     stage.setScene(scene);
 
                     PackageInformationDialogController controller = loader.getController();
+                    if ( itemsRemovable )
+                        controller.enableRemoveItemButton();
+                    
                     controller.updateAll(packageID);
 
                     stage.show();
@@ -150,9 +156,9 @@ abstract public class Package {
 }
 
 class PackageClass1 extends Package {
-    private double maxDistance = 200;
-    final static public int maxSize = 50;
-    static public int maxWeight = 15;
+    private double maxDistance = 150;
+    final static public int maxSize = 25000;
+    static public int maxWeight = 20;
     
     public PackageClass1(int packageID, int SenderID, int ReceiverID, Item... i) {
         super(packageID, 1, SenderID, ReceiverID, true, i);
@@ -169,9 +175,9 @@ class PackageClass1 extends Package {
 } 
 
 class PackageClass2 extends Package {
-    private double maxDistance = 1200;
-    final static public int maxSize = 25;
-    final static public int maxWeight = 10;
+    private double maxDistance = 1300;
+    final static public int maxSize = 20000;
+    final static public int maxWeight = 30;
     
     public PackageClass2(int packageID, int SenderID, int ReceiverID, Item... i) {
         super(packageID, 2, SenderID, ReceiverID, false, i);
@@ -188,8 +194,8 @@ class PackageClass2 extends Package {
 } 
 
 class PackageClass3 extends Package {
-    private double maxDistance = 700;
-    final static public int maxSize = 30;
+    private double maxDistance = 1300;
+    final static public int maxSize = 40000;
     final static public int maxWeight = 30;
     
     public PackageClass3(int packageID, int SenderID, int ReceiverID, Item... i) {

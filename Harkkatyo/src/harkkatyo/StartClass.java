@@ -1,5 +1,6 @@
-/*
- * Aleksi Ruokoniemi
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
  */
 
 package harkkatyo;

@@ -7,16 +7,10 @@
 package harkkatyo;
 
 import javafx.scene.control.Button;
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.Control;
 import javafx.scene.control.Label;
-import javafx.scene.control.TreeCell;
 import javafx.scene.layout.HBox;
 
-/**
- *
- * @author m8581
- */
+
 public class CustomBox extends HBox {
     private Label itemText;
     private Button button;

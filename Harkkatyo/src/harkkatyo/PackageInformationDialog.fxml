@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="bgPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.PackageInformationDialogController">
+<Pane fx:id="bgPane" prefHeight="377.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.PackageInformationDialogController">
    <children>
       <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
          <children>
@@ -51,5 +51,6 @@
             </VBox>
          </children>
       </AnchorPane>
+      <Button fx:id="removeItemButton" layoutX="20.0" layoutY="337.0" mnemonicParsing="false" text="Poista esine" />
    </children>
 </Pane>

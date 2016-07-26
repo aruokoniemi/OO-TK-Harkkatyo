@@ -27,7 +27,6 @@
 }
 
 .tab {
-    -fx-border-radius: 8 8 0 0;
     -fx-border-color: #444444;
     -fx-border-width: 0.2;
     -fx-background-image: url("bgpicture.png");
@@ -87,6 +86,52 @@
 .web-view{
     -fx-border-color: black;
     -fx-effect: dropshadow(gaussian, black, 10, 0, 0, 0);
+}
+
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow {
+    -fx-background-color: linear-gradient(#fead63, #fdc795); 
+}
+
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-background-color: linear-gradient(#fef4ea, #ffe5cd);
+}
+
+.list-view .scroll-bar:horizontal .increment-button:pressed,
+.list-view .scroll-bar:horizontal .decrement-button:pressed,
+.list-view .scroll-bar:vertical .increment-button:pressed,
+.list-view .scroll-bar:vertical .decrement-button:pressed {
+    -fx-border-color: #6a0202;
+}
+
+.list-view .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: linear-gradient(#fdc795, #fead63);
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 1, 1);
+}
+
+.list-view .scroll-bar:vertical .thumb:hover,
+.list-view .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: linear-gradient(#fead63, #fdc795);
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 1, 1);
+}
+
+.list-view .scroll-bar:vertical .thumb:pressed,
+.list-view .scroll-bar:horizontal .thumb:pressed {
+    -fx-background-color: linear-gradient(#fead63, #fdc795);
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 1, 1);
+    -fx-border-color: #6a0202;
+    -fx-border-radius: 8;
+}
+
+.list-view .scroll-bar:horizontal .track,
+.list-view .scroll-bar:vertical .track {
+    -fx-background-color: #fef2f2;
 }
 
 .table-view{

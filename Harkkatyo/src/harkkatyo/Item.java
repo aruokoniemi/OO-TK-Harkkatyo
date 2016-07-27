@@ -121,15 +121,15 @@ class Cat extends Item {
 
 class Stone extends Item {
     public Stone() {
-        super("Kivi", 1000, 1, true);
+        super("Kivi", 1000, 1, false);
     }
     
     public Stone(boolean broken) {
-        super("Kivi", 1000, 1, broken, true);
+        super("Kivi", 1000, 1, broken, false);
     }
     
     public Stone(int itemID, boolean broken) {
-        super(itemID, "Kivi", 1000, 1, broken, true);
+        super(itemID, "Kivi", 1000, 1, broken, false);
     }
 }
 

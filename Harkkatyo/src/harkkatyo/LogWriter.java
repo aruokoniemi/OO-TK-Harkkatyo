@@ -26,14 +26,14 @@ public class LogWriter {
     
     public ArrayList<Log> getAllLogs() {
         DatabaseHandler db = DatabaseHandler.getInstance();
-        ArrayList<Log> logs = db.getLogMessages();
+        ArrayList<Log> logs = db.getLogs();
         return logs;
     }
     
     //Returns logs only from this session
     public ArrayList<Log> getSessionLogs() {
         DatabaseHandler db = DatabaseHandler.getInstance();
-        ArrayList<Log> logs = db.getLogMessages();
+        ArrayList<Log> logs = db.getLogs();
         ArrayList<Log> removedLogs = new ArrayList<>();
         
         for ( Log l : logs ) {

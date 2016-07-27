@@ -20,11 +20,11 @@ public class Log {
     private final SimpleDoubleProperty distance;
     private final SimpleIntegerProperty sessionID;
 
-    private int logMessageID;
+    private int logEntryID;
 
     public Log(int logMessageID, int sessionID, String message, int packageID,
             double distance, Date logDate) {
-        this.logMessageID = logMessageID;
+        this.logEntryID = logMessageID;
         this.sessionID = new SimpleIntegerProperty(sessionID);
         this.message = new SimpleStringProperty(message);
         this.packageID = new SimpleIntegerProperty(packageID);
@@ -32,8 +32,8 @@ public class Log {
         this.logDate = new SimpleObjectProperty(this, "logDate", logDate);
     }
 
-    public int getLogMessageID() {
-        return logMessageID;
+    public int getLogEntryID() {
+        return logEntryID;
     }
     
     public String getUser() {

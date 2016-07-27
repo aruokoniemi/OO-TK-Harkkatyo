@@ -34,6 +34,7 @@ import javafx.stage.Stage;
 public class StartMenuController implements Initializable {
 
     //Settings
+    @FXML private CheckBox clearLogsCBox;
     @FXML private CheckBox clearStoragesCBox;
     @FXML private CheckBox xmlSelectionCBox;
     @FXML private TextField userNameField;
@@ -75,8 +76,8 @@ public class StartMenuController implements Initializable {
         userNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {
-                if (newValue.length() > 20) {
-                    userNameField.setText(newValue.substring(0, 20));
+                if (userNameField.getText().length() > 20) {
+                    userNameField.setText(userNameField.getText().substring(0, 20));
                 }
 
             }
@@ -115,12 +116,16 @@ public class StartMenuController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean oldVal, Boolean newVal) {
                 if ( newVal == true ) {
+                    clearLogsCBox.setSelected(true);
+                    clearLogsCBox.setDisable(true);
                     clearStoragesCBox.setSelected(true);
                     clearStoragesCBox.setDisable(true);
                 }
                 else {
                     clearStoragesCBox.setSelected(false);
                     clearStoragesCBox.setDisable(false);
+                    clearLogsCBox.setSelected(false);
+                    clearLogsCBox.setDisable(false);
                 }
             }
         });
@@ -143,6 +148,16 @@ public class StartMenuController implements Initializable {
                 
                 int sessionID = db.getNewSessionID();
                 db.addSession(userName, sessionID);
+                
+                //Clear logs, packages that are not sent and items in packages
+                if ( clearLogsCBox.isSelected() ) {
+                    ArrayList<Log> logs = db.getLogs();
+                    for ( Log l : logs ) {
+                        db.removePackage(l.getPackageID());
+                        db.removeLog(l);
+                    }
+                    
+                }
                 
                 //Clear storages, packages in storages and items in packages
                 if ( clearStoragesCBox.isSelected() ) {

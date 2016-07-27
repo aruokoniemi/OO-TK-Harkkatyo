@@ -31,8 +31,8 @@ public class AskStorageNameController implements Initializable {
         storageNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {
-                if ( newValue.length() > 20 ) {
-                    storageNameField.setText(newValue.substring(0, 20));
+                if ( storageNameField.getText().length() > 20 ) {
+                    storageNameField.setText(storageNameField.getText().substring(0, 20));
                 }
                     
             }

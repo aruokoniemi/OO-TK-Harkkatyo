@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="485.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.DatabaseManagementController">
+   <tabs>
+      <Tab text="Varastot">
+         <content>
+            <AnchorPane fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="661.0">
+               <children>
+                  <VBox layoutX="-6.0" layoutY="-8.0" prefHeight="463.0" prefWidth="669.0" spacing="10.0">
+                     <children>
+                        <TreeView fx:id="storageTreeView" prefHeight="372.0" prefWidth="629.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </TreeView>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="addStorageButton" mnemonicParsing="false" text="Lisää varasto" />
+                              <Button fx:id="removeStorageButton" mnemonicParsing="false" text="Poista varasto" />
+                              <Button fx:id="removePackageButton" mnemonicParsing="false" text="Poista paketti" />
+                              <Label fx:id="messageLabel" text="Label" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Postiautomaatit">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="400.0" prefWidth="275.0" spacing="10.0">
+                           <children>
+                              <Label text="Lisää uusi automaatti">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="localAddressField" prefHeight="25.0" prefWidth="223.0" promptText="Lähiosoite:" />
+                              <TextField fx:id="postalNumberField" prefHeight="25.0" prefWidth="223.0" promptText="Postinumero:" />
+                              <ComboBox fx:id="addedCityCBox" prefHeight="25.0" prefWidth="266.0" promptText="Kaupunki:" />
+                              <TextField fx:id="postOfficeField" promptText="Postitoimisto:" />
+                              <TextField fx:id="availabilityField" promptText="Aukioloajat:" />
+                              <TextField fx:id="latitudeField" promptText="Leveyaste:" />
+                              <TextField fx:id="longitudeField" promptText="Pituusaste:">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="addAutomaticButton" mnemonicParsing="false" text="Lisää uusi automaatti">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin></Button>
+                              <Label fx:id="addAutomaticLabel" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="400.0" prefWidth="313.0" spacing="10.0">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Poista automaatti">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="removedCityCBox" prefHeight="25.0" prefWidth="266.0" promptText="Valitse kaupunki:">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="automaticComboBox" prefHeight="25.0" prefWidth="267.0" promptText="Valitse automaatti">
+                                 <VBox.margin>
+                                    <Insets bottom="35.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button fx:id="removeAutomaticButton" mnemonicParsing="false" text="Poista valittu automaatti">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="automaticDeletionLabel" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

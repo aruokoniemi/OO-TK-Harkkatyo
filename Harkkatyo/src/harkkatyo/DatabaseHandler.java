@@ -94,17 +94,17 @@ public class DatabaseHandler {
     }
     
     //Return all logs from database
-    public ArrayList<Log> getLogMessages() {
+    public ArrayList<Log> getLogs() {
         ArrayList<Log> logs = new ArrayList<Log>();
         try (
             Connection c = getConnection();
             Statement stmt = c.createStatement();
         ) {
-            String sqlQuery = "SELECT logmessageid, sessionid, message, packageid, distance,"
-                    + " logdate FROM logmessage ORDER BY logmessageid DESC;";
+            String sqlQuery = "SELECT logentryid, sessionid, message, packageid, distance,"
+                    + " logdate FROM logentry ORDER BY logentryid DESC;";
             try ( ResultSet rs = stmt.executeQuery(sqlQuery) )   {
                 while ( rs.next() ) {
-                    int logMessageID = rs.getInt("logmessageid");
+                    int logEntryID = rs.getInt("LogEntryID");
                     int sessionID = rs.getInt("sessionid");
                     String message = rs.getString("message");
                     int packageID = rs.getInt("packageid");
@@ -112,7 +112,7 @@ public class DatabaseHandler {
                     Long time = rs.getLong("logdate");
                     Date logdate = new Date(time);
                     
-                    Log l = new Log(logMessageID, sessionID, message, packageID, distance, logdate);
+                    Log l = new Log(logEntryID, sessionID, message, packageID, distance, logdate);
                     logs.add(l);
                 }
             }
@@ -145,6 +145,87 @@ public class DatabaseHandler {
             e.printStackTrace();
         }
         return lastID;
+    }
+    
+    public void removeSmartPost(SmartPost sp) {
+        //Get LocationID and AddressID for removed SP
+        int locationID = -99;
+        int addressID = -99;
+        
+        try (
+            Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("SELECT locationid, addressid FROM smartpost WHERE smartpostid = ?;");) 
+        {
+            ps.setInt(1, sp.getID());
+            try ( ResultSet rs = ps.executeQuery() ) {
+                if ( rs.isBeforeFirst() ) {
+                    locationID = rs.getInt("locationid");
+                    addressID = rs.getInt("addressid");
+                }
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        if ( locationID == -99 || addressID == -99 ) {
+            return;
+        }
+        
+        //Remove Location and Address
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM location WHERE locationid = ?;");) {
+            try {
+                ps.setInt(1, locationID);
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM address WHERE addressid = ?;");) {
+            try {
+                ps.setInt(1, addressID);
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM postoffice WHERE name = ?;");) {
+            try {
+                ps.setString(1, sp.getPostOffice());
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        //Remove SmartPost
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM smartpost WHERE smartpostid = ?;");) {
+            try {
+                ps.setInt(1, sp.getID());
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     
     
@@ -189,6 +270,43 @@ public class DatabaseHandler {
                 ps.executeUpdate();
             }
             catch(SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    // remove not yet sent packages and items in package from arg Storage
+    public void removePackage(int PackageID) {
+        ArrayList<Item> items = this.getItems(PackageID);
+        //Remove items first
+        for (Item i : items) {
+            removeItem(i);
+        }
+
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM package WHERE packageid = ?;");) {
+            try {
+                ps.setInt(1, PackageID);
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void removeLog(Log l) {
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM logentry WHERE logentryid = ?;");) {
+            try {
+                ps.setInt(1, l.getLogEntryID());
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
                 innerE.printStackTrace();
             }
         } catch (SQLException e) {
@@ -399,7 +517,7 @@ public class DatabaseHandler {
         boolean retVal = false;
         try (
             Connection c = getConnection();
-            PreparedStatement ps = c.prepareStatement("INSERT INTO logmessage("
+            PreparedStatement ps = c.prepareStatement("INSERT INTO logentry("
                     + "sessionid, message, packageid, distance, logdate) VALUES "
                     + "(?, ?, ?, ?, ?);");
         ) {

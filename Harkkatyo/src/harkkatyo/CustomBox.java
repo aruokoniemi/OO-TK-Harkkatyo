@@ -27,4 +27,8 @@ public class CustomBox extends HBox {
         this.button = b;
         this.getChildren().addAll(itemText, button);
     }
+    
+    public String getLabelText() {
+        return itemText.getText();
+    }
 }

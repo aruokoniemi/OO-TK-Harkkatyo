@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="bgPane" fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.StartMenuController">
+<AnchorPane id="bgPane" fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.StartMenuController">
    <children>
       <VBox prefHeight="406.0" prefWidth="551.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -25,12 +25,13 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
+            <CheckBox fx:id="clearLogsCBox" mnemonicParsing="false" text="Tyhjennä lokitiedot" />
             <CheckBox fx:id="clearStoragesCBox" mnemonicParsing="false" text="Tyhjennä varastot" />
             <CheckBox mnemonicParsing="false" text="Lataa SmartPost-tiedot tietokantaan" fx:id="xmlSelectionCBox" />
-            <TextField fx:id="userNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="222.0" promptText="Anna käyttäjätunnus:" />
+            <TextField fx:id="userNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="292.0" promptText="Anna käyttäjätunnus:" />
             <HBox prefHeight="62.0" prefWidth="476.0" spacing="10.0">
                <children>
-                  <TextField fx:id="dbPathField" prefHeight="25.0" prefWidth="272.0" />
+                  <TextField fx:id="dbPathField" prefHeight="25.0" prefWidth="386.0" />
                   <Button fx:id="dbLocationButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" text="Aseta tietokannan sijainti" />
                </children>
             </HBox>
@@ -47,7 +48,7 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="165.0">
                <children>
                   <ProgressBar fx:id="pb" prefHeight="25.0" prefWidth="230.0" progress="0.0" />
                   <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Aloita käyttö" textAlignment="CENTER" />

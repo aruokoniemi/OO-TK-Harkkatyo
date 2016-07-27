@@ -135,7 +135,7 @@ public class MainviewController implements Initializable {
             @Override
             public void handle(ActionEvent e) {
                try { 
-                   displayStorageManagement();
+                   displayDatabaseManagement();
                }
                catch(IOException ex) {
                    ex.printStackTrace();
@@ -523,13 +523,13 @@ public class MainviewController implements Initializable {
         labelPause.play();
     }
     
-    public void displayStorageManagement() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("StorageManagement.fxml"));
+    public void displayDatabaseManagement() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("DatabaseManagement.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("timoStyleSheet.css").toExternalForm());
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Varastonhallinta");
+        stage.setTitle("Tietokannan hallinta");
         stage.showAndWait();
         updateStorages();
     }

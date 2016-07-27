@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane fx:id="bgPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1144.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.MainviewController">
+<TabPane fx:id="bgPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="872.0" prefWidth="1195.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.MainviewController">
   <tabs>
     <Tab closable="false" text="TIMO">
       <content>
@@ -40,7 +40,7 @@
                                           <Insets bottom="35.0" />
                                        </VBox.margin>
                                     </ComboBox>
-                                    <Button fx:id="addSmartPostsButton" mnemonicParsing="false" text="Lisää kaupungin automaatit kartalle" />
+                                    <Button fx:id="addSmartPostsButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="275.0" text="Lisää kaupungin automaatit kartalle" />
                                     <Button fx:id="removePathsButton" mnemonicParsing="false" text="Poista kaikki reitit kartalta">
                                        <VBox.margin>
                                           <Insets top="20.0" />
@@ -69,7 +69,7 @@
                                                 <Insets top="5.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Button fx:id="manageStoragesButton" mnemonicParsing="false" text="Varastojen hallinta">
+                                          <Button fx:id="manageStoragesButton" mnemonicParsing="false" text="Tietokannan hallinta">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>

@@ -9,11 +9,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<AnchorPane fx:id="bgPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.PackageCreationController">
+<AnchorPane fx:id="bgPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.PackageCreationController">
    <children>
       <HBox layoutX="16.0" layoutY="73.0" prefHeight="395.0" prefWidth="724.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-29.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox layoutX="16.0" layoutY="73.0" prefHeight="286.0" prefWidth="409.0" spacing="10.0">
+            <VBox layoutX="16.0" layoutY="73.0" spacing="10.0">
                <children>
                   <Label prefHeight="42.0" prefWidth="155.0" text="Luo paketti">
                      <font>
@@ -49,7 +49,12 @@
                   <Insets bottom="20.0" left="20.0" top="20.0" />
                </HBox.margin>
             </VBox>
-            <VBox prefHeight="379.0" prefWidth="247.0" spacing="10.0">
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+            </Separator>
+            <VBox prefHeight="382.0" prefWidth="318.0" spacing="10.0">
                <children>
                   <HBox prefHeight="0.0" prefWidth="128.0" spacing="20.0">
                      <children>
@@ -59,14 +64,6 @@
                            </HBox.margin>
                         </Label>
                         <StackPane prefHeight="9.0" prefWidth="4.0">
-                           <children>
-                              <Label text="(?)" textFill="#5e50f8" />
-                              <Button fx:id="classInfoButton" contentDisplay="TOP" mnemonicParsing="false" opacity="0.0" prefHeight="18.0" prefWidth="23.0" text="(?)">
-                                 <cursor>
-                                    <Cursor fx:constant="OPEN_HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
                            <HBox.margin>
                               <Insets top="5.0" />
                            </HBox.margin>
@@ -79,7 +76,7 @@
                   <RadioButton fx:id="class1Button" mnemonicParsing="false" text="1. luokka" />
                   <RadioButton fx:id="class2Button" mnemonicParsing="false" text="2. luokka" />
                   <RadioButton fx:id="class3Button" mnemonicParsing="false" text="3. luokka" />
-                  <HBox prefHeight="180.0" prefWidth="224.0" spacing="5.0">
+                  <HBox prefHeight="101.0" prefWidth="247.0" spacing="5.0">
                      <children>
                         <VBox prefHeight="160.0" prefWidth="65.0" spacing="5.0">
                            <children>
@@ -104,13 +101,14 @@
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </HBox>
+                  <Label fx:id="warningLabel" ellipsisString="" prefHeight="100.0" prefWidth="327.0" textFill="RED" visible="false" wrapText="true" />
                   <HBox prefHeight="25.0" prefWidth="236.0" spacing="10.0">
                      <children>
                         <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" text="Peruuta" />
                         <Button fx:id="packageReadyButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Valmis" />
                      </children>
                      <VBox.margin>
-                        <Insets />
+                        <Insets top="50.0" />
                      </VBox.margin>
                   </HBox>
                </children>
@@ -120,6 +118,5 @@
             </VBox>
          </children>
       </HBox>
-      <Label fx:id="warningLabel" layoutX="547.0" layoutY="381.0" textFill="RED" visible="false" />
    </children>
 </AnchorPane>

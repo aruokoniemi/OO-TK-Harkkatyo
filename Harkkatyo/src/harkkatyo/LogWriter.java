@@ -18,7 +18,9 @@ public class LogWriter {
         SmartPost sender = db.getSmartPost(p.getSenderID());
         SmartPost receiver = db.getSmartPost(p.getReceiverID());
         String logMessage = "Paketti lähetetty: " + 
+                sender.getCity() + " " +
                 sender.getPostOffice() + " -> " +
+                receiver.getCity() + " ";
                 receiver.getPostOffice();
         db.addLogEntry(this.sessionid, logMessage, p, distance, new Date());
     }

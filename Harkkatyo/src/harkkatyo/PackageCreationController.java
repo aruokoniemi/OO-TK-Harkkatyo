@@ -46,7 +46,6 @@ public class PackageCreationController implements Initializable {
     @FXML private RadioButton class2Button;
     @FXML private RadioButton class3Button;
     @FXML private ToggleGroup classGroup;
-    @FXML private Button classInfoButton;
     
     //
     @FXML private Label classMaxWeightLabel;
@@ -114,18 +113,6 @@ public class PackageCreationController implements Initializable {
             }
         });
         
-        // package class information popup
-        classInfoButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                try {
-                    showPackageClassInformation();
-                }
-                catch(IOException infoButtonException) {
-                    System.out.println(infoButtonException.getMessage());
-                }
-            }
-        });
         
         // add item to item listview
         itemAddButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -222,13 +209,12 @@ public class PackageCreationController implements Initializable {
             limitsOk = false;
         }
         if ( !testPackageLimits() ) {
-            warningString += "Esineet eivät täytä pakettiluokan vaatimuksia!";
+            warningString += "Sisältö ei täytä valitun pakettiluokan vaatimuksia!";
             limitsOk = false;
         }
 
         if ( limitsOk == false ) {
-            warningLabel.setVisible(true);
-            warningLabel.setText(warningString);
+            showAndHideLabel(warningLabel, warningString);
         }
         
         return limitsOk;
@@ -324,15 +310,6 @@ public class PackageCreationController implements Initializable {
             }
         });
         labelPause.play();
-    }
-
-    //Display package class information popup
-    public void showPackageClassInformation() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("packageInformationPopup.fxml"));
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.showAndWait();
     }
     
     public void setStorage(Storage storage) {

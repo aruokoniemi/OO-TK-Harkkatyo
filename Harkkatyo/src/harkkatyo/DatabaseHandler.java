@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
@@ -245,6 +246,21 @@ public class DatabaseHandler {
                 ps.executeUpdate();
             }
             catch(SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void removeCity(String cityName) {
+        try (
+                Connection c = getConnection();
+                PreparedStatement ps = c.prepareStatement("DELETE FROM city WHERE name = ?;");) {
+            try {
+                ps.setString(1, cityName);
+                ps.executeUpdate();
+            } catch (SQLException innerE) {
                 innerE.printStackTrace();
             }
         } catch (SQLException e) {
@@ -821,13 +837,8 @@ public class DatabaseHandler {
     public ArrayList<String> getCities() {
         ArrayList<String> cities = new ArrayList<>();
         try (
-                Connection c = getConnection();) {
-            if (c.isClosed()) {
-                System.out.print("rip");
-            }
-            if (c == null) {
-                System.out.print("rip");
-            }
+                Connection c = getConnection();
+        ) {
             Statement stmt = c.createStatement();
             try (ResultSet rs = stmt.executeQuery("SELECT name FROM city;")) {
                 while (rs.next()) {
@@ -1075,7 +1086,7 @@ public class DatabaseHandler {
                     + "JOIN location on smartpost.locationid = location.locationid "
                     + "WHERE address.city = ?;");
         ) {
-            ps.setString(1, city);
+            ps.setString(1, city.toUpperCase());
             try ( ResultSet rs = ps.executeQuery() ) {
                 ArrayList<String> resultStrings = this.resultSetToArrayList(rs);
                 smartposts = new ArrayList<>();
@@ -1101,6 +1112,92 @@ public class DatabaseHandler {
             return null;
         }
         return smartposts;
+    }
+    
+    /*  Updates values of the SmartPost with ID given as arg
+     *  New Values taken from arg SmartPost
+     *  Returns true if smartpost updated successfully, false if not
+     */ 
+    public boolean updateSmartPost(SmartPost oldSmartPost, SmartPost updatedSmartPost) {
+        boolean retVal = false;
+        
+        //Get LocationID and AddressID 
+        int locationID = -99;
+        int addressID = -99;
+
+        try (
+            Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("SELECT locationid, addressid FROM smartpost WHERE smartpostid = ?;");
+        ) {
+            ps.setInt(1, oldSmartPost.getID());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    locationID = rs.getInt("locationid");
+                    addressID = rs.getInt("addressid");
+                }
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (locationID == -99 || addressID == -99) {
+            return retVal;
+        }
+        
+        try (
+                Connection c = getConnection();
+                PreparedStatement psPostalNumberUpdate = c.prepareStatement("UPDATE OR IGNORE postalnumber SET number = ?, city = ? "
+                        + "WHERE number = ? AND city = ?;");
+                PreparedStatement psLocationUpdate = c.prepareStatement("UPDATE location SET latitude = ?, longitude = ? "
+                        + "WHERE locationid = ?;");
+                PreparedStatement psAddressUpdate = c.prepareStatement("UPDATE address SET "
+                        + "localaddress = ?, city = ?, postalnumber = ? WHERE addressid = ?;");
+                PreparedStatement psPostOffice = c.prepareStatement("UPDATE OR IGNORE postoffice SET name = ? WHERE name = ?;");
+                PreparedStatement psSmartPostUpdate = c.prepareStatement("UPDATE smartpost SET "
+                        + "availability = ?, postoffice = ? WHERE smartpostid = ?;");) {
+            try {
+                try {
+                    psPostalNumberUpdate.setString(1, updatedSmartPost.getPostalNumber());
+                    psPostalNumberUpdate.setString(2, updatedSmartPost.getCity());
+                    psPostalNumberUpdate.setString(3, oldSmartPost.getPostalNumber());
+                    psPostalNumberUpdate.setString(4, oldSmartPost.getCity());
+                    psPostalNumberUpdate.executeUpdate();
+                }  catch(SQLException e) {     
+                }
+
+                Double latitude = Double.parseDouble(updatedSmartPost.getGeoPoint().getAsArrayList().get(0));
+                Double longitude = Double.parseDouble(updatedSmartPost.getGeoPoint().getAsArrayList().get(1));
+                psLocationUpdate.setDouble(1, latitude);
+                psLocationUpdate.setDouble(2, longitude);
+                psLocationUpdate.setInt(3, locationID);
+                psLocationUpdate.executeUpdate();
+
+                psAddressUpdate.setString(1, updatedSmartPost.getLocalAddress());
+                psAddressUpdate.setString(2, updatedSmartPost.getCity());
+                psAddressUpdate.setString(3, updatedSmartPost.getPostalNumber());
+                psAddressUpdate.setInt(4, addressID);
+                psAddressUpdate.executeUpdate();
+
+                psPostOffice.setString(1, updatedSmartPost.getPostOffice());
+                psPostOffice.setString(2, oldSmartPost.getPostOffice());
+                psPostOffice.executeUpdate();
+
+                psSmartPostUpdate.setString(1, updatedSmartPost.getAvailability());
+                psSmartPostUpdate.setString(2, updatedSmartPost.getPostOffice());
+                psSmartPostUpdate.setInt(3, oldSmartPost.getID());
+                psSmartPostUpdate.executeUpdate();
+                
+                retVal = true;
+            } catch (SQLException innerE) {
+                innerE.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return retVal;
     }
     
     // SQL query resultset to arraylist.

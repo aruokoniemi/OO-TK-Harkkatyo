@@ -63,7 +63,7 @@ public class MainviewController implements Initializable {
     @FXML private ComboBox<SmartPost> receiverComboBox;
     
     //Storage management
-    @FXML private Button manageStoragesButton;
+    @FXML private Button manageDatabaseButton;
     
     // Log controls
     @FXML private RadioButton thisSessionLogsRadioButton;
@@ -131,11 +131,14 @@ public class MainviewController implements Initializable {
             }
         });        
         
-        manageStoragesButton.setOnAction(new EventHandler<ActionEvent>() {
+        manageDatabaseButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
                try { 
                    displayDatabaseManagement();
+                   updateCitiesBox();
+                   updateStorages();
+                   updatePackages();
                }
                catch(IOException ex) {
                    ex.printStackTrace();
@@ -391,7 +394,7 @@ public class MainviewController implements Initializable {
             protected void updateItem(SmartPost sp, boolean empty) {
                 super.updateItem(sp, empty);
                 if (empty) {
-                    setText("Vastaanottaja");
+                    setText("Valitse vastaanottaja:");
                     setGraphic(null);
                 } else {
                     setText(sp.getCity() + ": " + sp.getPostOffice());
@@ -405,7 +408,7 @@ public class MainviewController implements Initializable {
             protected void updateItem(SmartPost sp, boolean empty) {
                 super.updateItem(sp, empty);
                 if (empty) {
-                    setText("Lähettäjä");
+                    setText("Valitse lähettäjä");
                     setGraphic(null);
                 } else {
                     setText(sp.getCity() + ": " + sp.getPostOffice());
@@ -422,7 +425,7 @@ public class MainviewController implements Initializable {
                     protected void updateItem(Package p, boolean empty) {
                         super.updateItem(p, empty);
                         if (empty) {
-                            setText("Paketti");
+                            setText(null);
                             setGraphic(null);
                         } else {
                             setText("ID: " + p.getPackageID());
@@ -440,7 +443,7 @@ public class MainviewController implements Initializable {
             protected void updateItem(Package p, boolean empty) {
                 super.updateItem(p, empty);
                 if (empty) {
-                    setText("Paketti");
+                    setText("Valitse paketti");
                     setGraphic(null);
                 } else {
                     setText("ID: " + p.getPackageID() );
@@ -457,7 +460,7 @@ public class MainviewController implements Initializable {
                     protected void updateItem(Storage s, boolean empty) {
                         super.updateItem(s, empty);
                         if (empty) {
-                            setText("Varasto");
+                            setText("Valitse varasto: ");
                             setGraphic(null);
                         } else {
                             setText(s.getName());
@@ -485,7 +488,7 @@ public class MainviewController implements Initializable {
         if ( selectedStorage == null ) {
             String msgString;
             if ( storageComboBox.getItems().size() == 0 ) {
-                msgString = "Luo varasto varastonhallinnasta.";
+                msgString = "Lisää tietokantaan varasto!";
             }
             else {
                 msgString = "Valitse varasto johon paketti asetetaan!";
@@ -535,9 +538,16 @@ public class MainviewController implements Initializable {
     }
     
     public void updateCitiesBox() {  
+        String selectedCity = (String) cityComboBox.getSelectionModel().getSelectedItem();
+        
         ArrayList cityList = db.getCities();
         ObservableList<String> cityObservable = FXCollections.observableArrayList(cityList);
+        FXCollections.sort(cityObservable);
+        
         cityComboBox.setItems(cityObservable);
+        if ( cityObservable.contains(selectedCity) ) {
+            cityComboBox.getSelectionModel().select(selectedCity);
+        }
     }
     
     public void updateStorages() {

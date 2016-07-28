@@ -44,7 +44,7 @@ public class DatabaseManagementController implements Initializable {
     //Add SmartPost
     @FXML TextField localAddressField;
     @FXML TextField postalNumberField;
-    @FXML ComboBox addedCityCBox;
+    @FXML TextField cityField;
     @FXML TextField postOfficeField;
     @FXML TextField availabilityField;
     @FXML TextField latitudeField;
@@ -52,11 +52,21 @@ public class DatabaseManagementController implements Initializable {
     @FXML Button addAutomaticButton;
     @FXML Label addAutomaticLabel;
     
-    //Remove SmartPost
+    //Edit SmartPost
+    @FXML TextField editableLocalAddressTField;
+    @FXML TextField editableCityTField;
+    @FXML TextField editablePostalNumberTField;
+    @FXML TextField editableAvailabilityTField;
+    @FXML TextField editablePostOfficeTField;
+    @FXML TextField editableLatitudeTField;
+    @FXML TextField editableLongitudeTField;
+    
     @FXML ComboBox removedCityCBox;
     @FXML ComboBox automaticComboBox;
+    
+    @FXML Button updateSmartPostButton;
     @FXML Button removeAutomaticButton;
-    @FXML Label automaticDeletionLabel;
+    @FXML Label editAutomaticLabel;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -64,9 +74,16 @@ public class DatabaseManagementController implements Initializable {
         updateStorageTreeView();
         
         this.addLengthLimiter(localAddressField, 30);
+        this.addLengthLimiter(cityField, 20);
         this.addLengthLimiter(postalNumberField, 5);
         this.addLengthLimiter(postOfficeField, 50);
-        this.addLengthLimiter(availabilityField, 50);       
+        this.addLengthLimiter(availabilityField, 50);  
+        
+        this.addLengthLimiter(editableLocalAddressTField, 30);
+        this.addLengthLimiter(editableCityTField, 20);
+        this.addLengthLimiter(editablePostalNumberTField, 5);
+        this.addLengthLimiter(editablePostOfficeTField, 50);
+        this.addLengthLimiter(editableAvailabilityTField, 50);
         
         addStorageButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -78,7 +95,6 @@ public class DatabaseManagementController implements Initializable {
 
                 //Check if name in use already
                 for (Storage s : storages) {
-                    System.out.println(s.getName());
                     if (storageName.equals(s.getName())) {
                         showAndHideLabel(messageLabel, "Varaston nimi on jo käytössä.");
                         return;
@@ -90,11 +106,7 @@ public class DatabaseManagementController implements Initializable {
                 DatabaseHandler db = DatabaseHandler.getInstance();
                 //Add storage to database, update treeview if added successfully
                 if (db.addStorage(newStorage)) {
-                    storages.add(newStorage);
-
-                    TreeItem<String> storageItem = new TreeItem<>();
-                    storageItem.setValue(newStorage.getName());
-                    storageTreeView.getRoot().getChildren().add(storageItem);
+                    updateStorageTreeView();
                 }
                 else {
                     showAndHideLabel(messageLabel, "Virhe varaston lisäämisessä tietokantaan.");
@@ -119,10 +131,10 @@ public class DatabaseManagementController implements Initializable {
                 if (removedIndex == -1) {
                     return;
                 }
-
-                storageTreeView.getRoot().getChildren().remove(removedIndex);
+                
                 DatabaseHandler db = DatabaseHandler.getInstance();
                 db.removeStorage(new Storage(removedStorageName));
+                updateStorageTreeView();
             }
         });
         
@@ -157,12 +169,27 @@ public class DatabaseManagementController implements Initializable {
         addAutomaticButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                if ( !inputsValid() ) {
+                if ( !testSmartPostAdditionFields() ) {
                     showAndHideLabel(addAutomaticLabel, "Kentät täytetty virheellisesti!");
                     return;
                 }
-                addNewAutomatic();
-                resetFields();
+                String msgString = addNewAutomatic();
+                showAndHideLabel(addAutomaticLabel, msgString);
+                resetAdditionFields();
+            }
+        });
+        
+        updateSmartPostButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                if ( !testSmartPostEditionFields() ) {
+                    showAndHideLabel(editAutomaticLabel, "Kentät täytetty virheellisesti!");
+                }
+                String msgString = updateSmartPostDetails();
+                showAndHideLabel(editAutomaticLabel, msgString);
+                
+                updateSmartPosts();
+                removeCityIfNoSmartPosts();
             }
         });
         
@@ -170,13 +197,18 @@ public class DatabaseManagementController implements Initializable {
             @Override
             public void handle(ActionEvent e) {
                 SmartPost removedSP = (SmartPost) automaticComboBox.getSelectionModel().getSelectedItem();
+                String selectedCity = (String) removedCityCBox.getSelectionModel().getSelectedItem();
                 if ( removedSP == null ) {
                     return;
                 }
                 DatabaseHandler db = DatabaseHandler.getInstance();
                 db.removeSmartPost(removedSP);
+                
+                showAndHideLabel(editAutomaticLabel, "Automaatti poistettu tietokannasta.");
+                resetEditionFields();
                 updateSmartPosts();
-                showAndHideLabel(automaticDeletionLabel, "Automaatti poistettu tietokannasta.");
+                
+                removeCityIfNoSmartPosts();
             }
         });
         
@@ -186,7 +218,18 @@ public class DatabaseManagementController implements Initializable {
             @Override
             public void changed(ObservableValue observable, String oldValue, String newValue) {
                 if (newValue != null) {
+                    resetEditionFields();
                     updateSmartPosts();
+                }
+            }
+        });
+        
+        //Update Textfields when selected automatic changes
+        automaticComboBox.valueProperty().addListener(new ChangeListener<SmartPost>() {
+            @Override
+            public void changed(ObservableValue observable, SmartPost oldSP, SmartPost newSP) {
+                if (newSP != null) {
+                    updateEditableFields(newSP);
                 }
             }
         });
@@ -218,7 +261,7 @@ public class DatabaseManagementController implements Initializable {
             protected void updateItem(SmartPost sp, boolean empty) {
                 super.updateItem(sp, empty);
                 if (empty) {
-                    setText("Vastaanottaja");
+                    setText("Valitse automaatti:");
                     setGraphic(null);
                 } else {
                     setText(sp.getCity() + ": " + sp.getPostOffice());
@@ -228,34 +271,66 @@ public class DatabaseManagementController implements Initializable {
         });
     }  
     
+    //Removes selected city from database and selection combobox if no smartposts are located in city
+    private void removeCityIfNoSmartPosts() {
+        DatabaseHandler db = DatabaseHandler.getInstance();
+        String selectedCity = (String) removedCityCBox.getSelectionModel().getSelectedItem();
+        
+        if (db.getSmartPosts(selectedCity).isEmpty()) {
+            db.removeCity(selectedCity);
+            updateCities();
+            resetEditionFields();
+        }
+    }
+    
     private void addLengthLimiter(final TextField textField, final int maxLength) {
         textField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {
                 if (textField.getText().length() > maxLength) {
-                    textField.setText(postalNumberField.getText().substring(0, maxLength));
+                    textField.setText(textField.getText().substring(0, maxLength));
                 }
             }
         });
     }
 
     //resets SmartPost information fields 
-    private void resetFields() {
-        localAddressField.setText(null);
-        addedCityCBox.getSelectionModel().select(null);
-        postalNumberField.setText(null);
-        availabilityField.setText(null);
-        postOfficeField.setText(null);
-        latitudeField.setText(null);
-        longitudeField.setText(null);
+    private void resetAdditionFields() {
+        localAddressField.setText("");
+        cityField.setText("");
+        postalNumberField.setText("");
+        availabilityField.setText("");
+        postOfficeField.setText("");
+        latitudeField.setText("");
+        longitudeField.setText("");
+    }
+    
+    private void resetEditionFields() {
+        editableLocalAddressTField.setText("");
+        editableCityTField.setText("");
+        editablePostalNumberTField.setText("");
+        editableAvailabilityTField.setText("");
+        editablePostOfficeTField.setText("");
+        editableLatitudeTField.setText("");
+        editableLongitudeTField.setText("");
+    }
+    
+    private void updateEditableFields(SmartPost sp) {
+        editableLocalAddressTField.setText(sp.getLocalAddress());
+        editableCityTField.setText(sp.getCity());
+        editablePostalNumberTField.setText(sp.getPostalNumber());
+        editableAvailabilityTField.setText(sp.getAvailability());
+        editablePostOfficeTField.setText(sp.getPostOffice());
+        editableLatitudeTField.setText(sp.getGeoPoint().getAsArrayList().get(0));
+        editableLongitudeTField.setText(sp.getGeoPoint().getAsArrayList().get(1));
     }
     
     //returns false if user inputs not valid
-    private boolean inputsValid() {        
+    private boolean testSmartPostAdditionFields() {        
         if ( localAddressField.getText().length() == 0 ) {
             return false;
         }
-        if ( addedCityCBox.getSelectionModel().getSelectedItem() == null ) {
+        if ( cityField.getText().length() == 0 ) {
             return false;
         }
         if (postOfficeField.getText().length() == 0) {
@@ -287,6 +362,42 @@ public class DatabaseManagementController implements Initializable {
         return true;
     }
     
+    //returns false if user inputs not valid
+    private boolean testSmartPostEditionFields() {
+        if (editableLocalAddressTField.getText().length() == 0) {
+            return false;
+        }
+        if (editableCityTField.getText().length() == 0) {
+            return false;
+        }
+        if (editablePostOfficeTField.getText().length() == 0) {
+            return false;
+        }
+        if (editableLatitudeTField.getText().length() == 0) {
+            return false;
+        }
+        if (editableLongitudeTField.getText().length() == 0) {
+            return false;
+        }
+        if (editablePostalNumberTField.getText().length() != 5) {
+            return false;
+        }
+
+        try {
+            double latitude = Double.parseDouble(editableLatitudeTField.getText());
+            double longitude = Double.parseDouble(editableLongitudeTField.getText());
+            int postalNumber = Integer.parseInt(editablePostalNumberTField.getText());
+            if (latitude > 180 || latitude < -180 || longitude > 180 || longitude < -180 || postalNumber == 0) {
+                return false;
+            }
+
+        } catch (NumberFormatException e) {
+            return false;
+        }
+
+        return true;
+    }
+    
     
     public void updateStorageTreeView() {
         DatabaseHandler db = DatabaseHandler.getInstance();
@@ -300,7 +411,6 @@ public class DatabaseManagementController implements Initializable {
         
         //Create storage nodes
         for (Storage s : storages) {
-            System.out.println(s.getName());
             String packages = " pakettia";
             if ( s.getPackages().size() == 1 )
                 packages = " paketti";
@@ -368,9 +478,10 @@ public class DatabaseManagementController implements Initializable {
         return retVal;
     }
     
-    private void addNewAutomatic() {
+    //Returns message string; what went wrong / automatic added successfully
+    private String addNewAutomatic() {
         String localAddress = localAddressField.getText();
-        String city = (String) addedCityCBox.getSelectionModel().getSelectedItem();
+        String city = cityField.getText().toUpperCase();
         String postalNumber = postalNumberField.getText();
         String availability = availabilityField.getText();
         String postoffice = postOfficeField.getText();
@@ -378,7 +489,21 @@ public class DatabaseManagementController implements Initializable {
         String longitude = longitudeField.getText();
 
         DatabaseHandler db = DatabaseHandler.getInstance();
-
+        
+        //Add city to DB if its not there already
+        ArrayList<String> cities = db.getCities();
+        boolean cityfound = false;
+        
+        for ( String cityName : cities ) {
+            if ( cityName.equalsIgnoreCase(city) )
+                cityfound = true;
+        }
+        
+        if ( !cityfound ) {
+            db.addCity(city);
+            updateCities();
+        }
+        
         String labelText = "";
         while (true) {
 
@@ -406,32 +531,75 @@ public class DatabaseManagementController implements Initializable {
                 //add if got ids from db
                 if (locationID != -1 && addressID != -1) {
                     db.addSmartPost(newSmartPost, locationID, addressID);
+                    labelText = "Postiautomaatti lisätty tietokantaan.";
                 }
             }
-            labelText = "Postiautomaatti lisätty tietokantaan.";
+            else {
+                labelText = "Virhe postiautomaatin lisäämisessä tietokantaan.";
+            }
             break;
         }
-        showAndHideLabel(addAutomaticLabel, labelText);
+        updateCities();
+        return labelText;
+    }
+    
+    //Returns message string; what went wrong / automatic added successfully
+    private String updateSmartPostDetails() {
+        //SmartPost to be updated
+        SmartPost currentSmartPost = (SmartPost) automaticComboBox.getSelectionModel().getSelectedItem();
+        if ( currentSmartPost == null ) {
+            return "";
+        }
+        
+        String localAddress = editableLocalAddressTField.getText();
+        String city = editableCityTField.getText().toUpperCase();
+        String postalNumber = editablePostalNumberTField.getText();
+        String availability = editableAvailabilityTField.getText();
+        String postOffice = editablePostOfficeTField.getText();
+        String latitude = editableLatitudeTField.getText();
+        String longitude = editableLongitudeTField.getText();
+        SmartPost newSmartPost = new SmartPost(localAddress, city, postalNumber, availability, 
+                postOffice, latitude, longitude);
+        
+        DatabaseHandler db = DatabaseHandler.getInstance();
+        
+        String returnString = "";
+        if ( db.updateSmartPost(currentSmartPost, newSmartPost) )
+            returnString = "Automaatin tiedot pävitetty.";
+        else {
+            returnString = "Päivityksen aikana tapahtui virhe.";
+        }
+        return returnString;
     }
     
     private void updateCities() {
+        String selectedCity = (String) removedCityCBox.getSelectionModel().getSelectedItem();
+        
         DatabaseHandler db = DatabaseHandler.getInstance();
         ArrayList cityList = db.getCities();
         ObservableList<String> cityObservable = FXCollections.observableArrayList(cityList);
-        addedCityCBox.setItems(cityObservable);
+        FXCollections.sort(cityObservable);
         removedCityCBox.setItems(cityObservable);
+
+        if (cityObservable.contains(selectedCity)) {
+            removedCityCBox.getSelectionModel().select(selectedCity);
+        }
     }
     
     private void updateSmartPosts() {
+        SmartPost selectedSPost = (SmartPost) automaticComboBox.getSelectionModel().getSelectedItem();
+        
         DatabaseHandler db = DatabaseHandler.getInstance();
         String selectedCity = (String) removedCityCBox.getSelectionModel().getSelectedItem();
-        if ( selectedCity == null ) {
-            return;
-        }
         
         ArrayList<SmartPost> smartposts = db.getSmartPosts(selectedCity);
+        
         ObservableList<SmartPost> smartPostObservable = FXCollections.observableArrayList(smartposts);
         automaticComboBox.setItems(smartPostObservable);
+        
+        if ( smartPostObservable.contains(selectedSPost) ) {
+            automaticComboBox.getSelectionModel().select(selectedSPost);
+        }
     }
     
 }

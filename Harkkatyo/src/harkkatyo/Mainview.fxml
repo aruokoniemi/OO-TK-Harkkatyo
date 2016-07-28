@@ -40,7 +40,7 @@
                                           <Insets bottom="35.0" />
                                        </VBox.margin>
                                     </ComboBox>
-                                    <Button fx:id="addSmartPostsButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="275.0" text="Lisää kaupungin automaatit kartalle" />
+                                    <Button fx:id="addSmartPostsButton" mnemonicParsing="false" prefHeight="25.0" text="Lisää kaupungin automaatit kartalle" />
                                     <Button fx:id="removePathsButton" mnemonicParsing="false" text="Poista kaikki reitit kartalta">
                                        <VBox.margin>
                                           <Insets top="20.0" />
@@ -63,13 +63,13 @@
                                     </Label>
                                     <HBox spacing="20.0">
                                        <children>
-                                          <ComboBox fx:id="storageComboBox" prefHeight="25.0" prefWidth="215.0" promptText="Varasto" />
+                                          <ComboBox fx:id="storageComboBox" prefHeight="25.0" prefWidth="215.0" promptText="Valitse varasto" />
                                           <Label fx:id="selectStorageLabel" prefHeight="15.0" prefWidth="306.0" text="Valitse varasto!" textFill="#cd0000" visible="false">
                                              <HBox.margin>
                                                 <Insets top="5.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Button fx:id="manageStoragesButton" mnemonicParsing="false" text="Tietokannan hallinta">
+                                          <Button fx:id="manageDatabaseButton" mnemonicParsing="false" text="Tietokannan hallinta">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -79,18 +79,18 @@
                                     <Button fx:id="newPackageButton" mnemonicParsing="false" text="Luo paketti" />
                                     <HBox prefHeight="48.0" prefWidth="804.0" spacing="30.0">
                                        <children>
-                                          <ComboBox fx:id="packageComboBox" prefHeight="25.0" prefWidth="215.0" promptText="Paketti" />
+                                          <ComboBox fx:id="packageComboBox" prefHeight="25.0" prefWidth="215.0" promptText="Valitse paketti" />
                                           <Label fx:id="packageLabel" prefHeight="77.0" prefWidth="557.0" text="Label" visible="false">
                                              <HBox.margin>
-                                                <Insets top="5.0" />
+                                                <Insets />
                                              </HBox.margin>
                                           </Label>
                                        </children>
                                     </HBox>
                                     <HBox prefHeight="39.0" prefWidth="419.0" spacing="30.0">
                                        <children>
-                                          <ComboBox fx:id="senderComboBox" prefHeight="25.0" prefWidth="250.0" promptText="Lähettäjä" />
-                                          <ComboBox fx:id="receiverComboBox" prefWidth="250.0" promptText="Vastaanottaja" />
+                                          <ComboBox fx:id="senderComboBox" prefHeight="25.0" prefWidth="250.0" promptText="Valitse lähettäjä" />
+                                          <ComboBox fx:id="receiverComboBox" prefWidth="250.0" promptText="Valitse vastaanottaja" />
                                           <Button fx:id="sendPackageButton" mnemonicParsing="false" text="Lähetä paketti" />
                                        </children>
                                     </HBox>

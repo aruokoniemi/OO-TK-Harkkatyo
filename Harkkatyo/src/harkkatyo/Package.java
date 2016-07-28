@@ -108,11 +108,7 @@ abstract public class Package {
     
     public int getSenderID() {
         return senderID;
-    }
-    
-    public void getBreaksItems() {
-        System.out.print(breaksItems);
-    }    
+    }   
     
     public int getReceiverID() {
         return receiverID;

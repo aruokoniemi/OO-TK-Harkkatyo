@@ -9,13 +9,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane prefHeight="485.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.DatabaseManagementController">
+<TabPane prefHeight="556.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harkkatyo.DatabaseManagementController">
    <tabs>
       <Tab text="Varastot">
          <content>
-            <AnchorPane fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="661.0">
+            <AnchorPane fx:id="bgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="796.0">
                <children>
-                  <VBox layoutX="-6.0" layoutY="-8.0" prefHeight="463.0" prefWidth="669.0" spacing="10.0">
+                  <VBox layoutX="-6.0" layoutY="-8.0" prefHeight="532.0" prefWidth="792.0" spacing="10.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <TreeView fx:id="storageTreeView" prefHeight="372.0" prefWidth="629.0">
                            <VBox.margin>
@@ -45,11 +45,11 @@
       </Tab>
       <Tab text="Postiautomaatit">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <AnchorPane>
                <children>
                   <HBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <VBox prefHeight="400.0" prefWidth="275.0" spacing="10.0">
+                        <VBox prefHeight="483.0" prefWidth="313.0" spacing="10.0">
                            <children>
                               <Label text="Lisää uusi automaatti">
                                  <font>
@@ -61,13 +61,13 @@
                               </Label>
                               <TextField fx:id="localAddressField" prefHeight="25.0" prefWidth="223.0" promptText="Lähiosoite:" />
                               <TextField fx:id="postalNumberField" prefHeight="25.0" prefWidth="223.0" promptText="Postinumero:" />
-                              <ComboBox fx:id="addedCityCBox" prefHeight="25.0" prefWidth="266.0" promptText="Kaupunki:" />
+                              <TextField fx:id="cityField" promptText="Kaupunki:" />
                               <TextField fx:id="postOfficeField" promptText="Postitoimisto:" />
                               <TextField fx:id="availabilityField" promptText="Aukioloajat:" />
                               <TextField fx:id="latitudeField" promptText="Leveyaste:" />
                               <TextField fx:id="longitudeField" promptText="Pituusaste:">
                                  <VBox.margin>
-                                    <Insets bottom="30.0" />
+                                    <Insets bottom="20.0" />
                                  </VBox.margin>
                               </TextField>
                               <Button fx:id="addAutomaticButton" mnemonicParsing="false" text="Lisää uusi automaatti">
@@ -81,12 +81,12 @@
                            </HBox.margin>
                         </VBox>
                         <Separator orientation="VERTICAL" prefHeight="200.0" />
-                        <VBox prefHeight="400.0" prefWidth="313.0" spacing="10.0">
+                        <VBox prefHeight="483.0" prefWidth="394.0" spacing="10.0">
                            <HBox.margin>
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </HBox.margin>
                            <children>
-                              <Label text="Poista automaatti">
+                              <Label text="Muokkaa olemassa olevaa automaattia">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -94,22 +94,34 @@
                                     <Insets bottom="30.0" />
                                  </VBox.margin>
                               </Label>
-                              <ComboBox fx:id="removedCityCBox" prefHeight="25.0" prefWidth="266.0" promptText="Valitse kaupunki:">
+                              <ComboBox fx:id="removedCityCBox" prefWidth="295.0" promptText="Valitse kaupunki:">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </ComboBox>
-                              <ComboBox fx:id="automaticComboBox" prefHeight="25.0" prefWidth="267.0" promptText="Valitse automaatti">
+                              <ComboBox fx:id="automaticComboBox" prefWidth="295.0" promptText="Valitse automaatti:">
                                  <VBox.margin>
                                     <Insets bottom="35.0" />
                                  </VBox.margin>
                               </ComboBox>
-                              <Button fx:id="removeAutomaticButton" mnemonicParsing="false" text="Poista valittu automaatti">
+                              <TextField fx:id="editableLocalAddressTField" minHeight="25.0" promptText="Lähiosoite:" />
+                              <TextField fx:id="editablePostalNumberTField" minHeight="25.0" promptText="Postinumero" />
+                              <TextField fx:id="editableCityTField" minHeight="25.0" promptText="Kaupunki:" />
+                              <TextField fx:id="editablePostOfficeTField" minHeight="25.0" promptText="Postitoimisto:" />
+                              <TextField fx:id="editableAvailabilityTField" minHeight="25.0" promptText="Aukioloajat" />
+                              <TextField fx:id="editableLatitudeTField" minHeight="25.0" promptText="Leveysaste:" />
+                              <TextField fx:id="editableLongitudeTField" minHeight="25.0" promptText="Pituusaste:">
                                  <VBox.margin>
-                                    <Insets bottom="10.0" />
+                                    <Insets bottom="20.0" />
                                  </VBox.margin>
-                              </Button>
-                              <Label fx:id="automaticDeletionLabel" />
+                              </TextField>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="removeAutomaticButton" mnemonicParsing="false" text="Poista valittu automaatti" />
+                                    <Button fx:id="updateSmartPostButton" mnemonicParsing="false" text="Päivitä tiedot" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="editAutomaticLabel" />
                            </children>
                         </VBox>
                      </children>

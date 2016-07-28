@@ -144,8 +144,6 @@ public class StartMenuController implements Initializable {
                 String userName = userNameField.getText();
                 if ( userName.trim().isEmpty() ) userName = "Guest";
                 
-                System.out.println(userName);
-                
                 int sessionID = db.getNewSessionID();
                 db.addSession(userName, sessionID);
                 

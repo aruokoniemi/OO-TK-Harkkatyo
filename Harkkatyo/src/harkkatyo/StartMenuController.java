@@ -145,6 +145,7 @@ public class StartMenuController implements Initializable {
                 if ( userName.trim().isEmpty() ) userName = "Guest";
                 
                 int sessionID = db.getNewSessionID();
+                
                 db.addSession(userName, sessionID);
                 
                 //Clear logs, packages that are not sent and items in packages

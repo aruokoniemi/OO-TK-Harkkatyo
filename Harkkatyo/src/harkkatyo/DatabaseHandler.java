@@ -1,3 +1,8 @@
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
+ */
+
 package harkkatyo;
 
 import java.sql.Connection;
@@ -10,9 +15,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
+// SINGLETON CLASS
 public class DatabaseHandler {
     private static DatabaseHandler dbHandler;
-    private String path;
+    private String path; // path to database file
     
     private DatabaseHandler() { }
     
@@ -82,7 +88,7 @@ public class DatabaseHandler {
         }
     }
     
-    //Return PackageID of last inserted package
+    //Returns PackageID of last inserted package
     public String getLastPackageID() {
         try (
             Connection c = getConnection();
@@ -101,7 +107,7 @@ public class DatabaseHandler {
         return null;
     }
     
-    //Return all logs from database
+    //Returns all logs from database
     public ArrayList<Log> getLogs() {
         ArrayList<Log> logs = new ArrayList<Log>();
         try (
@@ -135,7 +141,7 @@ public class DatabaseHandler {
     }
     
     
-    //Dont use values from user inpuy
+    // Gets last added ID from arg table
     public int getLastID(String idColumnName, String tableName) {
         int lastID = -1;
         try (
@@ -181,7 +187,9 @@ public class DatabaseHandler {
             return;
         }
         
-        //Remove Location and Address
+        /* Remove Location and Address
+         * redundant if database foreign keys used
+         */
         try (
                 Connection c = getConnection();
                 PreparedStatement ps = c.prepareStatement("DELETE FROM location WHERE locationid = ?;");) {
@@ -237,10 +245,7 @@ public class DatabaseHandler {
     }
     
     
-     /* Removes a storage and stored packages
-      * @arg s Storage that will be removed from the database.
-      *
-      */
+    // Removes a storage and stored packages
     public void removeStorage(Storage s) {
         try (
                 Connection c = getConnection();
@@ -275,7 +280,7 @@ public class DatabaseHandler {
         }
     }
     
-    // remove not yet sent packages and items in package from arg Storage
+    // remove not yet sent packages and items in packages from arg Storage
     public void removePackages(Storage s) {
         //Remove items first
         for ( Package p : s.getPackages() ) {
@@ -300,7 +305,7 @@ public class DatabaseHandler {
         }
     }
     
-    // remove not yet sent packages and items in package from arg Storage
+    //Removes package with arg packageid and items stored in the package
     public void removePackage(int PackageID) {
         ArrayList<Item> items = this.getItems(PackageID);
         //Remove items first
@@ -385,9 +390,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    
-    
-    //Return false if failed
+    //Return false if adding package failed
     public boolean addPackage(Package p, Storage s) {
         //Add package first
         try (
@@ -432,8 +435,8 @@ public class DatabaseHandler {
                 ps.setBoolean(6, i.isBreakable());
                 ps.executeUpdate();
             }
-            catch(SQLException innerException) {
-                innerException.printStackTrace();
+            catch(SQLException innerE) {
+                innerE.printStackTrace();
             }
           }
         catch(SQLException e) {
@@ -441,6 +444,7 @@ public class DatabaseHandler {
         }
     }
     
+    //Returns false if adding city failed
     public boolean addCity (String name) {
         boolean retVal = false;
         try (
@@ -462,7 +466,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //Return false if failed 
+    //Return false if addition failed 
     public boolean addSmartPost(SmartPost sp, int locationID, int addressID) {
         boolean retVal= false;
         try (
@@ -491,7 +495,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //Return false if failed
+    //Return false if addition failed
     public boolean addSession(String userName, int sessionID) {
         boolean retVal = false;
         try (
@@ -512,7 +516,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //Return false if failed
+    //Return false if addition failed
     public boolean addPostOffice(String name) {
         boolean retVal = false;
         try (
@@ -535,7 +539,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //return false if fail
+    //return false if addition failed
     public boolean addLogEntry(int sessionID, String message, Package p, double distance, Date logDate) {
         boolean retVal = false;
         try (
@@ -564,7 +568,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //return false if fail
+    //returns false if addition failed
     public boolean addLocation(String latitude, String longitude) {
         boolean retVal = false;
         try (
@@ -589,7 +593,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //return false if fail
+    //return false if addition failed
     public boolean addAddress(String address, String city, String postalnumber) {
         boolean retVal = false;
         try (
@@ -616,7 +620,7 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //return false if fail
+    //return false if addition fail
     public boolean addPostalNumber(String postalnumber, String city) {
         boolean retVal = false;
         try (
@@ -641,35 +645,6 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    
-    //return false ifa ail  gmn
-    public boolean addSelectableItem(String name, int size, int weight, boolean breakable) {
-        boolean retVal = false;
-        try (
-            Connection c = getConnection();
-            PreparedStatement ps = c.prepareStatement("INSERT INTO selectableitem"
-                    + "(name, size, weight, breakable) VALUES "
-                    + "(?, ?, ?, ?);");
-        ) {
-            try {
-                ps.setString(1, name);
-                ps.setInt(2, size);
-                ps.setInt(3, weight);
-                ps.setBoolean(4, breakable);
-                ps.executeUpdate();
-                retVal = true;
-            }
-            catch(SQLException innerE) {
-                innerE.printStackTrace();
-            }
-          }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-        return retVal;
-    }
-    
-    //retrguhbn
     public boolean addStorage(Storage s) {
         boolean retVal = false;
         try (
@@ -693,7 +668,9 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //finds last added sessionid, returns that+1; returns 1 if no sessionids in db, -1 if error
+    /* Finds last added PackageID, returns that value + 1
+     * Returns 1 if no PackageIDs found in database, -1 if SQL exception encountered 
+     */
     public int getNewPackageID() {
         int packageID = -1;
         try (
@@ -712,12 +689,15 @@ public class DatabaseHandler {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            return -1;
         }
-        return packageID;
+        finally {
+            return packageID;
+        }
     }
     
-    //finds last added sessionid, returns that+1; returns 1 if no sessionids in db, -1 if error
+    /* Finds last added ItemID, returns that value + 1
+     * Returns 1 if no ItemIDs found in database, -1 if SQL exception encountered 
+     */
     public int getNewItemID() {
         int itemID = -1;
         try (
@@ -736,12 +716,15 @@ public class DatabaseHandler {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            return -1;
         }
-        return itemID;
+        finally {
+            return itemID;
+        }
     }
     
-    //finds last added sessionid, returns that+1; returns 1 if no sessionids in db, -1 if error
+    /* Finds last added SessionID, returns that value + 1
+     * Returns 1 if no SessionIDs found in database, -1 if SQL exception encountered 
+     */
     public int getNewSessionID() {
         int sessionID = -1;
         try (
@@ -763,12 +746,15 @@ public class DatabaseHandler {
           }
         catch(SQLException e) {
             e.printStackTrace();
-            return -1;
         }
-        return sessionID;
+        finally {
+            return sessionID;
+        }
     }
     
-    //finds last added sessionid, returns that or integer 1 if no sessionids found
+    /* Finds last added SessionID, returns that value
+     * Returns 1 if no SessionIDs found in database, -1 if SQL exception encountered 
+     */
     public int getLastSessionID() {
         int sessionID = -1;
         try (
@@ -787,12 +773,15 @@ public class DatabaseHandler {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            return -1;
         }
-        return sessionID;
+        finally {
+            return sessionID;
+        }
     }
     
-    //finds last smartpostid, returns that+1; returns 1 if no smartpostids in db, -1 if error
+    /* Finds last added SmartPostID, returns that value
+     * Returns 1 if no SmartPostIDs found in database, -1 if SQL exception encountered 
+     */
     public int getNewSmartPostID() {
         int smartPostID = -1;
         try (
@@ -814,9 +803,10 @@ public class DatabaseHandler {
           }
         catch(SQLException e) {
             e.printStackTrace();
-            return -1;
         }
-        return smartPostID;
+        finally {
+            return smartPostID;
+        }
     }
     
     public String getUserName(int sessionID) {
@@ -892,7 +882,7 @@ public class DatabaseHandler {
     }
     
     
-    //Get packages taht are in arg storage ( not sent yet ) ) 
+    //Get (not yet sent) packages that are stored in arg storage
     public ArrayList<Package> getPackages(String storageName) {
         ArrayList<Package> packages = new ArrayList<>();
         try (
@@ -905,7 +895,6 @@ public class DatabaseHandler {
                 try ( ResultSet rs = ps.executeQuery() ) {
                     PackageBuilder pb = new PackageBuilder();
                     
-                    //Create packages and add to arraylist
                     while ( rs.next() ) {
                         int packageClass = rs.getInt("class");
                         int senderid = rs.getInt("senderid");
@@ -931,7 +920,6 @@ public class DatabaseHandler {
     }
     
     public Package getPackage(int packageID) {
-        System.out.print(packageID);
         Package retPackage = null;
         try (
                 Connection c = getConnection();
@@ -962,6 +950,7 @@ public class DatabaseHandler {
         return retPackage;
     }
     
+    //Returns items from package identified by arg packageid
     public ArrayList<Item> getItems(int packageID) {
         ArrayList<Item> items = new ArrayList<>();
         try (
@@ -991,6 +980,7 @@ public class DatabaseHandler {
         return items;
     }
     
+    //Returns locations as array. Element 1 is latitude, element 2 longitude
     public String[] getLocation(int locationID) {
         String[] coordinates = null;
         try (
@@ -1010,12 +1000,14 @@ public class DatabaseHandler {
             }
         }
         catch(SQLException e) {
-            return null;
+            e.printStackTrace();
         }
-        return coordinates;
+        finally {
+            return coordinates;
+        }
     }
     
-    // return arraylist with elements address city postalnumber
+    // Element 1 = local address, element 2 = city, element 3 = postal number
     public ArrayList<String> getAddress(int locationID) {
         ArrayList<String> address = null;
         try (
@@ -1038,9 +1030,11 @@ public class DatabaseHandler {
             }
           }
         catch(SQLException e) {
-            return null;
+            e.printStackTrace();
         }
-        return address;
+        finally {
+            return address;
+        }
     }
     
     public SmartPost getSmartPost(int smartPostID) {
@@ -1080,6 +1074,7 @@ public class DatabaseHandler {
         return retSmartPost;
     }
     
+    //Returns all smartposts from arg city
     public ArrayList<SmartPost> getSmartPosts(String city) {
         ArrayList<SmartPost> smartposts = null;
         try (
@@ -1116,8 +1111,8 @@ public class DatabaseHandler {
         return smartposts;
     }
     
-    /*  Updates values of the SmartPost with ID given as arg
-     *  New Values taken from arg SmartPost
+    /*  Updates values of SmartPost with the id of arg oldSmartPost
+     *  New Values taken from arg updatedSmartPost
      *  Returns true if smartpost updated successfully, false if not
      */ 
     public boolean updateSmartPost(SmartPost oldSmartPost, SmartPost updatedSmartPost) {
@@ -1202,8 +1197,9 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    // SQL query resultset to arraylist.
-      // contents formatted "column1:column2:...."
+    /* Returns resultset rows formatted like "column1:column2:...."
+     * each arraylist elements contains one row
+     */
     public ArrayList<String> resultSetToArrayList(ResultSet rs) {
         try {
             ResultSetMetaData md = rs.getMetaData();
@@ -1239,26 +1235,5 @@ public class DatabaseHandler {
         catch(SQLException e) {
             e.printStackTrace();
         }
-    }
-        
-    public int getSmartPostID(String postoffice) {
-        int smartPostID = -1;
-        try (
-            Connection c = getConnection();
-            PreparedStatement ps = c.prepareStatement("SELECT smartpostid"
-                    + " FROM smartpost WHERE postoffice = ?;");
-        ) {
-            ps.setString(1, postoffice);
-            try ( ResultSet rs = ps.executeQuery() ) {
-                smartPostID = rs.getInt("smartpostid");
-            }
-            catch(SQLException innerE) {
-                innerE.printStackTrace();
-            }
-          }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-        return smartPostID;
-    }
+    }      
 }

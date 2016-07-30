@@ -1,3 +1,8 @@
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
+ */
+
 package harkkatyo;
 
 import java.io.IOException;
@@ -18,7 +23,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -284,6 +288,7 @@ public class DatabaseManagementController implements Initializable {
         }
     }
     
+    //Limits arg TextField to arg maxLength characters
     private void addLengthLimiter(final TextField textField, final int maxLength) {
         textField.textProperty().addListener(new ChangeListener<String>() {
             @Override

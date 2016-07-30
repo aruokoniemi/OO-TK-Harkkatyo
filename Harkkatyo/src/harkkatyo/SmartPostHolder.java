@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
  */
 
 package harkkatyo;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author m8581
- */
 public class SmartPostHolder {
     private ArrayList<SmartPost> smartposts;
 

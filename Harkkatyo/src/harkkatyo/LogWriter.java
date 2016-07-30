@@ -1,3 +1,8 @@
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
+ */
+
 
 package harkkatyo;
 
@@ -12,7 +17,6 @@ public class LogWriter {
         this.sessionid = db.getLastSessionID();
     }
     
-    //
     public void logSentPackage(Package p, double distance) {
         DatabaseHandler db = DatabaseHandler.getInstance();
         SmartPost sender = db.getSmartPost(p.getSenderID());
@@ -32,7 +36,6 @@ public class LogWriter {
         return logs;
     }
     
-    //Returns logs only from this session
     public ArrayList<Log> getSessionLogs() {
         DatabaseHandler db = DatabaseHandler.getInstance();
         ArrayList<Log> logs = db.getLogs();

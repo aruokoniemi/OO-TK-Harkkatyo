@@ -1,13 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
  */
 
 package harkkatyo;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,25 +15,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Callback;
 
-/**
- * FXML Controller class
- *
- * @author m8581
- */
 public class PackageInformationDialogController implements Initializable {
-    @FXML ListView itemListView;
-    @FXML Label packageIDLabel;
-    @FXML Label packageSizeLabel;
-    @FXML Label packageWeightLabel;
-    @FXML Label packageClassLabel;
-    @FXML Pane bgPane;
-    @FXML Button removeItemButton;
+    @FXML private ListView itemListView;
+    @FXML private Label packageIDLabel;
+    @FXML private Label packageSizeLabel;
+    @FXML private Label packageWeightLabel;
+    @FXML private Label packageClassLabel;
+    @FXML private Pane bgPane;
+    @FXML private Button removeItemButton;
     
     
     private ObservableList<Item> items;

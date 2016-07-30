@@ -1,7 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
  */
 
 package harkkatyo;
@@ -17,17 +16,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-//Moi
 
 public class AskStorageNameController implements Initializable {
-    @FXML TextField storageNameField;
-    @FXML Pane bgPane;
+    @FXML private TextField storageNameField;
+    @FXML private Pane bgPane;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         storageNameField.setText((""));
         
-        //  Don't let user input be over 20 characters
+        // Limit user input to 20 characters
         storageNameField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String newValue, String oldValue) {

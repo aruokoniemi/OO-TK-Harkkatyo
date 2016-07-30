@@ -1,3 +1,9 @@
+/* 
+ * Tekijä: Aleksi Ruokoniemi
+ * Oppilasnumero: 0452334
+ */
+
+
 package harkkatyo;
 
 import java.net.URL;
@@ -35,8 +41,6 @@ public class PackageCreationController implements Initializable {
     @FXML private RadioButton class2Button;
     @FXML private RadioButton class3Button;
     @FXML private ToggleGroup classGroup;
-    
-    //
     @FXML private Label classMaxWeightLabel;
     @FXML private Label classMaxSizeLabel;
     
@@ -62,7 +66,7 @@ public class PackageCreationController implements Initializable {
     
     private ObservableList<Item> items = FXCollections.observableArrayList();
     private Storage storage;
-    private Boolean packageAdded = false;
+    private boolean packageAdded = false;
     
     private int totalWeight;
     private int totalSize;
@@ -162,7 +166,7 @@ public class PackageCreationController implements Initializable {
         });
         
         
-        /**exits.. button/panepressed
+        /**exit controls
          *  
          * 
          */
@@ -189,14 +193,10 @@ public class PackageCreationController implements Initializable {
         
     }
 
-    public boolean testAllLimits() {
+    private boolean testAllLimits() {
         String warningString = "";
         boolean limitsOk = true;
-        
-        if ( !selectionsValid() ) {
-            warningString += "Täytä tarvittavat kentät!\n";
-            limitsOk = false;
-        }
+
         if ( !testPackageLimits() ) {
             warningString += "Sisältö ei täytä valitun pakettiluokan vaatimuksia!";
             limitsOk = false;
@@ -208,36 +208,8 @@ public class PackageCreationController implements Initializable {
         
         return limitsOk;
     }
-
-    //creates package from given info
-    public Package createPackage() {
-        DatabaseHandler db = DatabaseHandler.getInstance();
-        
-        RadioButton selected = (RadioButton) classGroup.getSelectedToggle();
-        int selectedClass = Integer.parseInt(selected.getText().substring(0, 1));
-        
-        Item[] itemList = items.toArray(new Item[items.size()]);
-        
-        PackageBuilder pb = new PackageBuilder();
-        int packageID = db.getNewPackageID();
-        Package newPackage = pb.createPackage(packageID, selectedClass, itemList);
-        storage.addPackage(newPackage);
-        
-        return newPackage;
-        
-    }
     
-    public boolean selectionsValid() {
-        boolean retVal = true;
-        if ( classGroup.getSelectedToggle() == null ) {
-            retVal = false;
-        }
-        return retVal;
-    }
-    
-    
-    
-    public boolean testPackageLimits() {     
+    private boolean testPackageLimits() {     
         boolean retVal = true;
         if ( totalSize > maxSize ) {
             selectedItemsSizeLabel.setTextFill(Color.RED);
@@ -256,8 +228,27 @@ public class PackageCreationController implements Initializable {
         }
         return retVal;
     }
+
+    //creates package from given info
+    private Package createPackage() {
+        DatabaseHandler db = DatabaseHandler.getInstance();
+        
+        RadioButton selected = (RadioButton) classGroup.getSelectedToggle();
+        int selectedClass = Integer.parseInt(selected.getText().substring(0, 1));
+        
+        Item[] itemList = items.toArray(new Item[items.size()]);
+        
+        PackageBuilder pb = new PackageBuilder();
+        int packageID = db.getNewPackageID();
+        Package newPackage = pb.createPackage(packageID, selectedClass, itemList);
+        storage.addPackage(newPackage);
+        
+        return newPackage;
+        
+    }
+
     
-    public void updateSelectedClass(int selectedClass) {
+    private void updateSelectedClass(int selectedClass) {
         if ( selectedClass == 1 ) {
             maxWeight = PackageClass1.maxWeight;
             maxSize = PackageClass1.maxSize;
@@ -276,20 +267,7 @@ public class PackageCreationController implements Initializable {
         testPackageLimits();
     }
     
-    public void updateItemDetails() {
-        int newWeight = 0;
-        int newSize = 0;
-        
-        for ( Item i : items ) {
-            newWeight =+ i.getWeight();
-            newSize =+ i.getSize();
-        }
-        
-        selectedItemsWeightLabel.setText(String.valueOf(newWeight));
-        selectedItemsSizeLabel.setText(String.valueOf(newSize));
-    }
-    
-    public void showAndHideLabel(final Label l, String s) {
+    private void showAndHideLabel(final Label l, String s) {
         l.setText(s);
         l.setVisible(true);
         PauseTransition labelPause = new PauseTransition(Duration.seconds(5));

@@ -3,7 +3,7 @@
     Author     : m8581
 */
 .root{
-    -fx-font-family: "Lucida Console";
+    -fx-font-family: "Arial";
     -fx-font-size: 14px;
     -fx-text-fill: rgb(0, 0, 0);
     -fx-base: white;
@@ -361,12 +361,12 @@
 
 
 .label{
-    -fx-font-family: "Lucida Console";
+    -fx-font-family: "Arial";
     -fx-font-size: 14px;
 }
 
 #mainLabel{
-    -fx-font-family: "Lucida Console";
+    -fx-font-family: "Arial";
     -fx-font-type: bold;
     -fx-font-size: 18px;
 }

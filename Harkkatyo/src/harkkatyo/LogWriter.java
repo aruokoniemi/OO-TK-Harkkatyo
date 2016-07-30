@@ -20,7 +20,7 @@ public class LogWriter {
         String logMessage = "Paketti lähetetty: " + 
                 sender.getCity() + " " +
                 sender.getPostOffice() + " -> " +
-                receiver.getCity() + " ";
+                receiver.getCity() + " " +
                 receiver.getPostOffice();
         db.addLogEntry(this.sessionid, logMessage, p, distance, new Date());
     }

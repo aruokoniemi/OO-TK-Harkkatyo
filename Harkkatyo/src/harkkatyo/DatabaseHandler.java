@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,13 +37,19 @@ public class DatabaseHandler {
     public boolean testConnection() {
         boolean retVal = true;
         try ( Connection c = getConnection() ) {
-            c.prepareStatement("SELECT * FROM smartpost LIMIT 1");
+            if ( c != null ) {
+                c.prepareStatement("SELECT * FROM smartpost LIMIT 1");
+            }
+            else {
+                retVal = false;
+            }
         } 
         catch(SQLException e) {
-            e.printStackTrace();
             retVal = false;
         }
-        return retVal;
+        finally {
+            return retVal;
+        }
     }
     
     public void setPackageAsSent(Package p) {
@@ -72,7 +77,9 @@ public class DatabaseHandler {
         catch(SQLException|ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return c;
+        finally {
+            return c;
+        }
     }
     
     //Return PackageID of last inserted package
@@ -896,16 +903,14 @@ public class DatabaseHandler {
         ) {
             ps.setString(1, storageName);
                 try ( ResultSet rs = ps.executeQuery() ) {
-                    ArrayList<String> resultStrings = this.resultSetToArrayList(rs);
                     PackageBuilder pb = new PackageBuilder();
                     
                     //Create packages and add to arraylist
-                    for ( String result : resultStrings ) {
-                        String[] columns = result.split(":");
-                        int packageClass = Integer.parseInt(columns[0]);
-                        int senderid = Integer.parseInt(columns[1]);
-                        int receiverid = Integer.parseInt(columns[2]);
-                        int packageid = Integer.parseInt(columns[3]);
+                    while ( rs.next() ) {
+                        int packageClass = rs.getInt("class");
+                        int senderid = rs.getInt("senderid");
+                        int receiverid = rs.getInt("receiverid");
+                        int packageid = rs.getInt("packageid");
                         ArrayList<Item> items = getItems(packageid);
                         Item[] itemList = items.toArray(new Item[items.size()]);
 
@@ -1088,19 +1093,16 @@ public class DatabaseHandler {
         ) {
             ps.setString(1, city.toUpperCase());
             try ( ResultSet rs = ps.executeQuery() ) {
-                ArrayList<String> resultStrings = this.resultSetToArrayList(rs);
-                smartposts = new ArrayList<>();
+                smartposts = new ArrayList<SmartPost>();
                 
-                for ( String result : resultStrings ) {
-                    String[] columns = result.split(":");
-                    int smartpostid = Integer.parseInt(columns[0]);
-                    String localaddress = columns[1];
-                    String cityName = columns[2];
-                    String postalNumber = columns[3];
-                    String availability = columns[4];
-                    String postoffice = columns[5];
-                    String latitude = columns[6];
-                    String longitude = columns[7];
+                while ( rs.next() ) {
+                    int smartpostid = rs.getInt("smartpostid");
+                    String localaddress = rs.getString("localaddress");
+                    String postalNumber = rs.getString("postalnumber");
+                    String availability = rs.getString("availability");
+                    String postoffice = rs.getString("postoffice");
+                    String latitude = rs.getString("latitude");
+                    String longitude = rs.getString("longitude");
 
                     SmartPost newSmartPost = new SmartPost(smartpostid, localaddress, city, postalNumber, 
                             availability, postoffice, latitude, longitude );
@@ -1109,7 +1111,7 @@ public class DatabaseHandler {
             }
           }
         catch(SQLException e) {
-            return null;
+            e.printStackTrace();
         }
         return smartposts;
     }

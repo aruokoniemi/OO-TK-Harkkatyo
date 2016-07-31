@@ -857,12 +857,6 @@ public class DatabaseHandler {
         try (
             Connection c = getConnection();
         ) {
-            if ( c.isClosed() ) {
-                System.out.print("rip");
-            }
-            if (c == null) {
-                System.out.print("rip");
-            }
             Statement stmt = c.createStatement();
             try ( ResultSet rs = stmt.executeQuery("SELECT name FROM storage;")
             ) {

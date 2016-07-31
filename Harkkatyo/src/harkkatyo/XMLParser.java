@@ -102,7 +102,7 @@ public class XMLParser {
                 
             }
             catch (IOException | SAXException | ParserConfigurationException e) {
-                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
         
         return null;

@@ -214,20 +214,7 @@ public class DatabaseHandler {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        
-        try (
-                Connection c = getConnection();
-                PreparedStatement ps = c.prepareStatement("DELETE FROM postoffice WHERE name = ?;");) {
-            try {
-                ps.setString(1, sp.getPostOffice());
-                ps.executeUpdate();
-            } catch (SQLException innerE) {
-                innerE.printStackTrace();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        }       
         
         //Remove SmartPost
         try (
@@ -516,29 +503,6 @@ public class DatabaseHandler {
         return retVal;
     }
     
-    //Return false if addition failed
-    public boolean addPostOffice(String name) {
-        boolean retVal = false;
-        try (
-            Connection c = getConnection();
-            PreparedStatement ps = c.prepareStatement("INSERT INTO postoffice("
-                    + "name) VALUES (?);")
-        )  {
-            ps.setString(1, name);
-            try {
-                ps.executeUpdate();
-                retVal = true;
-            }
-            catch(SQLException innerE) {
-                innerE.printStackTrace();
-            }
-           }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-        return retVal;
-    }
-    
     //return false if addition failed
     public boolean addLogEntry(int sessionID, String message, Package p, double distance, Date logDate) {
         boolean retVal = false;
@@ -613,31 +577,6 @@ public class DatabaseHandler {
                 innerE.printStackTrace();
             }
 
-          }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-        return retVal;
-    }
-    
-    //return false if addition fail
-    public boolean addPostalNumber(String postalnumber, String city) {
-        boolean retVal = false;
-        try (
-            Connection c = getConnection();
-            PreparedStatement ps = c.prepareStatement("INSERT OR IGNORE INTO postalnumber("
-                    + "number, city) VALUES "
-                    + "(?, ?);");
-        ) {
-            try {
-                ps.setString(1, postalnumber);
-                ps.setString(2, city);
-                ps.executeUpdate();
-                retVal = true;
-            }
-            catch(SQLException innerE) {
-                innerE.printStackTrace();
-            }
           }
         catch(SQLException e) {
             e.printStackTrace();
@@ -1139,25 +1078,13 @@ public class DatabaseHandler {
         
         try (
                 Connection c = getConnection();
-                PreparedStatement psPostalNumberUpdate = c.prepareStatement("UPDATE OR IGNORE postalnumber SET number = ?, city = ? "
-                        + "WHERE number = ? AND city = ?;");
                 PreparedStatement psLocationUpdate = c.prepareStatement("UPDATE location SET latitude = ?, longitude = ? "
                         + "WHERE locationid = ?;");
                 PreparedStatement psAddressUpdate = c.prepareStatement("UPDATE address SET "
                         + "localaddress = ?, city = ?, postalnumber = ? WHERE addressid = ?;");
-                PreparedStatement psPostOffice = c.prepareStatement("UPDATE OR IGNORE postoffice SET name = ? WHERE name = ?;");
                 PreparedStatement psSmartPostUpdate = c.prepareStatement("UPDATE smartpost SET "
                         + "availability = ?, postoffice = ? WHERE smartpostid = ?;");) {
             try {
-                try {
-                    psPostalNumberUpdate.setString(1, updatedSmartPost.getPostalNumber());
-                    psPostalNumberUpdate.setString(2, updatedSmartPost.getCity());
-                    psPostalNumberUpdate.setString(3, oldSmartPost.getPostalNumber());
-                    psPostalNumberUpdate.setString(4, oldSmartPost.getCity());
-                    psPostalNumberUpdate.executeUpdate();
-                }  catch(SQLException e) {     
-                }
-
                 Double latitude = Double.parseDouble(updatedSmartPost.getGeoPoint().getAsArrayList().get(0));
                 Double longitude = Double.parseDouble(updatedSmartPost.getGeoPoint().getAsArrayList().get(1));
                 psLocationUpdate.setDouble(1, latitude);
@@ -1170,10 +1097,6 @@ public class DatabaseHandler {
                 psAddressUpdate.setString(3, updatedSmartPost.getPostalNumber());
                 psAddressUpdate.setInt(4, addressID);
                 psAddressUpdate.executeUpdate();
-
-                psPostOffice.setString(1, updatedSmartPost.getPostOffice());
-                psPostOffice.setString(2, oldSmartPost.getPostOffice());
-                psPostOffice.executeUpdate();
 
                 psSmartPostUpdate.setString(1, updatedSmartPost.getAvailability());
                 psSmartPostUpdate.setString(2, updatedSmartPost.getPostOffice());

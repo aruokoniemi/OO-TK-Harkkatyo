@@ -67,12 +67,6 @@ public class XMLParser {
                             if ( !db.addCity(city) )
                                 break;
 
-                            if ( !db.addPostOffice(postoffice) )
-                                break;
-
-                            if  ( !db.addPostalNumber(postalNumber, city) ) 
-                                break;
-
                             int locationID;
                             int addressID;
                             //Add smartpost only if address and location added successfuly

@@ -27,7 +27,6 @@ abstract public class Package {
     
     protected int packageClass;
     protected boolean breaksItems;
-    static public int packageCounter;
 
     private double maxDistance;
     private int maxSize;

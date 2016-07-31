@@ -1,0 +1,150 @@
+PRAGMA foreign_keys = ON;
+
+BEGIN TRANSACTION;
+
+
+CREATE TABLE storage (
+
+  name VARCHAR(20) PRIMARY KEY
+
+);
+
+
+CREATE TABLE city (
+  
+  name VARCHAR(20) PRIMARY KEY
+);
+
+CREATE TABLE address (
+  
+  AddressID INTEGER PRIMARY KEY,
+  
+  localaddress  VARCHAR(30),
+  
+  city VARCHAR(20),
+ 
+  postalnumber VARCHAR(5), 
+
+ 
+
+  FOREIGN KEY (city) REFERENCES city(name),
+  
+  FOREIGN KEY (postalnumber) REFERENCES postalnumber(number)
+
+);
+
+
+CREATE TABLE location (
+  
+  LocationID INTEGER PRIMARY KEY,
+  
+  latitude VARCHAR(20) NOT NULL,
+  
+  longitude VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE smartpost (
+  
+  SmartPostID INTEGER PRIMARY KEY,
+  
+  LocationID INTEGER,
+  
+  AddressID INTEGER,
+  
+  availability VARCHAR(50),
+  
+  postoffice VARCHAR(50),
+
+  
+
+  FOREIGN KEY (PostOffice) REFERENCES postoffice(name) ON DELETE CASCADE,
+  
+  FOREIGN KEY (LocationID) REFERENCES location(locationid) ON DELETE CASCADE,
+  
+  FOREIGN KEY (addressid) REFERENCES address(addressid) ON DELETE CASCADE
+
+);
+
+
+CREATE TABLE session (
+  
+  SessionID INTEGER PRIMARY KEY,
+  
+  username VARCHAR(20)
+
+);
+
+
+CREATE TABLE logentry (
+  
+  LogEntryID INTEGER PRIMARY KEY,
+  
+  SessionID INTEGER NOT NULL,
+  
+  message VARCHAR(30),
+  
+  packageID INTEGER,
+  
+  logdate DATETIME NOT NULL,
+  
+  distance DOUBLE,
+
+  
+
+  FOREIGN KEY (sessionid) REFERENCES session(sessionid),
+  
+  FOREIGN KEY (packageid) REFERENCES package(packageid)
+
+);
+
+
+CREATE TABLE package (
+  
+  PackageID INTEGER PRIMARY KEY,
+  
+  SenderID INTEGER,
+  
+  ReceiverID INTEGER,
+
+  
+  storage VARCHAR(20),
+  
+  sent INTEGER DEFAULT 0,   
+  class INTEGER NOT NULL,
+
+  
+
+  FOREIGN KEY (senderid) REFERENCES smartpost(smartpostid),
+  
+  FOREIGN KEY (receiverid) REFERENCES smartpost(smartpostid),
+  
+  FOREIGN KEY (storage) REFERENCES storage(name)
+
+);
+
+
+CREATE TABLE item (
+  
+  ItemID INTEGER PRIMARY KEY UNIQUE NOT NULL,  
+ 
+  PackageID INTEGER,
+
+  
+  name VARCHAR(40),
+   
+  size INTEGER NOT NULL,
+  
+  weight INTEGER NOT NULL,
+  
+  broken INTEGER DEFAULT 0,    
+
+  breakable INTEGER DEFAULT 0,
+
+ 
+
+  FOREIGN KEY (PackageID) REFERENCES package(PackageID)
+
+);
+
+
+COMMIT;

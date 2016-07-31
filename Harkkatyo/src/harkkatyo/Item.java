@@ -9,7 +9,6 @@ package harkkatyo;
 import java.util.ArrayList;
 
 abstract public class Item {
-    public static int ItemCounter;
     private int ItemID;
     private final String itemName;
     private final int size;

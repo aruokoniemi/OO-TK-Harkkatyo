@@ -8,7 +8,7 @@ package harkkatyo;
 import java.util.ArrayList;
 
 public class Storage {
-    String name;
+    private String name;
     
     public Storage(String name) {
         this.name = name;

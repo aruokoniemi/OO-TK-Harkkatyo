@@ -189,6 +189,7 @@ public class DatabaseManagementController implements Initializable {
             public void handle(ActionEvent e) {
                 if ( !testSmartPostEditionFields() ) {
                     showAndHideLabel(editAutomaticLabel, "Kentät täytetty virheellisesti!");
+                    return;
                 }
                 String msgString = updateSmartPostDetails();
                 showAndHideLabel(editAutomaticLabel, msgString);
@@ -202,7 +203,6 @@ public class DatabaseManagementController implements Initializable {
             @Override
             public void handle(ActionEvent e) {
                 SmartPost removedSP = (SmartPost) automaticComboBox.getSelectionModel().getSelectedItem();
-                String selectedCity = (String) removedCityCBox.getSelectionModel().getSelectedItem();
                 if ( removedSP == null ) {
                     return;
                 }
@@ -512,17 +512,6 @@ public class DatabaseManagementController implements Initializable {
         
         String labelText = "";
         while (true) {
-
-            if (!db.addPostOffice(postoffice)) {
-                labelText = "Postitoimiston lisääminen tietokantaan epäonnistui.";
-                break;
-            }
-
-            if (!db.addPostalNumber(postalNumber, city)) {
-                labelText = "Postinumeron lisääminen tietokantaan epäonnistui.";
-                break;
-            }
-
             int locationID;
             int addressID;
             int SmartPostID = db.getNewSmartPostID();
